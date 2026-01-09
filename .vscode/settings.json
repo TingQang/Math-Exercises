@@ -1,0 +1,66 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "-outdir=./build",
+                "%DOC%"
+            ]
+        }
+    ],
+    
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": ["latexmk"]
+        }
+    ],
+    
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux", "*.bbl", "*.blg", "*.bcf", "*.run.xml",
+        "*.synctex.gz", "*.log", "*.out", "*.toc",
+        "*.lof", "*.lot", "*.fmt", "*.fot", "*.fdb_latexmk", "*.fls"
+    ],
+    
+    // ============ 关键配置 ============
+    "latex-workshop.view.pdf.viewer": "tab",  // 使用内置查看器
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "latex-workshop.view.pdf.internal.click": true,
+    "latex-workshop.view.pdf.internal.dblclick": true,
+    "latex-workshop.view.pdf.internal.ctrlclick": false,
+    
+    // 同步配置
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.synctex.path": "synctex",
+    
+    // 输出目录
+    "latex-workshop.latex.outDir": "./build",
+    
+    // 性能优化
+    "latex-workshop.latex.watch.files.ignore": [
+        "**/build/**",
+        "**/.git/**"
+    ],
+        "cSpell.words": [
+        "kaoyan",  // 新增：忽略考研相关自定义关键词的拼写警告
+        "xelatex", // 可保留其他已有的白名单单词
+        "latexmk",
+        "biber",
+        "synctex",
+        "stringstyle",
+        "breaklines",
+        "lstlisting",
+        "lstset",
+        "htbp",
+        "tcolorbox",
+        "pdfauthor",
+        "pdfsubject",
+    ]
+}

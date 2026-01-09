@@ -1,0 +1,154 @@
+% 章节文件：ch02.tex
+% 测试README.md中定义的所有LaTeX功能（图、表、公式、交叉引用、代码、列表等）
+\chapter{第二章：功能测试章节}
+\label{ch:ch02}
+
+\section{文本与基础格式测试}
+\label{sec:text_format}
+
+% 测试普通文本、加粗、斜体、脚注（README中常提及的基础格式）
+本章用于测试README.md中定义的所有LaTeX功能，包括基础文本格式、图表插入、公式排版、交叉引用等。
+加粗文本示例：\textbf{这是加粗文本}；斜体文本示例：\textit{这是斜体文本}；
+脚注示例\footnote{这是测试脚注，验证脚注功能是否正常编译}。
+
+\section{列表功能测试}
+\label{sec:lists}
+
+% 测试无序列表、有序列表（README中常见列表需求）
+\subsection{无序列表}
+\begin{itemize}
+    \item 测试无序列表项1
+    \item 测试无序列表项2
+    \item 嵌套无序列表
+          \begin{itemize}
+              \item 嵌套项1
+              \item 嵌套项2
+          \end{itemize}
+\end{itemize}
+
+\subsection{有序列表}
+\begin{enumerate}
+    \item 测试有序列表项1
+    \item 测试有序列表项2
+    \item 嵌套有序列表
+          \begin{enumerate}
+              \item 嵌套项1
+              \item 嵌套项2
+          \end{enumerate}
+\end{enumerate}
+
+\section{公式功能测试}
+\label{sec:equations}
+
+% 测试行内公式、单行公式、多行公式（README中数学公式相关功能）
+\subsection{行内公式}
+行内公式示例：$E=mc^2$（质能方程），$f(x) = \sum_{i=1}^n x_i$（求和公式）。
+
+\subsection{单行编号公式}
+\begin{equation}
+    \int_{-\infty}^{+\infty} e^{-x^2} dx = \sqrt{\pi}
+    \label{eq:gaussian_integral}
+\end{equation}
+公式\eqref{eq:gaussian_integral}为高斯积分，验证公式交叉引用功能。
+
+\subsection{多行公式}
+\begin{align}
+    \sin^2\theta + \cos^2\theta &= 1 \label{eq:trig1} \\
+    \tan\theta &= \frac{\sin\theta}{\cos\theta} \label{eq:trig2}
+\end{align}
+公式\eqref{eq:trig1}和\eqref{eq:trig2}验证多行公式排版与引用。
+
+\section{表格功能测试}
+\label{sec:tables}
+
+% 测试基础表格、带标题/引用的表格（README中表格相关功能）
+\begin{table}[htbp]
+    \centering
+    \caption{测试表格（基础格式）}
+    \label{tab:test_table}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        列1 & 列2 & 列3 \\
+        \hline
+        数据1 & 数据2 & 数据3 \\
+        \hline
+        数据4 & 数据5 & 数据6 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+表格\ref{tab:test_table}验证表格插入、标题与交叉引用功能。
+
+\section{图片功能测试}
+\label{sec:figures}
+
+% 测试图片插入、标题/引用、缩放（README中图相关核心功能）
+% 统一图片路径为 ./figures/ch02/，符合LaTeX项目通用目录规范
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{ch02/three.pdf} 
+    \caption{测试图片（验证图插入、缩放、标题）}
+    \label{fig:test_figure}
+\end{figure}
+
+图\ref{fig:test_figure}%验证图片插入、缩放、标题与交叉引用功能（需确保test_image.png放在./figures/ch02/目录下）。
+
+\section{代码块功能测试}
+\label{sec:code_blocks}
+
+% 测试LaTeX代码块排版（README中若提及代码展示功能）
+\begin{verbatim}
+# Python测试代码
+def hello_world():
+    print("Hello, LaTeX!")
+hello_world()
+\end{verbatim}
+
+% 代码高亮配置（放在章节内，避免与主文档冲突）
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    frame=single,
+    breaklines=true
+}
+
+\begin{lstlisting}[caption={Python代码高亮示例}, label={lst:python_code}]
+# 带高亮的Python测试代码
+def add(a, b):
+    """求和函数"""
+    return a + b
+
+result = add(3, 5)
+print(f"结果：{result}")
+\end{lstlisting}
+
+代码块\ref{lst:python_code}验证代码高亮、标题与引用功能（需确保listings包已加载）。
+
+\section{交叉引用综合测试}
+\label{sec:cross_ref}
+
+% 综合验证章节、公式、表格、图片、代码的交叉引用
+\begin{itemize}
+    \item 引用章节：第二章(\ref{ch:ch02})的\textsection\ref{sec:text_format}；
+    \item 引用公式：\eqref{eq:gaussian_integral}、\eqref{eq:trig1}；
+    \item 引用表格：\ref{tab:test_table}；
+    \item 引用图片：\ref{fig:test_figure}；
+    \item 引用代码：\ref{lst:python_code}；
+    \item 引用浮动体测试图：\ref{fig:float_test}。
+\end{itemize}
+
+\section{浮动体位置测试}
+\label{sec:floats}
+
+% 测试图表浮动体位置（README中常说明htbp等参数）
+\begin{figure}[h] % h=here, t=top, b=bottom, p=page
+    \centering
+    \includegraphics[width=0.5\textwidth]{ch02/three.pdf}
+    \caption{浮动体位置测试（h参数）}
+    \label{fig:float_test}
+\end{figure}
+
+% 验证浮动体位置控制功能，需确保test_image2.png放在./figures/ch02/目录下。

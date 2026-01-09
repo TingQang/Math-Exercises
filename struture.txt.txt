@@ -1,0 +1,28 @@
+Math-Notes/
+├── 📄 main.tex                  # 唯一编译入口
+├── 📄 preamble.tex              # 所有宏包+自定义环境+命令定义
+├── 📄 references.bib            # 参考文献
+├── 📁 chapters/                 # 章节文件
+│   ├── 📄 00_preface.tex
+│   ├── 📄 01_limits.tex
+│   ├── 📄 02_derivatives.tex
+│   ├── 📄 03_integrals.tex
+│   ├── 📄 04_series.tex
+│   ├── 📄 05_multivar.tex
+│   ├── 📄 06_differential_eq.tex
+│   ├── 📄 07_linear_algebra.tex
+│   ├── 📄 08_probability.tex
+│   └── 📄 99_appendix.tex
+├── 📁 figures/                  # 图片资源
+│   ├── 📁 ch01_limits/
+│   ├── 📁 ch02_derivatives/
+│   ├── 📁 ch03_integrals/
+│   ├── 📁 ch04_series/
+│   ├── 📁 ch05_multivar/
+│   ├── 📁 ch06_differential_eq/
+│   ├── 📁 ch07_linear_algebra/
+│   ├── 📁 ch08_probability/
+│   └── 📁 common/              # 通用图片
+├── 📁 output/                  # 编译输出（自动生成）
+├── 📄 .latexmkrc               # 编译配置
+└── 📄 README.md                # 项目说明

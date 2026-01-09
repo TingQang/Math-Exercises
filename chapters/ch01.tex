@@ -1,0 +1,147 @@
+ %!TEX root = ../main.tex
+\chapter{极限与连续}
+\label{ch:limits}
+
+\begin{center}
+    \textcolor{kaoyan-blue}{\Large 本章学习目标：掌握极限的计算方法，理解连续性的本质}
+\end{center}
+
+\section{极限的概念与性质}
+
+\subsection{数列极限}
+\begin{definition}{数列极限}{}
+    设$\{x_n\}$为数列，$a$为常数。若对于任意$\varepsilon>0$，存在正整数$N$，使得当$n>N$时，有$|x_n-a|<\varepsilon$，则称数列$\{x_n\}$收敛于$a$，记作$\lim\limits_{n\to\infty}x_n=a$。
+\end{definition}
+
+\begin{example}
+    证明：$\lim\limits_{n\to\infty}\left(1+\frac{1}{n}\right)^n = e$
+    \begin{solution}
+        利用单调有界准则证明：
+        \begin{enumerate}
+            \item 先证数列$x_n = \left(1+\frac{1}{n}\right)^n$单调递增
+            \item 再证数列有上界
+            \item 由单调有界准则知极限存在，记该极限为$e$
+        \end{enumerate}
+    \end{solution}
+\end{example}
+\label{sec:sequence-limit-properties}
+\keypoint{极限存在准则}：单调有界数列必收敛；夹逼准则。 
+
+% 数列极限唯一性定理（用项目预设的theorem环境）
+\begin{theorem}{唯一性}{thm:sequence-limit-uniqueness}
+若数列$\{a_n\}$收敛，则它只有一个极限．
+\end{theorem}
+
+% 证明（用项目预设的proof环境，若未预设则用amsthm的proof）
+\begin{proofbox}
+设$a$是$\{a_n\}$的一个极限．我们证明：对任何数$b \neq a$，$b$不是$\{a_n\}$的极限．
+事实上，若取$\varepsilon_0 = \frac{1}{2}|b - a|$，则按定义，在$U(a;\varepsilon_0)$之外至多只有$\{a_n\}$中有限项，从而在$U(b;\varepsilon_0)$内至多只有$\{a_n\}$中有限个项；所以$b$不是$\{a_n\}$的极限．
+这就证明了收敛数列只能有一个极限．
+\end{proofbox}
+\begin{theorem}{有界性}{thm:sequence-limit-boundedness}
+    若数列$\{a_n\}$收敛，则它是有界的。即存在正数$M$，使得对一切正整数$n$，都有
+    \begin{equation}
+        \absme{a_n} \leq M
+    \end{equation}
+\end{theorem}
+\begin{proofbox}
+    设$\lim\limits_{n\to\infty}a_n = a$，则对$\varepsilon = 1$，存在正整数$N$，使得当$n > N$时，有$\absme{a_N-a} < 1$。
+    因此，对所有$n \geq 1$，都有
+    $$
+    \absme{a_n} = \absme{a_n - a + a} \leq \absme{a_n - a} + \absme{a} < 1 + \absme{a}
+    $$
+    令$M = \max\{\absme{a_1}, \absme{a_2}, \ldots, \absme{a_N}, 1 + \absme{a}\}$，则对一切正整数$n$都有$\absme{a_n} \leq M$。
+\end{proofbox}
+\subsection{函数极限}
+\begin{definition}{函数极限}{}
+    设函数$f(x)$在点$x_0$的某去心邻域内有定义，$A$为常数。若对于任意$\varepsilon>0$，存在$\delta>0$，使得当$0<|x-x_0|<\delta$时，有$|f(x)-A|<\varepsilon$，则称$f(x)$在$x\to x_0$时的极限为$A$。
+\end{definition}
+
+\formula{\lim_{x\to 0}\frac{\sin x}{x}=1}
+
+\begin{attention}
+    使用洛必达法则前必须检查是否满足$\frac{0}{0}$或$\frac{\infty}{\infty}$型未定式。
+\end{attention}
+
+\section{极限的计算方法}
+
+\subsection{基本方法}
+\begin{enumerate}
+    \item \textbf{直接代入法}：初等函数在其定义域内连续
+    \item \textbf{因式分解法}：消去零因子
+    \item \textbf{有理化法}：处理根式
+    \item \textbf{等价无穷小替换}：常用等价关系
+\end{enumerate}
+
+\subsection{洛必达法则}
+\begin{theorem}{洛必达法则}{}
+    若$\lim\limits_{x\to a}f(x)=\lim\limits_{x\to a}g(x)=0$（或$\infty$），且$\lim\limits_{x\to a}\frac{f'(x)}{g'(x)}$存在（或为$\infty$），则
+    \[
+    \lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}
+    \]
+\end{theorem}
+
+\begin{example}
+    求$\lim\limits_{x\to 0}\frac{e^x-1-x}{x^2}$
+    \begin{solution}
+        这是$\frac{0}{0}$型未定式，使用洛必达法则：
+        \begin{align*}
+            \lim_{x\to 0}\frac{e^x-1-x}{x^2} 
+            &= \lim_{x\to 0}\frac{e^x-1}{2x} \quad \text{（再次洛必达）}\\
+            &= \lim_{x\to 0}\frac{e^x}{2} = \frac{1}{2}
+        \end{align*}
+    \end{solution}
+\end{example}
+
+\section{连续与间断}
+
+\subsection{连续的定义}
+\begin{definition}{连续}{}
+    函数$f(x)$在点$x_0$连续，当且仅当：
+    \begin{enumerate}
+        \item $f(x_0)$存在
+        \item $\lim\limits_{x\to x_0}f(x)$存在
+        \item $\lim\limits_{x\to x_0}f(x)=f(x_0)$
+    \end{enumerate}
+\end{definition}
+
+\subsection{间断点类型}
+\begin{table}[ht]
+    \centering
+    \caption{间断点分类}
+    \begin{tabular}{ccc}
+        \toprule
+        类型 & 条件 & 示例 \\
+        \midrule
+        可去间断点 & $\lim\limits_{x\to x_0}f(x)$存在但不等于$f(x_0)$ & $\frac{\sin x}{x} (x=0)$ \\
+        跳跃间断点 & 左右极限存在但不相等 & $\operatorname{sgn}(x) (x=0)$ \\
+        无穷间断点 & 极限为无穷大 & $\frac{1}{x} (x=0)$ \\
+        振荡间断点 & 极限不存在且不为无穷 & $\sin\frac{1}{x} (x=0)$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{本章习题}
+
+\begin{exercise}
+    \begin{enumerate}
+        \item 求极限：$\lim\limits_{x\to 0}\frac{\sqrt{1+x}-\sqrt{1-x}}{x}$
+        \item 求极限：$\lim\limits_{x\to 0}\left(\frac{1}{x}-\frac{1}{e^x-1}\right)$
+        \item 判断函数$f(x)=\frac{x^2-1}{x-1}$在$x=1$处的连续性
+    \end{enumerate}
+\end{exercise}
+
+\section{本章总结}
+\begin{summary}
+    \begin{itemize}
+        \item \important{极限的$\varepsilon$-$\delta$定义是理论基础}
+        \item 掌握七大重要极限：
+        \begin{enumerate}
+            \item $\lim\limits_{x\to 0}\frac{\sin x}{x}=1$
+            \item $\lim\limits_{x\to\infty}\left(1+\frac{1}{x}\right)^x=e$
+            \item $\lim\limits_{x\to 0}(1+x)^{\frac{1}{x}}=e$
+        \end{enumerate}
+        \item 熟练运用洛必达法则\cite{同济高数}
+        \item 理解连续\cite{浙大概率论,同济高数,浙大概率论,清华线性代数}与间断的实质\cite{考研数学分析}
+    \end{itemize}
+\end{summary}

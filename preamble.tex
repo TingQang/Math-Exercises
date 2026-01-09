@@ -1,0 +1,291 @@
+% ==============================================
+% 考研数学笔记 - 完整宏包与自定义配置
+% 文件：preamble.tex
+% 作用：集中管理所有宏包、环境、自定义命令
+% ==============================================
+
+% ==================== 第一部分：编码与字体 ====================
+% 注意：\documentclass 已在 main.tex 中定义，此处不要重复
+\usepackage[UTF8]{ctex}                      % 中文支持
+\usepackage{anyfontsize}                     % 任意字体大小
+\usepackage[quiet]{fontspec}                 % 安静模式，减少警告
+
+% ==================== 第二部分：页面布局 ====================
+\usepackage[
+    a4paper,
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm,
+    headheight=15pt,
+    footskip=1.2cm,
+    marginparwidth=0cm,      % 移除边注，使页面更干净
+    marginparsep=0cm
+]{geometry}
+
+% ==================== 第三部分：数学宏包 ====================
+\usepackage{amsmath, amsthm, amssymb, amsfonts}  % AMS数学基础
+\usepackage{mathtools}                           % 增强数学工具
+\usepackage{bm}                                  % 粗体数学符号
+\usepackage{cases}                               % 多行公式
+\usepackage{siunitx}                             % 单位与数字
+
+% \usepackage{physics}                             % 物理符号（包含很多数学符号）
+
+% ==================== 第四部分：图形与颜色 ====================
+\usepackage{graphicx}                    % 图片插入
+\usepackage{tcolorbox}                   % 彩色框（含定理环境）
+\tcbuselibrary{most, breakable, skins}   % 加载tcolorbox库
+\usepackage{tikz}                        % 绘图
+\usepackage{xcolor}                      % 颜色
+
+% 定义考研专用颜色
+\definecolor{kaoyan-blue}{RGB}{0, 102, 204}    % 主色调蓝色
+\definecolor{kaoyan-red}{RGB}{204, 51, 0}      % 重点红色
+\definecolor{kaoyan-green}{RGB}{0, 153, 0}     % 正确/答案绿色
+\definecolor{kaoyan-orange}{RGB}{255, 153, 0}  % 警告/注意橙色
+\definecolor{kaoyan-gray}{RGB}{245, 245, 245}  % 背景灰色
+
+% ==================== 第五部分：排版与工具 ====================
+\usepackage{enumitem}                    % 列表控制
+\usepackage{booktabs}                    % 专业表格
+\usepackage{multirow, multicol}          % 表格与多列
+\usepackage{array}                       % 数组扩展
+\usepackage{makecell}                    % 表格单元格
+\usepackage{longtable}                   % 长表格
+
+% ==================== 第六部分：页面样式 ====================
+\usepackage{fancyhdr}                    % 页眉页脚
+\usepackage{titlesec}                    % 标题格式
+\usepackage{titletoc}                    % 目录格式
+\usepackage{appendix}                    % 附录
+
+% ==================== 第七部分：引用与链接 ====================
+\usepackage{hyperref}                    % 超链接
+\usepackage{cleveref}                    % 智能引用
+
+% ==================== 第八部分：参考文献 ====================
+\usepackage[backend=biber, style=gb7714-2015, gbpub=false]{biblatex}
+
+% ==================== 第九部分：自定义环境（使用tcolorbox） ====================
+
+% 1. 定理类环境
+\newtcbtheorem[number within=chapter]{definition}{定义}{%
+    colframe=kaoyan-blue, 
+    colback=kaoyan-gray, 
+    colbacktitle=kaoyan-blue!10, 
+    coltitle=kaoyan-blue, 
+    fonttitle=\bfseries, 
+    boxed title style={size=small},
+    breakable
+}{def}
+
+\newtcbtheorem[number within=chapter]{theorem}{定理}{%
+    colframe=kaoyan-red, 
+    colback=kaoyan-gray!30, 
+    colbacktitle=kaoyan-red!10,
+    coltitle=kaoyan-red, 
+    fonttitle=\bfseries, 
+    boxed title style={size=small},
+    breakable
+}{thm}
+
+\newtcbtheorem[number within=chapter]{lemma}{引理}{%
+    colframe=kaoyan-green, 
+    colback=kaoyan-gray!30, 
+    colbacktitle=kaoyan-green!10,
+    coltitle=kaoyan-green, 
+    fonttitle=\bfseries, 
+    boxed title style={size=small},
+    breakable
+}{lem}
+
+\newtcbtheorem[number within=chapter]{corollary}{推论}{%
+    colframe=kaoyan-orange, 
+    colback=kaoyan-gray!30, 
+    colbacktitle=kaoyan-orange!10,
+    coltitle=kaoyan-orange, 
+    fonttitle=\bfseries, 
+    boxed title style={size=small},
+    breakable
+}{cor}
+
+\newtcbtheorem[number within=section]{remark}{注}{%
+    colframe=gray, 
+    colback=kaoyan-gray, 
+    colbacktitle=gray!10,
+    coltitle=gray, 
+    fonttitle=\bfseries, 
+    boxed title style={size=small},
+    breakable
+}{rem}
+
+% 2. 例题与习题环境
+\newtcolorbox{example}{
+    colframe=kaoyan-green!70!black,
+    colback=kaoyan-green!5,
+    title=例题,
+    fonttitle=\bfseries,
+    breakable
+}
+
+\newtcolorbox{exercise}{
+    colframe=kaoyan-blue!70!black,
+    colback=kaoyan-blue!5,
+    title=习题,
+    fonttitle=\bfseries,
+    breakable
+}
+
+\newtcolorbox{solution}{
+    colframe=kaoyan-green!50!black,
+    colback=kaoyan-green!3,
+    title=解,
+    fonttitle=\bfseries,
+    breakable
+}
+
+\newtcolorbox{proofbox}{
+    colframe=kaoyan-red!50!black,
+    colback=kaoyan-red!3,
+    title=证明,
+    fonttitle=\bfseries,
+    breakable
+}
+
+% 3. 总结与注意事项
+\newtcolorbox{summary}{
+    colframe=kaoyan-orange,
+    colback=kaoyan-orange!5,
+    title=本章总结,
+    fonttitle=\bfseries,
+    breakable
+}
+
+\newtcolorbox{attention}{
+    colframe=kaoyan-red,
+    colback=kaoyan-red!5,
+    title=注意,
+    fonttitle=\bfseries,
+    breakable
+}
+
+% ==================== 第十部分：自定义命令（考研数学专用） ====================
+
+% 1. 数学符号快捷命令
+\newcommand{\R}{\mathbb{R}}          % 实数集
+\newcommand{\N}{\mathbb{N}}          % 自然数集
+\newcommand{\Z}{\mathbb{Z}}          % 整数集
+\newcommand{\Q}{\mathbb{Q}}          % 有理数集
+\newcommand{\C}{\mathbb{C}}          % 复数集
+\renewcommand{\P}{\mathbb{P}}        % 概率
+\newcommand{\E}{\mathbb{E}}          % 期望
+
+% 2. 微分与导数
+\newcommand{\ddme}{\mathrm{d}}         % 微分符号（直立体）
+\newcommand{\pd}{\partial}           % 偏导符号
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}  % 偏导数
+\newcommand{\gradme}{\nabla}           % 梯度
+\newcommand{\diver}{\operatorname{div}} % 散度
+
+% 3. 极限与积分
+\newcommand{\limn}{\lim\limits_{n\to\infty}}
+\newcommand{\limx}{\lim\limits_{x\to\infty}}
+\newcommand{\limxa}{\lim\limits_{x\to a}}
+\newcommand{\intab}{\int_{a}^{b}}
+\newcommand{\iintD}{\iint\limits_{D}}
+\newcommand{\ointC}{\oint\limits_{C}}
+
+% 4. 矩阵与向量
+\newcommand{\mat}[1]{\begin{pmatrix} #1 \end{pmatrix}}      % 圆括号矩阵
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}     % 方括号矩阵
+\newcommand{\absme}[1]{\left| #1 \right|}                     % 绝对值
+\newcommand{\normme}[1]{\left\| #1 \right\|}                  % 范数
+
+% 5. 概率与统计
+\newcommand{\Var}{\operatorname{Var}}    % 方差
+\newcommand{\Cov}{\operatorname{Cov}}    % 协方差
+
+% 6. 快捷输入
+\newcommand{\dx}{\,\mathrm{d}x}          % 积分微元
+\newcommand{\dy}{\,\mathrm{d}y}
+\newcommand{\dt}{\,\mathrm{d}t}
+\newcommand{\const}{\text{const}}        % 常数
+
+% 7. 考点标记
+\newcommand{\keypoint}[1]{\textbf{\textcolor{kaoyan-red}{【考点】#1}}}
+\newcommand{\important}[1]{\textbf{\textcolor{kaoyan-blue}{【重点】#1}}}
+\newcommand{\difficulty}[1]{\textbf{\textcolor{kaoyan-orange}{【难度】#1}}}
+\newcommand{\formula}[1]{\textcolor{kaoyan-blue}{\[#1\]}}
+
+% ==================== 第十一部分：页面样式设置 ====================
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% 章节格式设置
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries\color{kaoyan-blue}}
+    {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-30pt}{40pt}
+
+% 节格式设置
+\titleformat{\section}
+    {\normalfont\Large\bfseries\color{kaoyan-blue}}
+    {\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+% 超链接设置
+\hypersetup{
+    colorlinks=true,
+    linkcolor=kaoyan-blue,
+    citecolor=kaoyan-green,
+    filecolor=magenta,
+    urlcolor=kaoyan-blue,
+    bookmarksopen=true,
+    pdftitle={考研数学笔记},
+    pdfauthor={你的名字},
+    pdfsubject={考研数学复习资料}
+}
+
+% 列表格式设置
+\setlist[enumerate]{
+    topsep=0pt,
+    itemsep=0pt,
+    parsep=0pt,
+    label=\arabic*),
+    leftmargin=2em
+}
+
+\setlist[itemize]{
+    topsep=0pt,
+    itemsep=0pt,
+    parsep=0pt,
+    leftmargin=2em
+}
+
+% 表格设置
+\setlength{\heavyrulewidth}{0.12em}
+\setlength{\lightrulewidth}{0.05em}
+\renewcommand{\arraystretch}{1.2}
+
+% ==================== 第十二部分：计数器设置 ====================
+
+% 公式编号带章节号
+\numberwithin{equation}{chapter}
+
+% 图片表格编号带章节号
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand{\thetable}{\thechapter-\arabic{table}}
+
+% 重置计数器
+\AtBeginDocument{
+    \setcounter{chapter}{0}
+    \setcounter{section}{0}
+}

@@ -1,0 +1,27 @@
+\contentsline {chapter}{\numberline {1}极限与连续}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}极限的概念与性质}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}数列极限}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}函数极限}{3}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}极限的计算方法}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}基本方法}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}洛必达法则}{3}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}连续与间断}{4}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}连续的定义}{4}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}间断点类型}{4}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}本章习题}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}本章总结}{5}{section.1.5}%
+\contentsline {chapter}{\numberline {2}第二章：功能测试章节}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}文本与基础格式测试}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}列表功能测试}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}无序列表}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}有序列表}{6}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}公式功能测试}{6}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}行内公式}{6}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}单行编号公式}{6}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}多行公式}{7}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}表格功能测试}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.5}图片功能测试}{7}{section.2.5}%
+\contentsline {section}{\numberline {2.6}代码块功能测试}{7}{section.2.6}%
+\contentsline {section}{\numberline {2.7}交叉引用综合测试}{7}{section.2.7}%
+\contentsline {section}{\numberline {2.8}浮动体位置测试}{9}{section.2.8}%
+\contentsfinish 

@@ -1,0 +1,67 @@
+\documentclass[10pt, oneside]{book}
+
+% 引入所有配置
+\input{preamble}
+
+% 添加参考文献资源（必须在preamble之后）
+\addbibresource{references.bib}
+
+% 设置图片路径
+\graphicspath{{figures/}{figures/common/}}
+
+\begin{document}
+
+% ============= 封面页 =============
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge\bfseries\color{kaoyan-blue} 考研数学核心笔记 \par}
+    \vspace{0.5cm}
+    {\Large 高等数学·线性代数·概率论与数理统计 \par}
+    \vspace{2cm}
+    {\LARGE 张庭祥 \par}
+    \vspace{1cm}
+    {\large 版本：2025.1 \par}
+    \vspace{3cm}
+    % 可选：添加logo
+    % \includegraphics[width=0.2\textwidth]{figures/common/logo}
+    \vfill
+    {\large \today \par}
+\end{titlepage}
+
+% ============= 前言部分 =============
+\frontmatter
+\include{chapters/00_preface}
+
+% ============= 目录 =============
+\tableofcontents
+\listoffigures  % 可选：插图目录
+\listoftables   % 可选：表格目录
+
+% ============= 正文部分 =============
+\mainmatter
+
+% 高等数学部分
+\include{chapters/ch00}     % 序言
+\include{chapters/ch01}     % 第1章：极限与连续
+\include{chapters/ch02}     % 第2章：一元函数微分学  
+\include{chapters/ch03}     % 第3章：一元函数积分学
+\include{chapters/ch04}     % 第4章：无穷级数
+\include{chapters/ch05}     % 第5章：多元函数微积分
+\include{chapters/ch06}     % 第6章：多元函数积分学
+\include{chapters/ch07}     % 第7章：无穷级数
+\include{chapters/ch08}     % 第8章：微分方程
+% 线性代数部分
+\include{chapters/ch09} % 第7章：线性代数
+% 概率论部分
+\include{chapters/ch10}   % 第8章：概率论与数理统计
+
+% ============= 附录 =============
+\appendix
+\include{chapters/ch99}
+
+% ============= 参考文献 =============
+\backmatter
+\printbibliography[title=参考文献]
+
+\end{document}

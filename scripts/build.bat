@@ -1,0 +1,1 @@
+for /L %%i in (1,1,8) do (if %%i LSS 10 (echo. > ch0%%i.tex) else (echo. > ch%%i.tex))

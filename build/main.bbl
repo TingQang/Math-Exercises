@@ -1,0 +1,224 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{同济高数}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=25b0ae6a6866049b16a0179c43cafb29}{%
+           family={同济大学数学系},
+           familyi={同\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=25b0ae6a6866049b16a0179c43cafb29}{%
+           family={同济大学数学系},
+           familyi={同\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{publisher}{1}{%
+        {高等教育出版社}%
+      }
+      \strng{namehash}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{fullhash}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{fullhashraw}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{bibnamehash}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{authorbibnamehash}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{authornamehash}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{authorfullhash}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{authorfullhashraw}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{nameabibnamehash}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{nameanamehash}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{nameafullhash}{25b0ae6a6866049b16a0179c43cafb29}
+      \strng{nameafullhashraw}{25b0ae6a6866049b16a0179c43cafb29}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{第7版}
+      \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
+      \field{title}{高等数学}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \keyw{同济高数}
+    \endentry
+    \entry{浙大概率论}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=058bf66d9fb6467b2f182d0ebf4a6579}{%
+           family={盛骤},
+           familyi={盛\bibinitperiod}}}%
+        {{hash=0278a889470caa5b8c436aeeaaa3c3a3}{%
+           family={谢式千},
+           familyi={谢\bibinitperiod}}}%
+        {{hash=b912812dcba515dfb751a77dc6a00473}{%
+           family={潘承毅},
+           familyi={潘\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=058bf66d9fb6467b2f182d0ebf4a6579}{%
+           family={盛骤},
+           familyi={盛\bibinitperiod}}}%
+        {{hash=0278a889470caa5b8c436aeeaaa3c3a3}{%
+           family={谢式千},
+           familyi={谢\bibinitperiod}}}%
+        {{hash=b912812dcba515dfb751a77dc6a00473}{%
+           family={潘承毅},
+           familyi={潘\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{publisher}{1}{%
+        {高等教育出版社}%
+      }
+      \strng{namehash}{3ff7ed4ab17d9cdae658b35b98d3dd93}
+      \strng{fullhash}{ec08924c98a2bf0fe55abd2c33c83e7c}
+      \strng{fullhashraw}{ec08924c98a2bf0fe55abd2c33c83e7c}
+      \strng{bibnamehash}{ec08924c98a2bf0fe55abd2c33c83e7c}
+      \strng{authorbibnamehash}{ec08924c98a2bf0fe55abd2c33c83e7c}
+      \strng{authornamehash}{3ff7ed4ab17d9cdae658b35b98d3dd93}
+      \strng{authorfullhash}{ec08924c98a2bf0fe55abd2c33c83e7c}
+      \strng{authorfullhashraw}{ec08924c98a2bf0fe55abd2c33c83e7c}
+      \strng{nameabibnamehash}{ec08924c98a2bf0fe55abd2c33c83e7c}
+      \strng{nameanamehash}{3ff7ed4ab17d9cdae658b35b98d3dd93}
+      \strng{nameafullhash}{ec08924c98a2bf0fe55abd2c33c83e7c}
+      \strng{nameafullhashraw}{ec08924c98a2bf0fe55abd2c33c83e7c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{第4版}
+      \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
+      \field{title}{概率论与数理统计}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \keyw{浙大概率论}
+    \endentry
+    \entry{清华线性代数}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=787d25f4e41d1dce60b31af1006eb1fc}{%
+           family={居余马},
+           familyi={居\bibinitperiod}}}%
+        {{hash=f8d1777ea0165f57d9608ecc401e62e7}{%
+           family={林翠琴},
+           familyi={林\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=787d25f4e41d1dce60b31af1006eb1fc}{%
+           family={居余马},
+           familyi={居\bibinitperiod}}}%
+        {{hash=f8d1777ea0165f57d9608ecc401e62e7}{%
+           family={林翠琴},
+           familyi={林\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{publisher}{1}{%
+        {清华大学出版社}%
+      }
+      \strng{namehash}{efde23a57b7a8ffe6be7fb59c206ba14}
+      \strng{fullhash}{b55bde92ff370c4db3c1689568bd9c26}
+      \strng{fullhashraw}{b55bde92ff370c4db3c1689568bd9c26}
+      \strng{bibnamehash}{b55bde92ff370c4db3c1689568bd9c26}
+      \strng{authorbibnamehash}{b55bde92ff370c4db3c1689568bd9c26}
+      \strng{authornamehash}{efde23a57b7a8ffe6be7fb59c206ba14}
+      \strng{authorfullhash}{b55bde92ff370c4db3c1689568bd9c26}
+      \strng{authorfullhashraw}{b55bde92ff370c4db3c1689568bd9c26}
+      \strng{nameabibnamehash}{b55bde92ff370c4db3c1689568bd9c26}
+      \strng{nameanamehash}{efde23a57b7a8ffe6be7fb59c206ba14}
+      \strng{nameafullhash}{b55bde92ff370c4db3c1689568bd9c26}
+      \strng{nameafullhashraw}{b55bde92ff370c4db3c1689568bd9c26}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{第2版}
+      \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
+      \field{title}{线性代数}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \keyw{清华线性代数}
+    \endentry
+    \entry{考研数学分析}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1fed6de3753b8cf668a4eb4c485a70cb}{%
+           family={张宇},
+           familyi={张\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=1fed6de3753b8cf668a4eb4c485a70cb}{%
+           family={张宇},
+           familyi={张\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \strng{namehash}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{fullhash}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{fullhashraw}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{bibnamehash}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{authorbibnamehash}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{authornamehash}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{authorfullhash}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{authorfullhashraw}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{nameabibnamehash}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{nameanamehash}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{nameafullhash}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \strng{nameafullhashraw}{1fed6de3753b8cf668a4eb4c485a70cb}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{数学教育}
+      \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
+      \field{number}{3}
+      \field{title}{近年考研数学命题特点分析}
+      \field{usera}{J}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{volume}{45}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{12\bibrangedash 18}
+      \range{pages}{7}
+      \keyw{考研数学分析}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
