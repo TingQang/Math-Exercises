@@ -48,19 +48,27 @@
         "**/build/**",
         "**/.git/**"
     ],
-        "cSpell.words": [
-        "kaoyan",  // 新增：忽略考研相关自定义关键词的拼写警告
-        "xelatex", // 可保留其他已有的白名单单词
-        "latexmk",
+    "cSpell.words": [
+        "amsthm",
         "biber",
-        "synctex",
-        "stringstyle",
+        "biblatex",
         "breaklines",
+        "Consolas",
+        "gbpub",
+        "htbp",
+        "kaoyan",
+        "latexmk",
         "lstlisting",
         "lstset",
-        "htbp",
-        "tcolorbox",
         "pdfauthor",
         "pdfsubject",
-    ]
+        "stringstyle",
+        "synctex",
+        "tcolorbox",
+        "xelatex"
+    ],
+    "[latex]": {
+    "editor.wordWrapColumn": 80,
+    "editor.wordWrap": "bounded",
+    "editor.rulers": [80]}
 }

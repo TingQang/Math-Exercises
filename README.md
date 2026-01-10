@@ -1,53 +1,271 @@
-# 考研数学核心笔记 README.md
+# 考研数学一习题集与错题集LaTeX笔记
 
-个人整理的考研数学复习笔记，全面覆盖高等数学、线性代数、概率论与数理统计三大核心模块。基于 LaTeX 构建，通过精细化配置实现专业排版、考点突出、高效编译等功能，适配考研复习全程的知识点梳理与查阅需求。
+[![LaTeX](https://img.shields.io/badge/LaTeX-pdfLaTeX-blue)](https://www.latex-project.org/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-## 📚 项目核心特点
+一个基于LaTeX的考研数学一习题集与错题集管理系统，实现结构化题目收集、难度分级标注和错题专项复盘。
 
-- **结构化梳理**：按学科模块拆分章节，文件组织清晰，覆盖考研数学全考点，便于分阶段复习与快速检索
+## 📋 功能特性
 
-- **专业排版体系**：基于 XeLaTeX 适配中文排版，数学公式规范美观，自定义多类主题环境与快捷命令，视觉层级分明
-
-- **考点精准标记**：预设红/蓝/橙等主题色，通过专用命令标记考点、重点、难点，聚焦复习核心
-
-- **自动化编译**：配置 VS Code + LaTeX Workshop 一键编译，自动管理输出目录与临时文件，提升写作效率
-
-- **高度可定制**：支持自定义颜色方案、页面样式、定理环境，适配个性化笔记需求
-
-## 🛠️ 编译环境配置
-
-### 必需软件
-
-1. TeX 发行版：MiKTeX 25.12+（Windows）/ TeX Live 2024+（跨平台）（需包含 XeLaTeX、biber、latexmk）
-
-2. 编辑器：VS Code + LaTeX Workshop 扩展（推荐，已预设自动化配置）
-
-### 环境验证
-
-安装完成后，打开 VS Code 终端（Ctrl+`），输入以下命令验证环境可用性：
-
-```bash
-
-xelatex --version  # 验证 XeLaTeX 引擎
-latexmk --version  # 验证自动化编译工具
-biber --version    # 验证参考文献处理工具
-```
+- ✅ **三级结构化组织**: 章节-关键点-题型-习题的清晰层次
+- ✅ **难度可视化**: 1-5星彩色星星标注（绿色到紫色渐变）
+- ✅ **来源追溯**: 支持考研年份、视频BV号等来源标注
+- ✅ **错题复盘**: 专项错题集，分析错误原因和复盘状态
+- ✅ **LaTeX美观排版**: 专业格式，支持打印和电子阅读
+- ✅ **模板化设计**: 快速复用，易于扩展
 
 ## 🚀 快速开始
 
-### 方法一：VS Code 一键编译（推荐）
+### 环境要求
 
-1. 打开项目根目录，定位到核心编译入口 `main.tex`
+- **LaTeX发行版**: MiKTeX 或 TeX Live (推荐完整安装)
+- **编译器**: pdfLaTeX
+- **中文支持**: ctex宏包
 
-2. 保存文件（Ctrl+S），自动触发编译（预设 `onSave`自动编译）
+### 编译步骤
 
-3. 编译完成后，通过快捷键 `Ctrl+Alt+V` 打开内置 PDF 预览
-
-4. 双向同步：双击 PDF 内容可跳转至对应 LaTeX 源码，源码定位后可通过右键菜单跳转至 PDF
-
-### 方法二：命令行编译（备用）
+#### 方法一：使用构建脚本（推荐）
 
 ```bash
+# 完整编译（清理+编译+参考文献+最终编译）
+./scripts/build.sh
+
+# 或仅编译PDF
+./scripts/build.sh pdf
+
+# 或仅处理参考文献
+./scripts/build.sh biber
+
+#### 方法三：使用Make（如果安装了make）
+
+```bash
+# 完整编译
+make all
+
+# 或仅编译PDF
+make pdf
+
+# 或清理文件
+make clean
+
+# 或验证结果
+make validate
+```
+```
+
+#### 方法二：手动编译
+
+```bash
+# 克隆项目
+git clone https://github.com/your-username/Math-Exercises.git
+cd Math-Exercises
+
+# 编译PDF
+pdflatex main.tex
+
+# 如有参考文献，运行biber
+biber main
+
+# 再次编译以生成完整交叉引用
+pdflatex main.tex
+pdflatex main.tex
+```
+
+### 查看结果
+
+编译完成后，生成`main.pdf`文件。
+
+## 📁 项目结构
+
+```
+Math-Exercises/
+├── main.tex              # 主文档入口
+├── preamble.tex          # 宏包配置与自定义命令
+├── references.bib        # 参考文献数据库
+├── .gitignore           # Git忽略文件
+├── README.md            # 项目说明
+├── 设计文档.md          # 详细设计文档
+├── 考研数学一习题集与错题集LaTeX笔记需求分析.md
+├── chapters/            # 章节文件目录
+│   ├── 00_preface.tex   # 前言
+│   ├── ch01.tex         # 第1章：极限与连续
+│   ├── ch02.tex         # 第2章：一元函数微分学
+│   └── ...
+├── figures/             # 图片资源目录
+├── build/               # 编译缓存和中间文件
+│   ├── main.pdf         # 最终PDF输出
+│   ├── *.aux            # LaTeX辅助文件
+│   └── *.log            # 编译日志
+└── scripts/             # 构建脚本目录
+```
+
+## 📖 使用指南
+
+### 添加新习题
+
+在章节文件中使用以下格式添加习题：
+
+```latex
+\subsection{基础题型：直接计算}
+
+\begin{enumerate}
+    \item \difficulty{1} 计算 $\limx \frac{x^2 - 1}{x - 1}$ [\exercisesource{考研数学一·2018}]
+    \item \difficulty{2} 计算 $\limx \frac{e^x - 1}{x}$ [\exercisesource{考研数学一·2020}]
+\end{enumerate}
+```
+
+### 难度标注
+
+- `\difficulty{1}`: 1个绿色星星（基础题）
+- `\difficulty{2}`: 2个绿色星星（简单题）
+- `\difficulty{3}`: 3个黄色星星（中等题）
+- `\difficulty{4}`: 4个橙色星星（较难题）
+- `\difficulty{5}`: 5个紫色星星（难题）
+
+### 习题来源
+
+使用 `\exercisesource{来源信息}` 标注题目来源：
+
+```latex
+[\exercisesource{考研数学一·2018}]
+[\exercisesource{BV1xx411x7x8}]
+[\exercisesource{李林880·P45}]
+```
+
+在相应章节文件中添加：
+
+```latex
+\begin{enumerate}[label={【\arabic*】}]
+    \item 题目内容 \difficulty{难度级} \exercisesource{来源}
+    \matchexampoint{核心考点}
+    \exercisetip{解题提示}
+\end{enumerate}
+```
+
+### 难度标注
+
+- `\difficulty{1}`: ★ 【难度1】(绿色)
+- `\difficulty{2}`: ★★ 【难度2】(蓝色)
+- `\difficulty{3}`: ★★★ 【难度3】(橙色)
+- `\difficulty{4}`: ★★★★ 【难度4】(红色)
+- `\difficulty{5}`: ★★★★★ 【难度5】(紫色)
+
+### 错题记录
+
+```latex
+\begin{error-analysis}
+\textbf{错因：} 错误原因分析
+
+\textbf{错误解法：}
+原错误解题过程
+
+\textbf{正确解法：}
+正确解题过程
+
+\textbf{复盘状态：} 未复盘/已复盘N次/已掌握
+\end{error-analysis}
+```
+
+## 📂 项目结构
+
+```
+Math-Exercises/
+├── main.tex                    # 主文档
+├── preamble.tex                # 宏包配置
+├── references.bib              # 参考文献
+├── README.md                   # 项目说明
+├── 设计文档.md                 # 详细设计
+├── 需求分析.md                 # 需求分析
+├── chapters/                   # 章节文件
+│   ├── 00_preface.tex          # 前言
+│   ├── ch01.tex                # 第1章：极限与连续
+│   ├── ch02.tex                # 第2章：一元函数微分学
+│   └── ...                     # 其他章节
+├── figures/                    # 图片资源
+└── build/                      # 编译输出
+```
+
+## 🎯 章节覆盖
+
+### 高等数学部分
+- 第1章: 函数、极限与连续性
+- 第2章: 一元函数微分学
+- 第3章: 一元函数积分学
+- 第4章: 多元函数微分学
+- 第5章: 重积分
+- 第6章: 级数
+- 第7章: 常微分方程
+
+### 线性代数部分
+- 第8章: 行列式、矩阵、线性方程组
+
+### 概率论与数理统计部分
+- 第9章: 概率论基础
+- 第10章: 数理统计
+
+## 🛠️ 自定义扩展
+
+### 新增章节
+1. 在`chapters/`创建新tex文件
+2. 在`main.tex`添加`\include`语句
+3. 遵循统一格式
+
+### 新增题型
+使用`question-type`环境包装：
+
+```latex
+\begin{question-type}{题型名称}
+题型说明
+
+\begin{exercise}
+习题内容
+\end{exercise}
+\end{question-type}
+```
+
+### 自定义命令
+在`preamble.tex`添加新命令。
+
+## 📊 统计信息
+
+- **总章节**: 10章
+- **题型覆盖**: 30+种
+- **难度级别**: 1-5星
+- **LaTeX环境**: 15+个专用环境
+
+## 🤝 贡献指南
+
+1. Fork 本项目
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 创建 Pull Request
+
+## 📝 更新日志
+
+### v1.0.0 (2025-01-11)
+- ✅ 完成基础框架搭建
+- ✅ 实现难度标注系统
+- ✅ 创建10章模板结构
+- ✅ 验证第1章编译通过
+
+## 📄 许可证
+
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+
+## 🙏 致谢
+
+- LaTeX社区提供的技术支持
+- 考研数学复习资料的整理与完善
+
+## 📞 联系方式
+
+- 项目维护者: TingQang
+- 项目链接: [GitHub](https://github.com/TingQang/Math-Exercises)
+
+---
+
+**考研加油！数学不过是一堆符号的游戏。** 🎓
 
 # 一键编译（输出至 build 目录）
 latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape -outdir=./build main.tex

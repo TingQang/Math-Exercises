@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.1.9)  9 JAN 2026 04:56
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.1.9)  11 JAN 2026 01:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Projects/Math-Notes/main.tex
-(d:/Projects/Math-Notes/main.tex
+**d:/Projects/Error-Collection-Notes/Math-Exercises/main.tex
+(d:/Projects/Error-Collection-Notes/Math-Exercises/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (D:\Program Files\MikeTeX\tex/latex/base\book.cls
@@ -524,7 +524,9 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \extratabsurround=\skip69
 \backup@length=\skip70
 \ar@cellbox=\box68
-)) (D:\Program Files\MikeTeX\tex/latex/graphics\graphicx.sty
+)) (D:\Program Files\MikeTeX\tex/latex/cancel\cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (D:\Program Files\MikeTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (D:\Program Files\MikeTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
@@ -856,59 +858,77 @@ File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (D:\Program Files\MikeTeX\tex/latex/tcolorbox\tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '6.9.0'
-) (D:\Program Files\MikeTeX\tex/latex/enumitem\enumitem.sty
+) (D:\Program Files\MikeTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (D:\Program Files\MikeTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (D:\Program Files\MikeTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarysvg.path.code.tex
+File: tikzlibrarysvg.path.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (D:\Program Files\MikeTeX\tex/generic/pgf/libraries\pgflibrarysvg.path.code.tex
+File: pgflibrarysvg.path.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (D:\Program Files\MikeTeX\tex/generic/pgf/modules\pgfmoduleparser.code.tex
+File: pgfmoduleparser.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfparserdef@arg@count=\count386
+)
+\pgf@lib@svg@last@x=\dimen333
+\pgf@lib@svg@last@y=\dimen334
+\pgf@lib@svg@last@c@x=\dimen335
+\pgf@lib@svg@last@c@y=\dimen336
+\pgf@lib@svg@count=\count387
+\pgf@lib@svg@max@num=\count388
+)) (D:\Program Files\MikeTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip71
-\enit@outerparindent=\dimen333
+\enit@outerparindent=\dimen337
 \enit@toks=\toks46
 \enit@inbox=\box95
-\enit@count@id=\count386
-\enitdp@description=\count387
+\enit@count@id=\count389
+\enitdp@description=\count390
 ) (D:\Program Files\MikeTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen334
-\lightrulewidth=\dimen335
-\cmidrulewidth=\dimen336
-\belowrulesep=\dimen337
-\belowbottomsep=\dimen338
-\aboverulesep=\dimen339
-\abovetopsep=\dimen340
-\cmidrulesep=\dimen341
-\cmidrulekern=\dimen342
-\defaultaddspace=\dimen343
-\@cmidla=\count388
-\@cmidlb=\count389
-\@aboverulesep=\dimen344
-\@belowrulesep=\dimen345
-\@thisruleclass=\count390
-\@lastruleclass=\count391
-\@thisrulewidth=\dimen346
+\heavyrulewidth=\dimen338
+\lightrulewidth=\dimen339
+\cmidrulewidth=\dimen340
+\belowrulesep=\dimen341
+\belowbottomsep=\dimen342
+\aboverulesep=\dimen343
+\abovetopsep=\dimen344
+\cmidrulesep=\dimen345
+\cmidrulekern=\dimen346
+\defaultaddspace=\dimen347
+\@cmidla=\count391
+\@cmidlb=\count392
+\@aboverulesep=\dimen348
+\@belowrulesep=\dimen349
+\@thisruleclass=\count393
+\@lastruleclass=\count394
+\@thisrulewidth=\dimen350
 ) (D:\Program Files\MikeTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip72
-\multirow@cntb=\count392
+\multirow@cntb=\count395
 \multirow@dima=\skip73
-\bigstrutjot=\dimen347
+\bigstrutjot=\dimen351
 ) (D:\Program Files\MikeTeX\tex/latex/tools\multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count393
+\c@tracingmulticols=\count396
 \mult@box=\box96
-\multicol@leftmargin=\dimen348
-\c@unbalance=\count394
-\c@collectmore=\count395
-\doublecol@number=\count396
-\multicoltolerance=\count397
-\multicolpretolerance=\count398
-\full@width=\dimen349
-\page@free=\dimen350
-\premulticols=\dimen351
-\postmulticols=\dimen352
+\multicol@leftmargin=\dimen352
+\c@unbalance=\count397
+\c@collectmore=\count398
+\doublecol@number=\count399
+\multicoltolerance=\count400
+\multicolpretolerance=\count401
+\full@width=\dimen353
+\page@free=\dimen354
+\premulticols=\dimen355
+\postmulticols=\dimen356
 \multicolsep=\skip74
 \multicolbaselineskip=\skip75
 \partial@page=\box97
 \last@line=\box98
 \mc@boxedresult=\box99
-\maxbalancingoverflow=\dimen353
+\maxbalancingoverflow=\dimen357
 \mult@rightbox=\box100
 \mult@grightbox=\box101
 \mult@firstbox=\box102
@@ -949,20 +969,20 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \@tempa=\box137
 \@tempa=\box138
 \@tempa=\box139
-\c@minrows=\count399
-\c@columnbadness=\count400
-\c@finalcolumnbadness=\count401
-\last@try=\dimen354
-\multicolovershoot=\dimen355
-\multicolundershoot=\dimen356
+\c@minrows=\count402
+\c@columnbadness=\count403
+\c@finalcolumnbadness=\count404
+\last@try=\dimen358
+\multicolovershoot=\dimen359
+\multicolundershoot=\dimen360
 \mult@nat@firstbox=\box140
 \colbreak@box=\box141
-\mc@col@check@num=\count402
-\g__mc_curr_col_int=\count403
+\mc@col@check@num=\count405
+\g__mc_curr_col_int=\count406
 ) (D:\Program Files\MikeTeX\tex/latex/makecell\makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen357
-\c@nlinenum=\count404
+\rotheadsize=\dimen361
+\c@nlinenum=\count407
 \TeXr@lab=\toks47
 ) (D:\Program Files\MikeTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
@@ -970,17 +990,17 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTright=\skip77
 \LTpre=\skip78
 \LTpost=\skip79
-\LTchunksize=\count405
-\LTcapwidth=\dimen358
+\LTchunksize=\count408
+\LTcapwidth=\dimen362
 \LT@head=\box142
 \LT@firsthead=\box143
 \LT@foot=\box144
 \LT@lastfoot=\box145
 \LT@gbox=\box146
-\LT@cols=\count406
-\LT@rows=\count407
-\c@LT@tables=\count408
-\c@LT@chunks=\count409
+\LT@cols=\count409
+\LT@rows=\count410
+\c@LT@tables=\count411
+\c@LT@chunks=\count412
 \LT@p@ftn=\toks48
 ) (D:\Program Files\MikeTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
@@ -1004,20 +1024,20 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box147
 \beforetitleunit=\skip94
 \aftertitleunit=\skip95
-\ttl@plus=\dimen359
-\ttl@minus=\dimen360
+\ttl@plus=\dimen363
+\ttl@minus=\dimen364
 \ttl@toksa=\toks50
-\titlewidth=\dimen361
-\titlewidthlast=\dimen362
-\titlewidthfirst=\dimen363
+\titlewidth=\dimen365
+\titlewidthlast=\dimen366
+\titlewidthfirst=\dimen367
 ) (D:\Program Files\MikeTeX\tex/latex/titlesec\titletoc.sty
 Package: titletoc 2025/01/04 v2.17 TOC entries
-\ttl@leftsep=\dimen364
+\ttl@leftsep=\dimen368
 ) (D:\Program Files\MikeTeX\tex/latex/appendix\appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count410
-\c@@ppsavesec=\count411
-\c@@ppsaveapp=\count412
+\c@@pps=\count413
+\c@@ppsavesec=\count414
+\c@@ppsaveapp=\count415
 ) (D:\Program Files\MikeTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
  (D:\Program Files\MikeTeX\tex/latex/kvsetkeys\kvsetkeys.sty
@@ -1037,19 +1057,19 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (D:\Program Files\MikeTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count413
+\c@section@level=\count416
 ) (D:\Program Files\MikeTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen365
-\Hy@linkcounter=\count414
-\Hy@pagecounter=\count415
+\@linkdim=\dimen369
+\Hy@linkcounter=\count417
+\Hy@pagecounter=\count418
  (D:\Program Files\MikeTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 ) (D:\Program Files\MikeTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count416
+\Hy@SavedSpaceFactor=\count419
  (D:\Program Files\MikeTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 )
@@ -1061,21 +1081,21 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count417
+\c@Hy@tempcnt=\count420
  (D:\Program Files\MikeTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen366
+\XeTeXLinkMargin=\dimen370
  (D:\Program Files\MikeTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (D:\Program Files\MikeTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count418
-\Field@Width=\dimen367
-\Fld@charsize=\dimen368
+\Fld@menulength=\count421
+\Field@Width=\dimen371
+\Fld@charsize=\dimen372
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -1083,18 +1103,18 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count419
-\c@Item=\count420
-\c@Hfootnote=\count421
+\Hy@abspage=\count422
+\c@Item=\count423
+\c@Hfootnote=\count424
 )
 Package hyperref Info: Driver (autodetected): hxetex.
  (D:\Program Files\MikeTeX\tex/latex/hyperref\hxetex.def
 File: hxetex.def 2025-07-12 v7.01o Hyperref driver for XeTeX
 \pdfm@box=\box148
-\c@Hy@AnnotLevel=\count422
-\HyField@AnnotCount=\count423
-\Fld@listcount=\count424
-\c@bookmark@seq@number=\count425
+\c@Hy@AnnotLevel=\count425
+\HyField@AnnotCount=\count426
+\Fld@listcount=\count427
+\c@bookmark@seq@number=\count428
  (D:\Program Files\MikeTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (D:\Program Files\MikeTeX\tex/generic/uniquecounter\uniquecounter.sty
@@ -1124,55 +1144,55 @@ Package cleveref Info: `listings' support loaded on input line 3131.
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
  (D:\Program Files\MikeTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count426
+\lrq@indent=\count429
  (D:\Program Files\MikeTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (D:\Program Files\MikeTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count427
-\c@listtotal=\count428
-\c@listcount=\count429
-\c@liststart=\count430
-\c@liststop=\count431
-\c@citecount=\count432
-\c@citetotal=\count433
-\c@multicitecount=\count434
-\c@multicitetotal=\count435
-\c@instcount=\count436
-\c@maxnames=\count437
-\c@minnames=\count438
-\c@maxitems=\count439
-\c@minitems=\count440
-\c@citecounter=\count441
-\c@maxcitecounter=\count442
-\c@savedcitecounter=\count443
-\c@uniquelist=\count444
-\c@uniquename=\count445
-\c@refsection=\count446
-\c@refsegment=\count447
-\c@maxextratitle=\count448
-\c@maxextratitleyear=\count449
-\c@maxextraname=\count450
-\c@maxextradate=\count451
-\c@maxextraalpha=\count452
-\c@abbrvpenalty=\count453
-\c@highnamepenalty=\count454
-\c@lownamepenalty=\count455
-\c@maxparens=\count456
-\c@parenlevel=\count457
-\blx@tempcnta=\count458
-\blx@tempcntb=\count459
-\blx@tempcntc=\count460
-\c@blx@maxsection=\count461
-\blx@maxsegment@0=\count462
-\blx@notetype=\count463
-\blx@parenlevel@text=\count464
-\blx@parenlevel@foot=\count465
-\blx@sectionciteorder@0=\count466
-\blx@sectionciteorderinternal@0=\count467
-\blx@entrysetcounter=\count468
-\blx@biblioinstance=\count469
+\c@tabx@nest=\count430
+\c@listtotal=\count431
+\c@listcount=\count432
+\c@liststart=\count433
+\c@liststop=\count434
+\c@citecount=\count435
+\c@citetotal=\count436
+\c@multicitecount=\count437
+\c@multicitetotal=\count438
+\c@instcount=\count439
+\c@maxnames=\count440
+\c@minnames=\count441
+\c@maxitems=\count442
+\c@minitems=\count443
+\c@citecounter=\count444
+\c@maxcitecounter=\count445
+\c@savedcitecounter=\count446
+\c@uniquelist=\count447
+\c@uniquename=\count448
+\c@refsection=\count449
+\c@refsegment=\count450
+\c@maxextratitle=\count451
+\c@maxextratitleyear=\count452
+\c@maxextraname=\count453
+\c@maxextradate=\count454
+\c@maxextraalpha=\count455
+\c@abbrvpenalty=\count456
+\c@highnamepenalty=\count457
+\c@lownamepenalty=\count458
+\c@maxparens=\count459
+\c@parenlevel=\count460
+\blx@tempcnta=\count461
+\blx@tempcntb=\count462
+\blx@tempcntc=\count463
+\c@blx@maxsection=\count464
+\blx@maxsegment@0=\count465
+\blx@notetype=\count466
+\blx@parenlevel@text=\count467
+\blx@parenlevel@foot=\count468
+\blx@sectionciteorder@0=\count469
+\blx@sectionciteorderinternal@0=\count470
+\blx@entrysetcounter=\count471
+\blx@biblioinstance=\count472
 \labelnumberwidth=\skip97
 \labelalphawidth=\skip98
 \biblabelsep=\skip99
@@ -1184,9 +1204,9 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language79
-\c@mincomprange=\count470
-\c@maxcomprange=\count471
-\c@mincompwidth=\count472
+\c@mincomprange=\count473
+\c@maxcomprange=\count474
+\c@mincompwidth=\count475
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (D:\Program Files\MikeTeX\tex/latex/biblatex\blx-dm.def
@@ -1196,74 +1216,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'gb7714-2015.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count473
-\c@savedafterword=\count474
-\c@annotator=\count475
-\c@savedannotator=\count476
-\c@author=\count477
-\c@savedauthor=\count478
-\c@bookauthor=\count479
-\c@savedbookauthor=\count480
-\c@commentator=\count481
-\c@savedcommentator=\count482
-\c@editor=\count483
-\c@savededitor=\count484
-\c@editora=\count485
-\c@savededitora=\count486
-\c@editorb=\count487
-\c@savededitorb=\count488
-\c@editorc=\count489
-\c@savededitorc=\count490
-\c@foreword=\count491
-\c@savedforeword=\count492
-\c@holder=\count493
-\c@savedholder=\count494
-\c@introduction=\count495
-\c@savedintroduction=\count496
-\c@namea=\count497
-\c@savednamea=\count498
-\c@nameb=\count499
-\c@savednameb=\count500
-\c@namec=\count501
-\c@savednamec=\count502
-\c@translator=\count503
-\c@savedtranslator=\count504
-\c@shortauthor=\count505
-\c@savedshortauthor=\count506
-\c@shorteditor=\count507
-\c@savedshorteditor=\count508
-\c@labelname=\count509
-\c@savedlabelname=\count510
-\c@institution=\count511
-\c@savedinstitution=\count512
-\c@lista=\count513
-\c@savedlista=\count514
-\c@listb=\count515
-\c@savedlistb=\count516
-\c@listc=\count517
-\c@savedlistc=\count518
-\c@listd=\count519
-\c@savedlistd=\count520
-\c@liste=\count521
-\c@savedliste=\count522
-\c@listf=\count523
-\c@savedlistf=\count524
-\c@location=\count525
-\c@savedlocation=\count526
-\c@organization=\count527
-\c@savedorganization=\count528
-\c@origlocation=\count529
-\c@savedoriglocation=\count530
-\c@origpublisher=\count531
-\c@savedorigpublisher=\count532
-\c@publisher=\count533
-\c@savedpublisher=\count534
-\c@language=\count535
-\c@savedlanguage=\count536
-\c@origlanguage=\count537
-\c@savedoriglanguage=\count538
-\c@pageref=\count539
-\c@savedpageref=\count540
+\c@afterword=\count476
+\c@savedafterword=\count477
+\c@annotator=\count478
+\c@savedannotator=\count479
+\c@author=\count480
+\c@savedauthor=\count481
+\c@bookauthor=\count482
+\c@savedbookauthor=\count483
+\c@commentator=\count484
+\c@savedcommentator=\count485
+\c@editor=\count486
+\c@savededitor=\count487
+\c@editora=\count488
+\c@savededitora=\count489
+\c@editorb=\count490
+\c@savededitorb=\count491
+\c@editorc=\count492
+\c@savededitorc=\count493
+\c@foreword=\count494
+\c@savedforeword=\count495
+\c@holder=\count496
+\c@savedholder=\count497
+\c@introduction=\count498
+\c@savedintroduction=\count499
+\c@namea=\count500
+\c@savednamea=\count501
+\c@nameb=\count502
+\c@savednameb=\count503
+\c@namec=\count504
+\c@savednamec=\count505
+\c@translator=\count506
+\c@savedtranslator=\count507
+\c@shortauthor=\count508
+\c@savedshortauthor=\count509
+\c@shorteditor=\count510
+\c@savedshorteditor=\count511
+\c@labelname=\count512
+\c@savedlabelname=\count513
+\c@institution=\count514
+\c@savedinstitution=\count515
+\c@lista=\count516
+\c@savedlista=\count517
+\c@listb=\count518
+\c@savedlistb=\count519
+\c@listc=\count520
+\c@savedlistc=\count521
+\c@listd=\count522
+\c@savedlistd=\count523
+\c@liste=\count524
+\c@savedliste=\count525
+\c@listf=\count526
+\c@savedlistf=\count527
+\c@location=\count528
+\c@savedlocation=\count529
+\c@organization=\count530
+\c@savedorganization=\count531
+\c@origlocation=\count532
+\c@savedoriglocation=\count533
+\c@origpublisher=\count534
+\c@savedorigpublisher=\count535
+\c@publisher=\count536
+\c@savedpublisher=\count537
+\c@language=\count538
+\c@savedlanguage=\count539
+\c@origlanguage=\count540
+\c@savedoriglanguage=\count541
+\c@pageref=\count542
+\c@savedpageref=\count543
 \shorthandwidth=\skip105
 \shortjournalwidth=\skip106
 \shortserieswidth=\skip107
@@ -1290,19 +1310,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (D:\Program Files\MikeTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count541
-\c@textcitetotal=\count542
-\c@textcitemaxnames=\count543
-\c@biburlbigbreakpenalty=\count544
-\c@biburlbreakpenalty=\count545
-\c@biburlnumpenalty=\count546
-\c@biburlucpenalty=\count547
-\c@biburllcpenalty=\count548
+\c@textcitecount=\count544
+\c@textcitetotal=\count545
+\c@textcitemaxnames=\count546
+\c@biburlbigbreakpenalty=\count547
+\c@biburlbreakpenalty=\count548
+\c@biburlnumpenalty=\count549
+\c@biburlucpenalty=\count550
+\c@biburllcpenalty=\count551
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count549
+\c@smartand=\count552
 )
 Package biblatex Info: Trying to load bibliography style 'gb7714-2015'...
 Package biblatex Info: ... file 'gb7714-2015.bbx' found.
@@ -1320,22 +1340,22 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (D:\Program Files\MikeTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count550
-\c@bbx:relatedtotal=\count551
+\c@bbx:relatedcount=\count553
+\c@bbx:relatedtotal=\count554
 ))) (D:\Program Files\MikeTeX\tex/latex/xstring\xstring.sty (D:\Program Files\MikeTeX\tex/generic/xstring\xstring.tex
-\xs_counta=\count552
-\xs_countb=\count553
+\xs_counta=\count555
+\xs_countb=\count556
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
 \BracketLift=\skip119
 \footbibmargin=\skip120
 \footbiblabelsep=\skip121
-\c@gbnamefmtcase=\count554
-\c@gbalignlabel=\count555
-\c@gbcitelocalcase=\count556
-\c@gbbiblocalcase=\count557
-\c@lanordernum=\count558
+\c@gbnamefmtcase=\count557
+\c@gbalignlabel=\count558
+\c@gbcitelocalcase=\count559
+\c@gbbiblocalcase=\count560
+\c@lanordernum=\count561
 \bibitemindent=\skip122
 \biblabelextend=\skip123
 \bibextramargin=\skip124
@@ -1349,10 +1369,10 @@ Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
  (D:\Program Files\MikeTeX\tex/latex/biblatex/cbx\numeric-comp.cbx
 File: numeric-comp.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count559
-\c@cbx@tempcntb=\count560
-\c@cbx@tempcntc=\count561
-\c@cbx@tempcntd=\count562
+\c@cbx@tempcnta=\count562
+\c@cbx@tempcntb=\count563
+\c@cbx@tempcntc=\count564
+\c@cbx@tempcntd=\count565
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1365,7 +1385,7 @@ Package biblatex Info: Redefining '\cites'.
 Package biblatex Info: Redefining '\parencites'.
 Package biblatex Info: Redefining '\smartcites'.
 )
-\c@gbrefcompress=\count563
+\c@gbrefcompress=\count566
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\cbx@textcite'.
@@ -1385,18 +1405,19 @@ Package biblatex Info: ... and expl3
  (D:\Program Files\MikeTeX\tex/latex/biblatex\blx-case-expl3.sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
-\c@tcb@cnt@definition=\count564
-\c@tcb@cnt@theorem=\count565
-\c@tcb@cnt@lemma=\count566
-\c@tcb@cnt@corollary=\count567
-\c@tcb@cnt@remark=\count568
-Package hyperref Info: Option `colorlinks' set `true' on input line 255.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 255.
+\c@tcb@cnt@definition=\count567
+\c@tcb@cnt@theorem=\count568
+\c@tcb@cnt@lemma=\count569
+\c@tcb@cnt@corollary=\count570
+\c@tcb@cnt@remark=\count571
+\c@tcb@cnt@exam-point=\count572
+Package hyperref Info: Option `colorlinks' set `true' on input line 341.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 341.
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 12.
-\@quotelevel=\count569
-\@quotereset=\count570
- (d:\Projects\Math-Notes\build\main.aux (d:\Projects\Math-Notes\build\chapters/00_preface.aux) (d:\Projects\Math-Notes\build\chapters/ch00.aux) (d:\Projects\Math-Notes\build\chapters/ch01.aux) (d:\Projects\Math-Notes\build\chapters/ch02.aux) (d:\Projects\Math-Notes\build\chapters/ch03.aux) (d:\Projects\Math-Notes\build\chapters/ch04.aux) (d:\Projects\Math-Notes\build\chapters/ch05.aux) (d:\Projects\Math-Notes\build\chapters/ch06.aux) (d:\Projects\Math-Notes\build\chapters/ch07.aux) (d:\Projects\Math-Notes\build\chapters/ch08.aux) (d:\Projects\Math-Notes\build\chapters/ch09.aux) (d:\Projects\Math-Notes\build\chapters/ch10.aux) (d:\Projects\Math-Notes\build\chapters/ch99.aux))
+\@quotelevel=\count573
+\@quotereset=\count574
+ (d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.aux (d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters/00_preface.aux) (d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters/ch01.aux) (d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters/ch99.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -1419,6 +1440,11 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
 (Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 12.
@@ -1480,19 +1506,19 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* h-part:(L,W,R)=(85.35826pt, 441.01773pt, 71.13188pt)
 * v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
+* \textwidth=441.01773pt
 * \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-34.2056pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-44.59085pt
 * \headheight=15.0pt
-* \headsep=18.06749pt
+* \headsep=28.45274pt
 * \topskip=10.0pt
-* \footskip=34.14322pt
+* \footskip=28.45274pt
 * \marginparwidth=0.0pt
 * \marginparsep=0.0pt
 * \columnsep=10.0pt
@@ -1510,9 +1536,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 12.
-\c@lstlisting=\count571
+\c@lstlisting=\count575
 Package hyperref Info: Link coloring ON on input line 12.
- (d:\Projects\Math-Notes\build\main.out) (d:\Projects\Math-Notes\build\main.out)
+ (d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out) (d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1529,7 +1555,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (d:\Projects\Math-Notes\build\main.bbl)
+ (d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.bbl)
 Package biblatex Info: Reference section=0 on input line 12.
 Package biblatex Info: Reference segment=0 on input line 12.
  [1
@@ -1540,7 +1566,7 @@ Package biblatex Info: Reference segment=0 on input line 12.
 
 
 No file chapters/00_preface.tex.
-(d:\Projects\Math-Notes\build\main.toc
+(d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (D:\Program Files\MikeTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1558,132 +1584,52 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-] (d:\Projects\Math-Notes\build\main.lof)
+] (d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
  [2
 
-] (d:\Projects\Math-Notes\build\main.lot)
+] (d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
  [3
 
 ]
-\openout2 = `chapters/ch00.aux'.
-
- (chapters/ch00.tex) [1
-
-
-
-]
 \openout2 = `chapters/ch01.aux'.
 
  (chapters/ch01.tex
 Chapter 1.
-[2
+[1
 
 
 
-
-] [3] [4]) [5]
-\openout2 = `chapters/ch02.aux'.
-
- (chapters/ch02.tex
-Chapter 2.
-[6
-
-
-
-
-]
-File: figures/ch02/three.pdf Graphic file (type pdf)
-<use figures/ch02/three.pdf>
- (D:\Program Files\MikeTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 118.
- [7] [8]
-File: figures/ch02/three.pdf Graphic file (type pdf)
-<use figures/ch02/three.pdf>
-) [9]
-\openout2 = `chapters/ch03.aux'.
-
- (chapters/ch03.tex)
-\openout2 = `chapters/ch04.aux'.
-
- (chapters/ch04.tex)
-\openout2 = `chapters/ch05.aux'.
-
- (chapters/ch05.tex)
-\openout2 = `chapters/ch06.aux'.
-
- (chapters/ch06.tex)
-\openout2 = `chapters/ch07.aux'.
-
- (chapters/ch07.tex)
-\openout2 = `chapters/ch08.aux'.
-
- (chapters/ch08.tex)
-\openout2 = `chapters/ch09.aux'.
-
- (chapters/ch09.tex)
-\openout2 = `chapters/ch10.aux'.
-
- (chapters/ch10.tex)
+] [2]) [3]
 \openout2 = `chapters/ch99.aux'.
 
- (chapters/ch99.tex) [10
+ (chapters/ch99.tex)
 
+LaTeX Warning: Empty bibliography on input line 65.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-] (d:\Projects\Math-Notes\build\main.aux (d:\Projects\Math-Notes\build\chapters/00_preface.aux) (d:\Projects\Math-Notes\build\chapters/ch00.aux) (d:\Projects\Math-Notes\build\chapters/ch01.aux) (d:\Projects\Math-Notes\build\chapters/ch02.aux) (d:\Projects\Math-Notes\build\chapters/ch03.aux) (d:\Projects\Math-Notes\build\chapters/ch04.aux) (d:\Projects\Math-Notes\build\chapters/ch05.aux) (d:\Projects\Math-Notes\build\chapters/ch06.aux) (d:\Projects\Math-Notes\build\chapters/ch07.aux) (d:\Projects\Math-Notes\build\chapters/ch08.aux) (d:\Projects\Math-Notes\build\chapters/ch09.aux) (d:\Projects\Math-Notes\build\chapters/ch10.aux) (d:\Projects\Math-Notes\build\chapters/ch99.aux))
+(d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.aux (d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters/00_preface.aux) (d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters/ch01.aux) (d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters/ch99.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A74DAE28E5416E8B165D49282018277C;2626.
+(rerunfilecheck)             Checksum: 61113195FA4E854850A893694501A539;1156.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49164 strings out of 402987
- 1094089 string characters out of 5452665
- 2143179 words of memory out of 5000000
- 77135 multiletter control sequences out of 15000+600000
- 639483 words of font info for 123 fonts, out of 8000000 for 9000
+ 49145 strings out of 402987
+ 1093334 string characters out of 5452665
+ 2149259 words of memory out of 5000000
+ 77207 multiletter control sequences out of 15000+600000
+ 634411 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 107i,14n,121p,716b,4883s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,11n,121p,743b,1095s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on d:\Projects\Math-Notes\build\main.xdv (14 pages, 157284 bytes).
+Output written on d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.xdv (7 pages, 186524 bytes).

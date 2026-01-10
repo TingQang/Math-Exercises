@@ -1,1 +1,105 @@
- 
+% 第7章：常微分方程
+\chapter{常微分方程}
+\label{ch:differential-equations}
+
+本章介绍常微分方程的基本概念、解法以及在几何、物理、生物等领域的应用。
+
+% 题型7.1 一阶微分方程
+\begin{question-type}{一阶微分方程}
+本题型主要考查一阶微分方程的求解，包括变量可分离方程、齐次方程、线性方程、伯努利方程等。
+
+\begin{exercise}
+解变量可分离方程：
+\begin{enumerate}[label={【\arabic*】}]
+    \item $\frac{\dy}{\dx} = \frac{y}{x}$ \difficulty{1} \exercisesource{变量分离基础}
+    \item $\frac{\dy}{\dx} = e^{x-y}$ \difficulty{2} \exercisesource{李永乐复习全书P601}
+    \item $\frac{\dy}{\dx} = \frac{y^2}{x^2}$ \difficulty{2} \exercisesource{2024考研数学一真题}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+解齐次方程：
+\begin{enumerate}[label={【\arabic*】}]
+    \item $\frac{\dy}{\dx} = \frac{y - x}{y + x}$ \difficulty{3} \exercisesource{齐次方程}
+    \item $\frac{\dy}{\dx} = \frac{x^2 + y^2}{xy}$ \difficulty{3} \exercisesource{李永乐复习全书P615}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+解一阶线性方程：
+\begin{enumerate}[label={【\arabic*】}]
+    \item $\frac{\dy}{\dx} + y = e^x$ \difficulty{2} \exercisesource{线性方程}
+    \item $\frac{\dy}{\dx} + \frac{y}{x} = x^2$ \difficulty{3} \exercisesource{B站 BV1xx4y1E7xx}
+    \item $\frac{\dy}{\dx} + y \tan x = \sin 2x$ \difficulty{3} \exercisesource{2023考研数学一真题}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+解伯努利方程：
+\begin{enumerate}[label={【\arabic*】}]
+    \item $\frac{\dy}{\dx} + y = y^2 e^x$ \difficulty{4} \exercisesource{伯努利方程}
+    \item $\frac{\dy}{\dx} + \frac{1}{x} y = x y^2$ \difficulty{4} \exercisesource{李永乐复习全书P628}
+\end{enumerate}
+\end{exercise}
+\end{question-type}
+
+% 题型7.2 二阶微分方程
+\begin{question-type}{二阶微分方程}
+本题型主要考查二阶常系数线性微分方程的求解，包括齐次方程和非齐次方程。
+
+\begin{exercise}
+解二阶常系数齐次方程：
+\begin{enumerate}[label={【\arabic*】}]
+    \item $y'' + y = 0$ \difficulty{2} \exercisesource{二阶齐次基础}
+    \item $y'' - 2y' + y = 0$ \difficulty{2} \exercisesource{李永乐复习全书P645}
+    \item $y'' + 2y' + 2y = 0$ \difficulty{3} \exercisesource{2024考研数学一真题}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+解二阶常系数非齐次方程：
+\begin{enumerate}[label={【\arabic*】}]
+    \item $y'' + y = e^x$ \difficulty{3} \exercisesource{非齐次方程}
+    \item $y'' - y = x e^x$ \difficulty{4} \exercisesource{B站 BV1xx4y1E7xx}
+    \item $y'' + y = \sin x$ \difficulty{3} \exercisesource{李永乐复习全书P658}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+解欧拉方程：
+\begin{enumerate}[label={【\arabic*】}]
+    \item $x^2 y'' + x y' - y = 0$ \difficulty{4} \exercisesource{欧拉方程}
+    \item $x^2 y'' - 2x y' + 2y = x^3$ \difficulty{5} \exercisesource{2023考研数学一真题}
+\end{enumerate}
+\end{exercise}
+\end{question-type}
+
+% 题型7.3 微分方程的应用
+\begin{question-type}{微分方程的应用}
+本题型主要考查微分方程在几何、物理、生物等领域的应用。
+
+\begin{exercise}
+几何应用：曲率、渐屈线等：
+\begin{enumerate}[label={【\arabic*】}]
+    \item 求曲线 $y = \ln x$ 的曲率 \difficulty{3} \exercisesource{曲率计算}
+    \item 求抛物线 $y = x^2$ 的渐屈线 \difficulty{4} \exercisesource{李永乐复习全书P675}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+物理应用：牛顿冷却、阻尼振动等：
+\begin{enumerate}[label={【\arabic*】}]
+    \item 物体冷却问题：$\frac{\dT}{\dt} = -k(T - T_0)$ \difficulty{2} \exercisesource{冷却问题}
+    \item 弹簧振动：$y'' + 2y' + 5y = 0$ \difficulty{3} \exercisesource{B站 BV1xx4y1E7xx}
+    \item 电路问题：$L \frac{\di}{\dt} + R i = E$ \difficulty{3} \exercisesource{2024考研数学一真题}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+人口增长模型：
+\begin{enumerate}[label={【\arabic*】}]
+    \item 指数增长：$\frac{\dN}{\dt} = kN$ \difficulty{2} \exercisesource{人口模型}
+    \item 逻辑斯蒂增长：$\frac{\dN}{\dt} = rN(1 - \frac{N}{K})$ \difficulty{4} \exercisesource{李永乐复习全书P688}
+\end{enumerate}
+\end{exercise}
+\end{question-type} 

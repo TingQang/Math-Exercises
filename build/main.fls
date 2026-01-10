@@ -1,7 +1,7 @@
-PWD d:\Projects\Math-Notes
+PWD d:\Projects\Error-Collection-Notes\Math-Exercises
 INPUT C:\Users\PeterZhang\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
-INPUT d:\Projects\Math-Notes\main.tex
-OUTPUT d:\Projects\Math-Notes\build\main.log
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\main.tex
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.log
 INPUT D:\Program Files\MikeTeX\tex\latex\base\book.cls
 INPUT D:\Program Files\MikeTeX\tex\latex\base\book.cls
 INPUT D:\Program Files\MikeTeX\tex\latex\base\bk10.clo
@@ -120,6 +120,8 @@ INPUT D:\Program Files\MikeTeX\tex\generic\ltxcmds\ltxcmds.sty
 INPUT D:\Program Files\MikeTeX\tex\generic\ltxcmds\ltxcmds.sty
 INPUT D:\Program Files\MikeTeX\tex\latex\tools\array.sty
 INPUT D:\Program Files\MikeTeX\tex\latex\tools\array.sty
+INPUT D:\Program Files\MikeTeX\tex\latex\cancel\cancel.sty
+INPUT D:\Program Files\MikeTeX\tex\latex\cancel\cancel.sty
 INPUT D:\Program Files\MikeTeX\tex\latex\graphics\graphicx.sty
 INPUT D:\Program Files\MikeTeX\tex\latex\graphics\graphicx.sty
 INPUT D:\Program Files\MikeTeX\tex\latex\graphics\graphics.sty
@@ -285,6 +287,15 @@ INPUT D:\Program Files\MikeTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 INPUT D:\Program Files\MikeTeX\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
 INPUT D:\Program Files\MikeTeX\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
 INPUT D:\Program Files\MikeTeX\tex\latex\tcolorbox\tcbposter.code.tex
+INPUT D:\Program Files\MikeTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.geometric.code.tex
+INPUT D:\Program Files\MikeTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.geometric.code.tex
+INPUT D:\Program Files\MikeTeX\tex\generic\pgf\libraries\shapes\pgflibraryshapes.geometric.code.tex
+INPUT D:\Program Files\MikeTeX\tex\generic\pgf\libraries\shapes\pgflibraryshapes.geometric.code.tex
+INPUT D:\Program Files\MikeTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarysvg.path.code.tex
+INPUT D:\Program Files\MikeTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarysvg.path.code.tex
+INPUT D:\Program Files\MikeTeX\tex\generic\pgf\libraries\pgflibrarysvg.path.code.tex
+INPUT D:\Program Files\MikeTeX\tex\generic\pgf\libraries\pgflibrarysvg.path.code.tex
+INPUT D:\Program Files\MikeTeX\tex\generic\pgf\modules\pgfmoduleparser.code.tex
 INPUT D:\Program Files\MikeTeX\tex\latex\enumitem\enumitem.sty
 INPUT D:\Program Files\MikeTeX\tex\latex\enumitem\enumitem.sty
 INPUT D:\Program Files\MikeTeX\tex\latex\booktabs\booktabs.sty
@@ -401,71 +412,41 @@ INPUT D:\Program Files\MikeTeX\tex\latex\biblatex\biblatex.cfg
 INPUT D:\Program Files\MikeTeX\tex\latex\biblatex\blx-case-expl3.sty
 INPUT D:\Program Files\MikeTeX\tex\latex\biblatex\blx-case-expl3.sty
 INPUT D:\Program Files\MikeTeX\tex\latex\graphics\color.sty
-INPUT d:\Projects\Math-Notes\build\main.aux
-INPUT d:\Projects\Math-Notes\build\main.aux
-INPUT d:\Projects\Math-Notes\build\main.aux
-INPUT d:\Projects\Math-Notes\build\chapters\00_preface.aux
-INPUT d:\Projects\Math-Notes\build\chapters\00_preface.aux
-INPUT d:\Projects\Math-Notes\build\chapters\00_preface.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch00.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch00.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch00.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch01.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch01.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch01.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch02.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch02.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch02.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch03.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch03.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch03.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch04.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch04.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch04.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch05.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch05.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch05.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch06.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch06.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch06.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch07.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch07.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch07.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch08.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch08.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch08.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch09.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch09.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch09.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch10.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch10.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch10.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch99.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch99.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch99.aux
-OUTPUT d:\Projects\Math-Notes\build\main.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\00_preface.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\00_preface.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\00_preface.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch01.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch01.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch01.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch99.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch99.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch99.aux
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.aux
 INPUT D:\Program Files\MikeTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
 INPUT D:\Program Files\MikeTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
 INPUT D:\Program Files\MikeTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
-INPUT d:\Projects\Math-Notes\build\main.out
-INPUT d:\Projects\Math-Notes\build\main.out
-INPUT d:\Projects\Math-Notes\build\main.out
-INPUT d:\Projects\Math-Notes\build\main.out
-INPUT d:\Projects\Math-Notes\build\main.out
-INPUT d:\Projects\Math-Notes\build\main.out
-OUTPUT d:\Projects\Math-Notes\build\main.out
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out
 INPUT D:\Program Files\MikeTeX\tex\latex\biblatex\lbx\english.lbx
-OUTPUT d:\Projects\Math-Notes\build\main.bcf
-INPUT d:\Projects\Math-Notes\build\main.bbl
-INPUT d:\Projects\Math-Notes\build\main.bbl
-INPUT d:\Projects\Math-Notes\build\main.bbl
-INPUT d:\Projects\Math-Notes\build\main.bbl
-INPUT d:\Projects\Math-Notes\build\main.bbl
-OUTPUT d:\Projects\Math-Notes\build\main.xdv
-OUTPUT d:\Projects\Math-Notes\build\chapters\00_preface.aux
-INPUT d:\Projects\Math-Notes\build\main.toc
-INPUT d:\Projects\Math-Notes\build\main.toc
-INPUT d:\Projects\Math-Notes\build\main.toc
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.bcf
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.bbl
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.bbl
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.bbl
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.bbl
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.bbl
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.xdv
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\00_preface.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.toc
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.toc
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.toc
 INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT D:\Program Files\MikeTeX\tex\latex\amsfonts\umsa.fd
@@ -489,153 +470,38 @@ INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\cmextra\cmmib5.tfm
 INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
 INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
-OUTPUT d:\Projects\Math-Notes\build\main.toc
-INPUT d:\Projects\Math-Notes\build\main.lof
-INPUT d:\Projects\Math-Notes\build\main.lof
-INPUT d:\Projects\Math-Notes\build\main.lof
-OUTPUT d:\Projects\Math-Notes\build\main.lof
-INPUT d:\Projects\Math-Notes\build\main.lot
-INPUT d:\Projects\Math-Notes\build\main.lot
-INPUT d:\Projects\Math-Notes\build\main.lot
-OUTPUT d:\Projects\Math-Notes\build\main.lot
-INPUT .\chapters\ch00.tex
-INPUT .\chapters\ch00.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch00.aux
-INPUT .\chapters\ch00.tex
-INPUT .\chapters\ch00.tex
-INPUT chapters\ch00.tex
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.toc
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.lof
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.lof
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.lof
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.lof
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.lot
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.lot
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.lot
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.lot
 INPUT .\chapters\ch01.tex
 INPUT .\chapters\ch01.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch01.aux
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch01.aux
 INPUT .\chapters\ch01.tex
 INPUT .\chapters\ch01.tex
 INPUT chapters\ch01.tex
-INPUT .\chapters\ch02.tex
-INPUT .\chapters\ch02.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch02.aux
-INPUT .\chapters\ch02.tex
-INPUT .\chapters\ch02.tex
-INPUT chapters\ch02.tex
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmmi8.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmmi6.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmsy8.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmsy6.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmbx8.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmbx6.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmmib10.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\cmextra\cmmib7.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmbsy10.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmr8.tfm
-INPUT D:\Program Files\MikeTeX\fonts\tfm\public\cm\cmr6.tfm
-INPUT .\figures\ch02\three.pdf
-INPUT .\figures\ch02\three.pdf
-INPUT D:\Program Files\MikeTeX\tex\latex\listings\lstlang1.sty
-INPUT D:\Program Files\MikeTeX\tex\latex\listings\lstlang1.sty
-INPUT D:\Program Files\MikeTeX\tex\latex\listings\lstlang1.sty
-INPUT .\figures\ch02\three.pdf
-INPUT .\figures\ch02\three.pdf
-INPUT .\chapters\ch03.tex
-INPUT .\chapters\ch03.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch03.aux
-INPUT .\chapters\ch03.tex
-INPUT .\chapters\ch03.tex
-INPUT chapters\ch03.tex
-INPUT .\chapters\ch04.tex
-INPUT .\chapters\ch04.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch04.aux
-INPUT .\chapters\ch04.tex
-INPUT .\chapters\ch04.tex
-INPUT chapters\ch04.tex
-INPUT .\chapters\ch05.tex
-INPUT .\chapters\ch05.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch05.aux
-INPUT .\chapters\ch05.tex
-INPUT .\chapters\ch05.tex
-INPUT chapters\ch05.tex
-INPUT .\chapters\ch06.tex
-INPUT .\chapters\ch06.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch06.aux
-INPUT .\chapters\ch06.tex
-INPUT .\chapters\ch06.tex
-INPUT chapters\ch06.tex
-INPUT .\chapters\ch07.tex
-INPUT .\chapters\ch07.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch07.aux
-INPUT .\chapters\ch07.tex
-INPUT .\chapters\ch07.tex
-INPUT chapters\ch07.tex
-INPUT .\chapters\ch08.tex
-INPUT .\chapters\ch08.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch08.aux
-INPUT .\chapters\ch08.tex
-INPUT .\chapters\ch08.tex
-INPUT chapters\ch08.tex
-INPUT .\chapters\ch09.tex
-INPUT .\chapters\ch09.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch09.aux
-INPUT .\chapters\ch09.tex
-INPUT .\chapters\ch09.tex
-INPUT chapters\ch09.tex
-INPUT .\chapters\ch10.tex
-INPUT .\chapters\ch10.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch10.aux
-INPUT .\chapters\ch10.tex
-INPUT .\chapters\ch10.tex
-INPUT chapters\ch10.tex
 INPUT .\chapters\ch99.tex
 INPUT .\chapters\ch99.tex
-OUTPUT d:\Projects\Math-Notes\build\chapters\ch99.aux
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch99.aux
 INPUT .\chapters\ch99.tex
 INPUT .\chapters\ch99.tex
 INPUT chapters\ch99.tex
-INPUT d:\Projects\Math-Notes\build\main.aux
-INPUT d:\Projects\Math-Notes\build\chapters\00_preface.aux
-INPUT d:\Projects\Math-Notes\build\chapters\00_preface.aux
-INPUT d:\Projects\Math-Notes\build\chapters\00_preface.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch00.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch00.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch00.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch01.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch01.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch01.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch02.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch02.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch02.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch03.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch03.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch03.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch04.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch04.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch04.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch05.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch05.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch05.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch06.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch06.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch06.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch07.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch07.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch07.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch08.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch08.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch08.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch09.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch09.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch09.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch10.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch10.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch10.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch99.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch99.aux
-INPUT d:\Projects\Math-Notes\build\chapters\ch99.aux
-INPUT d:\Projects\Math-Notes\build\main.out
-INPUT d:\Projects\Math-Notes\build\main.out
-INPUT d:\Projects\Math-Notes\build\main.run.xml
-OUTPUT d:\Projects\Math-Notes\build\main.run.xml
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\00_preface.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\00_preface.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\00_preface.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch01.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch01.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch01.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch99.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch99.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\chapters\ch99.aux
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.out
+INPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.run.xml
+OUTPUT d:\Projects\Error-Collection-Notes\Math-Exercises\build\main.run.xml

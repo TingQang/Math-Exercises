@@ -2954,12 +2954,6 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">同济高数</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">浙大概率论</bcf:citekey>
-    <bcf:citekey order="2" intorder="2">同济高数</bcf:citekey>
-    <bcf:citekey order="2" intorder="3">浙大概率论</bcf:citekey>
-    <bcf:citekey order="2" intorder="4">清华线性代数</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">考研数学分析</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

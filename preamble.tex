@@ -5,21 +5,20 @@
 % ==============================================
 
 % ==================== 第一部分：编码与字体 ====================
-% 注意：\documentclass 已在 main.tex 中定义，此处不要重复
 \usepackage[UTF8]{ctex}                      % 中文支持
 \usepackage{anyfontsize}                     % 任意字体大小
-\usepackage[quiet]{fontspec}                 % 安静模式，减少警告
 
 % ==================== 第二部分：页面布局 ====================
 \usepackage[
     a4paper,
-    left=2.5cm,
+    left=3cm,               % 左侧边距（保留原有3cm设置）
     right=2.5cm,
     top=2.5cm,
     bottom=2.5cm,
     headheight=15pt,
-    footskip=1.2cm,
-    marginparwidth=0cm,      % 移除边注，使页面更干净
+    headsep=1cm,            % 页眉与正文间距
+    footskip=1cm,           % 页脚与正文间距
+    marginparwidth=0cm,     % 移除边注，使页面更干净
     marginparsep=0cm
 ]{geometry}
 
@@ -29,15 +28,16 @@
 \usepackage{bm}                                  % 粗体数学符号
 \usepackage{cases}                               % 多行公式
 \usepackage{siunitx}                             % 单位与数字
-
-% \usepackage{physics}                             % 物理符号（包含很多数学符号）
+\usepackage{cancel}                              % 取消线（原有需求）
 
 % ==================== 第四部分：图形与颜色 ====================
 \usepackage{graphicx}                    % 图片插入
 \usepackage{tcolorbox}                   % 彩色框（含定理环境）
 \tcbuselibrary{most, breakable, skins}   % 加载tcolorbox库
-\usepackage{tikz}                        % 绘图
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{svg.path}
 \usepackage{xcolor}                      % 颜色
+\usepackage{pgffor}                      % 循环
 
 % 定义考研专用颜色
 \definecolor{kaoyan-blue}{RGB}{0, 102, 204}    % 主色调蓝色
@@ -46,6 +46,16 @@
 \definecolor{kaoyan-orange}{RGB}{255, 153, 0}  % 警告/注意橙色
 \definecolor{kaoyan-gray}{RGB}{245, 245, 245}  % 背景灰色
 
+% 习题难度分级颜色
+\definecolor{difficulty-1}{RGB}{0, 153, 0}     % 难度1：绿色
+\definecolor{difficulty-2}{RGB}{0, 102, 204}   % 难度2：蓝色
+\definecolor{difficulty-3}{RGB}{255, 153, 0}   % 难度3：橙色
+\definecolor{difficulty-4}{RGB}{204, 51, 0}    % 难度4：红色
+\definecolor{difficulty-5}{RGB}{102, 0, 153}   % 难度5：紫色
+
+% 星形颜色
+\definecolor{star-full}{RGB}{255,215,0}  % 实心星：金色
+
 % ==================== 第五部分：排版与工具 ====================
 \usepackage{enumitem}                    % 列表控制
 \usepackage{booktabs}                    % 专业表格
@@ -53,6 +63,10 @@
 \usepackage{array}                       % 数组扩展
 \usepackage{makecell}                    % 表格单元格
 \usepackage{longtable}                   % 长表格
+
+% 段落格式配置
+\setlength{\parindent}{2em}      % 首行缩进2字符
+\setlength{\parskip}{0.5em}      % 段落间距0.5em
 
 % ==================== 第六部分：页面样式 ====================
 \usepackage{fancyhdr}                    % 页眉页脚
@@ -66,8 +80,7 @@
 
 % ==================== 第八部分：参考文献 ====================
 \usepackage[backend=biber, style=gb7714-2015, gbpub=false]{biblatex}
-
-% ==================== 第九部分：自定义环境（使用tcolorbox） ====================
+% ==================== 第九部分：自定义环境 ====================
 
 % 1. 定理类环境
 \newtcbtheorem[number within=chapter]{definition}{定义}{%
@@ -120,7 +133,55 @@
     breakable
 }{rem}
 
-% 2. 例题与习题环境
+% 2. 考研习题专用环境
+\newtcbtheorem[number within=chapter]{exam-point}{考点}{%
+    colframe=kaoyan-blue, 
+    colback=kaoyan-gray, 
+    colbacktitle=kaoyan-blue!10, 
+    coltitle=kaoyan-blue, 
+    fonttitle=\bfseries, 
+    boxed title style={size=small},
+    breakable,
+    attach boxed title to top left={xshift=1em, yshift=-0.5em}
+}{ep}
+
+\newtcolorbox{question-type}[1]{
+    colframe=kaoyan-blue!70!black,
+    colback=kaoyan-blue!5,
+    title=题型：#1,
+    fonttitle=\bfseries,
+    breakable,
+    attach boxed title to top left={xshift=1em, yshift=-0.3em}
+}
+
+\newtcolorbox{exercise-item}[2][]{
+    colframe=gray!50!black,
+    colback=white,
+    title=习题 #2,
+    fonttitle=\bfseries,
+    breakable,
+    #1,
+    attach boxed title to top left={xshift=1em, yshift=-0.3em}
+}
+
+\newtcolorbox{error-analysis}{
+    colframe=difficulty-4,
+    colback=difficulty-4!5,
+    title=常见错因,
+    fonttitle=\bfseries,
+    breakable,
+    attach boxed title to top left={xshift=1em, yshift=-0.3em}
+}
+
+\newtcolorbox{exercise-solution}{
+    colframe=kaoyan-green!50!black,
+    colback=kaoyan-green!3,
+    title=解析,
+    fonttitle=\bfseries,
+    breakable,
+    attach boxed title to top left={xshift=1em, yshift=-0.3em}
+}
+
 \newtcolorbox{example}{
     colframe=kaoyan-green!70!black,
     colback=kaoyan-green!5,
@@ -153,7 +214,6 @@
     breakable
 }
 
-% 3. 总结与注意事项
 \newtcolorbox{summary}{
     colframe=kaoyan-orange,
     colback=kaoyan-orange!5,
@@ -182,7 +242,7 @@
 \newcommand{\E}{\mathbb{E}}          % 期望
 
 % 2. 微分与导数
-\newcommand{\ddme}{\mathrm{d}}         % 微分符号（直立体）
+\newcommand{\ddme}{\mathrm{d}}         % 微分符号
 \newcommand{\pd}{\partial}           % 偏导符号
 \newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}  % 偏导数
 \newcommand{\gradme}{\nabla}           % 梯度
@@ -212,11 +272,30 @@
 \newcommand{\dt}{\,\mathrm{d}t}
 \newcommand{\const}{\text{const}}        % 常数
 
-% 7. 考点标记
+% 7. 考点与习题专用命令（整合原有功能）
 \newcommand{\keypoint}[1]{\textbf{\textcolor{kaoyan-red}{【考点】#1}}}
 \newcommand{\important}[1]{\textbf{\textcolor{kaoyan-blue}{【重点】#1}}}
-\newcommand{\difficulty}[1]{\textbf{\textcolor{kaoyan-orange}{【难度】#1}}}
-\newcommand{\formula}[1]{\textcolor{kaoyan-blue}{\[#1\]}}
+
+% 星级难度（整数级别 1-5）- 美化版
+\newcommand{\fullstar}{\tikz{\node[star, star points=5, star point ratio=2.25, fill=star-full, draw=none, scale=0.25] {};} }
+\newcommand{\difficulty}[1]{%
+    \textcolor{difficulty-#1}{%
+        \ifnum#1=1 \fullstar
+        \else\ifnum#1=2 \fullstar\fullstar
+        \else\ifnum#1=3 \fullstar\fullstar\fullstar
+        \else\ifnum#1=4 \fullstar\fullstar\fullstar\fullstar
+        \else\ifnum#1=5 \fullstar\fullstar\fullstar\fullstar\fullstar
+        \fi\fi\fi\fi\fi
+    }%
+}
+\newcommand{\exercisestar}[1]{\difficulty{#1}} % 简写版本
+\newcommand{\formula}[1]{\textcolor{kaoyan-blue}{\[\#1\]}}
+
+% 8. 习题扩展命令
+\newcommand{\exercisesource}[1]{\textbf{\textcolor{gray}{【来源】#1}}} % 习题来源
+\newcommand{\matchexampoint}[1]{\textbf{\textcolor{kaoyan-blue}{【匹配考点】#1}}} % 考点匹配
+\newcommand{\exercisetip}[1]{\textbf{\textcolor{kaoyan-orange}{【提示】#1}}} % 答题提示
+\newcommand{\multiplesolution}[1]{\textbf{\textcolor{kaoyan-orange}{【#1】}}} % 一题多解标注
 
 % ==================== 第十一部分：页面样式设置 ====================
 
@@ -229,10 +308,10 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% 章节格式设置
+% 章节格式设置（整合原有样式）
 \titleformat{\chapter}[display]
-    {\normalfont\huge\bfseries\color{kaoyan-blue}}
-    {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+    {\normalfont\Huge\bfseries\color{kaoyan-blue}}
+    {\chaptertitlename\ \thechapter}{20pt}{\centering}
 \titlespacing*{\chapter}{0pt}{-30pt}{40pt}
 
 % 节格式设置
@@ -241,25 +320,32 @@
     {\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 
-% 超链接设置
+% 小节格式设置（保留原有需求）
+\titleformat{\subsection}
+    {\normalfont\large\bfseries\color{kaoyan-blue!80!black}}
+    {\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{3.2ex plus 1ex minus .2ex}{1.8ex plus .2ex}
+
+% 超链接设置（整合原有配置）
 \hypersetup{
     colorlinks=true,
     linkcolor=kaoyan-blue,
     citecolor=kaoyan-green,
     filecolor=magenta,
-    urlcolor=kaoyan-blue,
+    urlcolor=kaoyan-orange,  % 保留原有橙色链接
+    linktoc=all,             % 保留原有目录链接配置
     bookmarksopen=true,
     pdftitle={考研数学笔记},
     pdfauthor={你的名字},
     pdfsubject={考研数学复习资料}
 }
 
-% 列表格式设置
+% 列表格式设置（整合原有样式）
 \setlist[enumerate]{
     topsep=0pt,
     itemsep=0pt,
     parsep=0pt,
-    label=\arabic*),
+    label=\textcolor{kaoyan-blue}{\arabic*.)},  % 保留原有蓝色编号
     leftmargin=2em
 }
 
@@ -267,6 +353,7 @@
     topsep=0pt,
     itemsep=0pt,
     parsep=0pt,
+    label=\textcolor{kaoyan-blue}{$\bullet$},    % 保留原有蓝色项目符号
     leftmargin=2em
 }
 
