@@ -449,12 +449,12 @@ Math-Exercises/
 ├── README.md             # 项目说明
 ├── 设计文档.md           # 详细设计文档
 ├── chapters/             # 章节文件
-│   ├── 00_preface.tex    # 前言
+│   ├── ch00.tex          # 前言
 │   ├── ch01.tex          # 第1章：极限与连续
 │   ├── ch02.tex          # 第2章：一元函数微分学
 │   ├── ...               # 其他章节
 │   └── ch99.tex          # 附录
-├── figures/              # 图片文件夹
+├── scripts/              # 构建脚本
 └── build/                # 编译输出
 ```
 
