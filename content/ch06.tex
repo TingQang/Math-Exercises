@@ -1,0 +1,90 @@
+% 第6章：级数
+\chapter{级数}
+\label{ch:series}
+
+本章介绍无穷级数的概念、性质、收敛性判别法，以及幂级数和傅里叶级数的理论与应用。
+
+% 题型6.1 数项级数的收敛性
+\begin{question-type}{数项级数的收敛性}
+本题型主要考查数项级数的收敛性判别，包括正项级数判别法、交错级数判别法、一般项级数判别法。
+
+\begin{exercise}
+判断正项级数的收敛性：
+\begin{enumerate}[label={【\arabic*】}]
+    \item \difficulty{1} $\sum_{n=1}^\infty \frac{1}{n^2}$ \exercisesource{级数基础}
+    \item \difficulty{2} $\sum_{n=1}^\infty \frac{n}{n^2 + 1}$ \exercisesource{李永乐复习全书P501}
+    \item \difficulty{3} $\sum_{n=1}^\infty \frac{1}{n \ln n}$ \exercisesource{2024考研数学一真题}
+    \item \difficulty{2} $\sum_{n=1}^\infty \frac{1}{n^p}$（p级数） \exercisesource{B站 BV1xx4y1E7xx}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+判断交错级数的收敛性：
+\begin{enumerate}[label={【\arabic*】}]
+    \item \difficulty{2} $\sum_{n=1}^\infty (-1)^{n-1} \frac{1}{n}$ \exercisesource{交错级数}
+    \item \difficulty{3} $\sum_{n=1}^\infty (-1)^{n-1} \frac{n}{n^2 + 1}$ \exercisesource{李永乐复习全书P515}
+    \item \difficulty{4} $\sum_{n=1}^\infty (-1)^{n-1} \frac{\ln n}{n}$ \exercisesource{2023考研数学一真题}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+使用一般项级数判别法：
+\begin{enumerate}[label={【\arabic*】}]
+    \item \difficulty{3} $\sum_{n=1}^\infty \frac{(-1)^n}{\sqrt{n}}$ \exercisesource{一般项判别}
+    \item \difficulty{4} $\sum_{n=1}^\infty \frac{\sin n}{n^2}$ \exercisesource{B站 BV1xx4y1E7xx}
+\end{enumerate}
+\end{exercise}
+\end{question-type}
+
+% 题型6.2 幂级数
+\begin{question-type}{幂级数}
+本题型主要考查幂级数的收敛域、性质、展开式以及应用。
+
+\begin{exercise}
+求幂级数的收敛域：
+\begin{enumerate}[label={【\arabic*】}]
+    \item \difficulty{1} $\sum_{n=0}^\infty x^n$ \exercisesource{幂级数基础}
+    \item \difficulty{2} $\sum_{n=0}^\infty \frac{x^n}{n!}$ \exercisesource{李永乐复习全书P535}
+    \item \difficulty{3} $\sum_{n=1}^\infty \frac{x^n}{n \cdot 2^n}$ \exercisesource{2024考研数学一真题}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+将函数展开为幂级数：
+\begin{enumerate}[label={【\arabic*】}]
+    \item \difficulty{2} $e^x$ 在 $x = 0$ 处的泰勒展开 \exercisesource{泰勒展开}
+    \item \difficulty{3} $\ln(1 + x)$ 在 $x = 0$ 处的展开 \exercisesource{李永乐复习全书P548}
+    \item \difficulty{2} $\sin x$ 在 $x = 0$ 处的展开 \exercisesource{B站 BV1xx4y1E7xx}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+利用幂级数求极限或定积分：
+\begin{enumerate}[label={【\arabic*】}]
+    \item \difficulty{3} $\lim_{x \to 0} \frac{e^x - 1 - x}{x^2}$ \exercisesource{幂级数求极限}
+    \item \difficulty{4} $\int_0^1 \frac{\sin x}{x} \dx$ \exercisesource{2023考研数学一真题}
+\end{enumerate}
+\end{exercise}
+\end{question-type}
+
+% 题型6.3 傅里叶级数
+\begin{question-type}{傅里叶级数}
+本题型主要考查周期函数的傅里叶级数展开及其收敛性。
+
+\begin{exercise}
+求函数的傅里叶级数：
+\begin{enumerate}[label={【\arabic*】}]
+    \item \difficulty{3} $f(x) = x$ 在 $(-\pi, \pi)$ 上的傅里叶级数 \exercisesource{傅里叶基础}
+    \item \difficulty{4} $f(x) = |x|$ 在 $(-\pi, \pi)$ 上的傅里叶级数 \exercisesource{李永乐复习全书P565}
+    \item \difficulty{4} $f(x) = \begin{cases} 1 & 0 < x < \pi \\ 0 & -\pi < x < 0 \end{cases}$ 的傅里叶级数 \exercisesource{2024考研数学一真题}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+讨论傅里叶级数的收敛性：
+\begin{enumerate}[label={【\arabic*】}]
+    \item \difficulty{3} 周期为 $2\pi$ 的函数在间断点的收敛性 \exercisesource{收敛性讨论}
+    \item \difficulty{4} 傅里叶级数在连续点和间断点的值 \exercisesource{B站 BV1xx4y1E7xx}
+\end{enumerate}
+\end{exercise}
+\end{question-type} 

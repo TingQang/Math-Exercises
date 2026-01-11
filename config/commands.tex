@@ -1,0 +1,118 @@
+% ==============================================
+% 自定义命令配置
+% 文件：config/commands.tex
+% 作用：集中管理所有自定义命令
+% ==============================================
+
+% 1. 数学符号快捷命令
+\newcommand{\R}{\mathbb{R}}          % 实数集
+\newcommand{\N}{\mathbb{N}}          % 自然数集
+\newcommand{\Z}{\mathbb{Z}}          % 整数集
+\newcommand{\Q}{\mathbb{Q}}          % 有理数集
+\newcommand{\C}{\mathbb{C}}          % 复数集
+\renewcommand{\P}{\mathbb{P}}        % 概率
+\newcommand{\E}{\mathbb{E}}          % 期望
+
+% 2. 微分与导数
+\newcommand{\ddme}{\mathrm{d}}         % 微分符号
+\newcommand{\pd}{\partial}           % 偏导符号
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}  % 偏导数
+\newcommand{\gradme}{\nabla}           % 梯度
+\newcommand{\diver}{\operatorname{div}} % 散度
+
+% 3. 极限与积分
+\newcommand{\limn}{\lim\limits_{n\to\infty}}
+\newcommand{\limx}{\lim\limits_{x\to\infty}}
+\newcommand{\limxa}{\lim\limits_{x\to a}}
+\newcommand{\intab}{\int_{a}^{b}}
+\newcommand{\iintD}{\iint\limits_{D}}
+\newcommand{\ointC}{\oint\limits_{C}}
+
+% 4. 矩阵与向量
+\newcommand{\mat}[1]{\begin{pmatrix} #1 \end{pmatrix}}      % 圆括号矩阵
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}     % 方括号矩阵
+\newcommand{\absme}[1]{\left| #1 \right|}                     % 绝对值
+\newcommand{\normme}[1]{\left\| #1 \right\|}                  % 范数
+
+% 5. 概率与统计
+\newcommand{\Var}{\operatorname{Var}}    % 方差
+\newcommand{\Cov}{\operatorname{Cov}}    % 协方差
+
+% 6. 快捷输入
+\newcommand{\dx}{\,\mathrm{d}x}          % 积分微元
+\newcommand{\dy}{\,\mathrm{d}y}
+\newcommand{\dt}{\,\mathrm{d}t}
+\newcommand{\const}{\text{const}}        % 常数
+
+% 7. 考点与习题专用命令
+\newcommand{\keypoint}[1]{\textbf{\textcolor{kaoyan-red}{【考点】#1}}}
+\newcommand{\important}[1]{\textbf{\textcolor{kaoyan-blue}{【重点】#1}}}
+
+% 难度标注系统 - 彩色方块用黑色中括号括住方案
+\newcommand{\difficulty}[1]{%
+    \def\difficultycolor{difficulty-#1}
+    【
+    \ifnum#1=1
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+    \else\ifnum#1=2
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+    \else\ifnum#1=3
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+    \else\ifnum#1=4
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+    \else
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+    \fi\fi\fi\fi
+    】
+}
+\newcommand{\exercisestar}[1]{\difficulty{#1}} % 简写版本
+\newcommand{\formula}[1]{\textcolor{kaoyan-blue}{\[#1\]}}
+
+% 8. 习题扩展命令
+\newcommand{\exercisesource}[1]{\textbf{\textcolor{gray}{【来源】#1}}} % 习题来源
+\newcommand{\matchexampoint}[1]{\textbf{\textcolor{kaoyan-blue}{【匹配考点】#1}}} % 考点匹配
+\newcommand{\exercisetip}[1]{\textbf{\textcolor{kaoyan-orange}{【提示】#1}}} % 答题提示
+\newcommand{\multiplesolution}[1]{\textbf{\textcolor{kaoyan-orange}{【#1】}}} % 一题多解标注
+
+% 9. 题目超链接命令
+\newcommand{\questionlink}[1]{%
+    \hyperref[#1]{\ref{#1}}
+}
+
+% 10. 答案锚点命令
+\newcommand{\answeranchor}[1]{%
+    \hypertarget{solution:#1}{}
+}
+
+% 11. 带超链接的题目命令
+\newcommand{\qitem}[1]{%
+    \item
+    \label{#1}
+    \hypertarget{problem:#1}{}
+    \textcolor{blue}{(\hyperlink{solution:#1}{答案})}
+}
+
+% 12. 自定义题目标签命令
+\newcommand{\qlabel}[1]{%
+    \label{#1} \hypertarget{problem:#1}{}
+}

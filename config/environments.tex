@@ -1,0 +1,31 @@
+% 定义自定义环境
+
+% 考点环境
+\newenvironment{exam-point}[2]{
+  \par\vspace{2ex}
+  \noindent\textbf{\textcolor{kaoyan-blue}{考点：#1}}\quad
+  \label{#2}
+}{\par\vspace{1ex}}
+
+% 章节答案环境
+\newenvironment{chapter-answers}{
+  \section{本章答案与解析}
+  \begin{center}
+    \textbf{\large 答案与解析}
+  \end{center}
+  \vspace{1em}
+}{}
+
+% 题型答案环境
+\newenvironment{type-answers}[1]{
+  \subsection{#1 答案}
+  \begin{enumerate}[label={【\arabic*】}]
+}{\end{enumerate}}
+
+% 答案项环境
+\newenvironment{answer-item}[1]{
+  \item
+  \hypertarget{solution:#1}{}
+  \begin{tcolorbox}[colframe=answercolor, colback=answercolor!10, breakable]
+    \textbf{\hyperlink{problem:#1}{返回题目}}\ref{#1}：
+}{\end{tcolorbox}}

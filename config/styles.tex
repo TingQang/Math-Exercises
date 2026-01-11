@@ -1,0 +1,97 @@
+% ==============================================
+% 样式配置
+% 文件：config/styles.tex
+% 作用：集中管理所有样式定义
+% ==============================================
+
+% 段落格式配置
+\setlength{\parindent}{2em}      % 首行缩进2字符
+\setlength{\parskip}{0.5em}      % 段落间距0.5em
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% 章节格式设置
+\titleformat{\chapter}[display]
+    {\normalfont\Huge\bfseries\color{kaoyan-blue}}
+    {\chaptertitlename\ \thechapter}{20pt}{\centering}
+\titlespacing*{\chapter}{0pt}{-30pt}{40pt}
+
+% 节格式设置
+\titleformat{\section}
+    {\normalfont\Large\bfseries\color{kaoyan-blue}}
+    {\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+% 小节格式设置
+\titleformat{\subsection}
+    {\normalfont\large\bfseries\color{kaoyan-blue!80!black}}
+    {\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{3.2ex plus 1ex minus .2ex}{1.8ex plus .2ex}
+
+% 超链接设置
+\hypersetup{
+    colorlinks=true,
+    linkcolor=kaoyan-blue,
+    citecolor=kaoyan-green,
+    filecolor=magenta,
+    urlcolor=kaoyan-orange,
+    linktoc=all,
+    bookmarksopen=true,
+    pdftitle={考研数学笔记},
+    pdfauthor={你的名字},
+    pdfsubject={考研数学复习资料}
+}
+
+% 列表格式设置
+\setlist[enumerate]{
+    topsep=0pt,
+    itemsep=0pt,
+    parsep=0pt,
+    label=\textcolor{kaoyan-blue}{\arabic*.)},
+    leftmargin=2em
+}
+
+% 为习题列表创建自定义label格式
+\newcommand{\exerciseLabelFormat}[1]{%
+    \textbf{\textcolor{kaoyan-blue}{\hyperlink{solution:#1}{【\arabic*】}}}
+}
+
+% 设置特定的enumerate环境为习题列表样式
+\setlist[enumerate,1]{
+    label={\textbf{\textcolor{kaoyan-blue}{\hyperlink{solution:\@currentlabel}{【\arabic*】}}}},
+    leftmargin=2em
+}
+
+\setlist[itemize]{
+    topsep=0pt,
+    itemsep=0pt,
+    parsep=0pt,
+    label=\textcolor{kaoyan-blue}{$\bullet$},
+    leftmargin=2em
+}
+
+% 表格设置
+\setlength{\heavyrulewidth}{0.12em}
+\setlength{\lightrulewidth}{0.05em}
+\renewcommand{\arraystretch}{1.2}
+
+% 计数器设置
+% 公式编号带章节号
+\numberwithin{equation}{chapter}
+
+% 图片表格编号带章节号
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand{\thetable}{\thechapter-\arabic{table}}
+
+% 重置计数器
+\AtBeginDocument{
+    \setcounter{chapter}{0}
+    \setcounter{section}{0}
+}

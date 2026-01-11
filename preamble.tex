@@ -133,6 +133,22 @@
     breakable
 }{rem}
 
+\newtcolorbox{attention}{
+    colframe=kaoyan-red,
+    colback=kaoyan-red!5,
+    title=注意,
+    fonttitle=\bfseries,
+    breakable
+}
+
+\newtcolorbox{testcase}{
+    colframe=kaoyan-blue!70!black,
+    colback=kaoyan-blue!5,
+    title=测试用例,
+    fonttitle=\bfseries,
+    breakable
+}
+
 % 2. 考研习题专用环境
 \newtcbtheorem[number within=chapter]{exam-point}{考点}{%
     colframe=kaoyan-blue, 
@@ -222,14 +238,6 @@
     breakable
 }
 
-\newtcolorbox{attention}{
-    colframe=kaoyan-red,
-    colback=kaoyan-red!5,
-    title=注意,
-    fonttitle=\bfseries,
-    breakable
-}
-
 % ==================== 第十部分：自定义命令（考研数学专用） ====================
 
 % 1. 数学符号快捷命令
@@ -276,26 +284,73 @@
 \newcommand{\keypoint}[1]{\textbf{\textcolor{kaoyan-red}{【考点】#1}}}
 \newcommand{\important}[1]{\textbf{\textcolor{kaoyan-blue}{【重点】#1}}}
 
-% 星级难度（整数级别 1-5）- 美化版
-\newcommand{\fullstar}{\tikz{\node[star, star points=5, star point ratio=2.25, fill=star-full, draw=none, scale=0.25] {};} }
+% 难度标注系统 - 彩色方块用黑色中括号括住方案
 \newcommand{\difficulty}[1]{%
-    \textcolor{difficulty-#1}{%
-        \ifnum#1=1 \fullstar
-        \else\ifnum#1=2 \fullstar\fullstar
-        \else\ifnum#1=3 \fullstar\fullstar\fullstar
-        \else\ifnum#1=4 \fullstar\fullstar\fullstar\fullstar
-        \else\ifnum#1=5 \fullstar\fullstar\fullstar\fullstar\fullstar
-        \fi\fi\fi\fi\fi
-    }%
+    \def\difficultycolor{difficulty-#1}
+    【
+    \ifnum#1=1
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+    \else\ifnum#1=2
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+    \else\ifnum#1=3
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+    \else\ifnum#1=4
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+    \else
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+        \tikz{\node[fill=\difficultycolor, draw=\difficultycolor, minimum size=0.3em, inner sep=0, outer sep=0] {};}
+    \fi\fi\fi\fi
+    】
 }
 \newcommand{\exercisestar}[1]{\difficulty{#1}} % 简写版本
-\newcommand{\formula}[1]{\textcolor{kaoyan-blue}{\[\#1\]}}
+\newcommand{\formula}[1]{\textcolor{kaoyan-blue}{\[#1\]}}
 
 % 8. 习题扩展命令
 \newcommand{\exercisesource}[1]{\textbf{\textcolor{gray}{【来源】#1}}} % 习题来源
 \newcommand{\matchexampoint}[1]{\textbf{\textcolor{kaoyan-blue}{【匹配考点】#1}}} % 考点匹配
 \newcommand{\exercisetip}[1]{\textbf{\textcolor{kaoyan-orange}{【提示】#1}}} % 答题提示
 \newcommand{\multiplesolution}[1]{\textbf{\textcolor{kaoyan-orange}{【#1】}}} % 一题多解标注
+
+% 9. 答案与解析相关命令
+% 答案环境定义
+\newenvironment{answer-item}[1]{
+    \item \hyperref[#1]{\ref{#1}} 
+    \begin{tcolorbox}[colframe=kaoyan-green, colback=kaoyan-green!10, breakable]
+}{\end{tcolorbox}}
+
+% 答案章节环境
+\newenvironment{chapter-answers}{% 
+    \section{本章答案与解析}
+    \begin{center}
+        \textbf{\large 答案与解析}
+    \end{center}
+    \vspace{1em}
+}{}
+
+% 题型答案环境
+\newenvironment{type-answers}[1]{%
+    \subsection{#1 答案}
+    \begin{enumerate}[label={【\arabic*】}]
+}{\end{enumerate}}
 
 % ==================== 第十一部分：页面样式设置 ====================
 
