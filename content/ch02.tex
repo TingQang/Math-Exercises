@@ -18,7 +18,7 @@
 
 % 题型1：极限与连续
 \begin{Exercise}[title={极限与连续}, label={ex:ch02-01}]
-    \Question \difficulty{1} 计算 $\lim_{x \to 0} \frac{\sin x}{x}$，并证明其结果。
+    \Question \difficulty{1} 计算 $\limxa \frac{\sin x}{x}$，并证明其结果。
     \exercisesource{考研数学一·2017}
     \matchexampoint{重要极限公式}
     \exercisetip{利用夹逼准则或泰勒展开证明}
@@ -28,7 +28,7 @@
     \matchexampoint{函数连续性}
     \exercisetip{分别计算左右极限和左右导数}
     
-    \Question \difficulty{4} 计算 $\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n$，并说明其几何意义。
+    \Question \difficulty{4} 计算 $\limn \left(1 + \frac{1}{n}\right)^n$，并说明其几何意义。
     \exercisesource{考研数学一·2019}
     \matchexampoint{重要极限公式}
     \exercisetip{利用自然对数和洛必达法则}
@@ -446,7 +446,7 @@
         \item $f(x) = \begin{cases} \sin \frac{1}{x}, & x \neq 0 \\ 0, & x = 0 \end{cases}$
     \end{enumerate}
     \matchexampoint{函数连续性}
-    \exercisetip{利用连续性的定义判断，即 $\lim_{x \to 0} f(x) = f(0)$}
+    \exercisetip{利用连续性的定义判断，即 $\limx0 f(x) = f(0)$}
 \end{Exercise}
 
 % 题型8：矩阵性质选择题
@@ -477,9 +477,9 @@
 
 % 题型10：极限计算填空题
 \begin{Exercise}[title={极限计算填空题}, label={ex:ch02-20}]
-    \Question \difficulty{2} 计算 $\lim_{x \to 0} \frac{\sin 3x}{x} = $ \underline{\hspace{2cm}}. \exercisesource{考研真题}
+    \Question \difficulty{2} 计算 $\limx0 \frac{\sin 3x}{x} = $ \underline{\hspace{2cm}}. \exercisesource{考研真题}
     \matchexampoint{极限计算}
-    \exercisetip{利用等价无穷小替换或重要极限 $\lim_{x \to 0} \frac{\sin x}{x} = 1$}
+    \exercisetip{利用等价无穷小替换或重要极限 $\limx0 \frac{\sin x}{x} = 1$}
 \end{Exercise}
 
 % 题型11：行列式计算填空题
@@ -502,9 +502,9 @@
     \Question 
     \textbf{易错点：} 直接代入0，注意分母不为0
     
-    $\lim_{x \to 0} \frac{\sin x}{x} = 1$（重要极限公式）
+    $\limx0 \frac{\sin x}{x} = 1$（重要极限公式）
     
-    证明：利用夹逼准则，当 $0 < x < \frac{\pi}{2}$ 时，$\sin x < x < \tan x$，两边除以 $\sin x$ 得 $1 < \frac{x}{\sin x} < \frac{1}{\cos x}$，取极限得 $\lim_{x \to 0^+} \frac{\sin x}{x} = 1$，同理 $\lim_{x \to 0^-} \frac{\sin x}{x} = 1$，因此 $\lim_{x \to 0} \frac{\sin x}{x} = 1$。
+    证明：利用夹逼准则，当 $0 < x < \frac{\pi}{2}$ 时，$\sin x < x < \tan x$，两边除以 $\sin x$ 得 $1 < \frac{x}{\sin x} < \frac{1}{\cos x}$，取极限得 $\lim_{x \to 0^+} \frac{\sin x}{x} = 1$，同理 $\lim_{x \to 0^-} \frac{\sin x}{x} = 1$，因此 $\limx0 \frac{\sin x}{x} = 1$。
     
     \Question 
     \textbf{易错点：} 分段函数在分界点处的连续性和可导性需要分别讨论左右极限和左右导数
@@ -520,7 +520,7 @@
     \Question 
     \textbf{易错点：} 重要极限公式的应用
     
-    $\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$（重要极限公式）
+    $\limn \left(1 + \frac{1}{n}\right)^n = e$（重要极限公式）
     
     几何意义：表示复利计算中，当计息期数趋近于无穷大时，本利和的极限值。
 \end{Answer}
