@@ -36,11 +36,16 @@
     \textbf{\ref{#1}}：
 }{\end{tcolorbox}}
 
+% 错题分析环境
+\newenvironment{error-analysis}{
+  \begin{tcolorbox}[colframe=kaoyan-red, colback=kaoyan-red!5, breakable, title=\textbf{错题分析}]
+}{\end{tcolorbox}}
+
 % 为Exercise和Answer环境添加双向超链接支持
 \makeatletter
 % 简化ExerciseHeader，只添加中文标题和指向答案的链接
 \renewcommand{\ExerciseHeader}{\medskip\centerline{\textbf{\Large 题型\arabic{Exercise}：\ExerciseTitle}（\refAnswer{\ExerciseLabel}）}\vspace{1ex}}
 
-% 简化AnswerHeader，使用中文标题，让宏包自动处理链接
-\renewcommand{\AnswerHeader}{\medskip\centerline{\textbf{\large 答案与解析}}\smallskip}
+% 简化AnswerHeader，使用中文标题，添加指向原题的超链接
+\renewcommand{\AnswerHeader}{\medskip\centerline{\textbf{\large 答案与解析}（\ref{\AnswerRef}）}\smallskip}
 \makeatother
