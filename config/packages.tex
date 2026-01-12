@@ -32,15 +32,22 @@
 
 % 第四部分：图形与颜色
 \usepackage{graphicx}                    % 图片插入
+\usepackage{caption}                     % 支持\captionof命令
 \usepackage{tcolorbox}                   % 彩色框（含定理环境）
 \tcbuselibrary{most, breakable, skins}   % 加载tcolorbox库
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{svg.path}
-\usepackage{xcolor}                      % 颜色
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}  % 颜色，添加选项以确保所有颜色命令都能正确定义
 \usepackage{pgffor}                      % 循环
 
 % 第五部分：排版与工具
+\usepackage{etoolbox}                    % 工具宏包
 \usepackage{enumitem}                    % 列表控制
+\usepackage{exercise} % 习题和答案的组织管理
+% 在每章开始时重置Exercise计数器
+\pretocmd{\chapter}{\setcounter{Exercise}{0}}{}{}
+% 配置Exercise环境，对应题型，显示题型标题
+% ExerciseHeader的重定义移到了environments.tex中
 \usepackage{booktabs}                    % 专业表格
 \usepackage{multirow, multicol}          % 表格与多列
 \usepackage{array}                       % 数组扩展
@@ -53,9 +60,9 @@
 \usepackage{titletoc}                    % 目录格式
 \usepackage{appendix}                    % 附录
 
-% 第七部分：引用与链接
+% 第七部分：参考文献
+\usepackage[backend=biber, style=gb7714-2015, gbpub=false]{biblatex}
+
+% 第八部分：引用与链接（放在最后加载）
 \usepackage{hyperref}                    % 超链接
 \usepackage{cleveref}                    % 智能引用
-
-% 第八部分：参考文献
-\usepackage[backend=biber, style=gb7714-2015, gbpub=false]{biblatex}

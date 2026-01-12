@@ -1,92 +1,576 @@
-% 第2章：一元函数微分学
-\chapter{一元函数微分学}
-\label{ch:differential-calculus}
+% 第2章：测试章节
+\chapter{测试章节}
+\label{ch:test}
 
-本章介绍导数与微分的概念、性质和应用，包括导数的定义、计算方法、几何意义，以及函数的单调性、极值、最值等性质。
+\begin{exam-point}{测试章节考点说明}{test-exam-point}
+本章节用于测试各种功能和格式，包括：
+1. 不同难度的习题
+2. 不同类型的数学公式
+3. 矢量图插入
+4. 一题多解
+5. 易错点说明
+6. 双向超链接
+7. 复杂表格布局
+8. 多图排版
+\end{exam-point}
 
-% 题型2.1 导数的定义与计算
-\begin{question-type}{导数的定义与计算}
-本题型主要考查导数的定义、基本导数公式、复合函数求导法则、隐函数求导、参数方程求导以及高阶导数的计算。
+\section{极限与连续}
 
-\begin{exercise}
-计算以下函数的导数：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{1} $y = x^3 + 2x^2 - 3x + 1$ \exercisesource{李永乐复习全书P145例2}
-    \item \difficulty{1} $y = \sin x \cos x$ \exercisesource{2024考研数学一真题}
-    \item \difficulty{2} $y = e^x \ln x$ \exercisesource{B站 BV1xx4y1E7xx}
-    \item \difficulty{2} $y = \frac{x^2 + 1}{x - 1}$ \exercisesource{教材习题3.1}
-    \item \difficulty{3} $y = \arctan \frac{1}{x}$ \exercisesource{知网 https://kns.cnki.net/...}
-\end{enumerate}
-\end{exercise}
+% 题型1：极限与连续
+\begin{Exercise}[title={极限与连续}, label={ex:ch02-01}]
+    \Question \difficulty{1} 计算 $\lim_{x \to 0} \frac{\sin x}{x}$，并证明其结果。
+    \exercisesource{考研数学一·2017}
+    \matchexampoint{重要极限公式}
+    \exercisetip{利用夹逼准则或泰勒展开证明}
+    
+    \Question \difficulty{3} 讨论函数 $f(x) = \begin{cases} x^2, & x < 0 \\ \sin x, & x \geq 0 \end{cases}$ 在 $x = 0$ 处的连续性和可导性。
+    \exercisesource{考研数学一·2018}
+    \matchexampoint{函数连续性}
+    \exercisetip{分别计算左右极限和左右导数}
+    
+    \Question \difficulty{4} 计算 $\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n$，并说明其几何意义。
+    \exercisesource{考研数学一·2019}
+    \matchexampoint{重要极限公式}
+    \exercisetip{利用自然对数和洛必达法则}
+\end{Exercise}
 
-\begin{exercise}
-求以下隐函数的导数：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} $x^2 + y^2 = 1$ \exercisesource{李永乐复习全书P152}
-    \item \difficulty{3} $e^y + xy = 0$ \exercisesource{2023考研数学一真题}
-    \item \difficulty{4} $\sin(x + y) = x^2 y$ \exercisesource{综合题型训练}
-\end{enumerate}
-\end{exercise}
+\section{导数与微分}
 
-\begin{exercise}
-求参数方程所确定的函数的导数：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{3} $\begin{cases} x = t^2 + 1 \\ y = t^3 - t \end{cases}$ \exercisesource{参数方程专项}
-    \item \difficulty{4} $\begin{cases} x = e^t \cos t \\ y = e^t \sin t \end{cases}$ \exercisesource{高等数学教材P178}
-\end{enumerate}
-\end{exercise}
-\end{question-type}
+% 题型2：导数与微分
+\begin{Exercise}[title={导数与微分}, label={ex:ch02-02}]
+    \Question \difficulty{2} 计算下列函数的导数：
+    \begin{align*}
+        (1) \quad y &= x^3 + 2x^2 - 3x + 1 \\ 
+        (2) \quad y &= e^{\sin x} \\ 
+        (3) \quad y &= \ln(1 + x^2) \\ 
+        (4) \quad y &= \arctan x
+    \end{align*}
+    \exercisesource{考研数学一·2020}
+    \matchexampoint{导数计算}
+    \exercisetip{利用基本导数公式和链式法则}
+    
+    \Question \difficulty{3} 计算函数 $f(x) = x^2$ 在 $x = 1$ 处的微分。
+    \exercisesource{考研数学一·2021}
+    \matchexampoint{微分计算}
+    \exercisetip{利用微分定义 $df = f'(x)dx$}
+    
+    \Question \difficulty{4} 证明罗尔定理，并应用它证明方程 $x^3 - 3x + 1 = 0$ 在区间 $(0, 1)$ 内至少有一个实根。
+    \exercisesource{考研数学一·2022}
+    \matchexampoint{中值定理}
+    \exercisetip{构造辅助函数，应用罗尔定理}
+\end{Exercise}
 
-% 题型2.2 函数的单调性、极值与最值
-\begin{question-type}{函数的单调性、极值与最值}
-本题型主要考查利用导数判断函数的单调性、求极值点和极值、求函数在区间上的最值，以及闭区间上连续函数的最值定理应用。
+\section{积分}
 
-\begin{exercise}
-判断函数的单调性：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} $f(x) = x^3 - 3x$ \exercisesource{单调性基础题}
-    \item \difficulty{3} $f(x) = e^x - x$ \exercisesource{2024考研数学一真题}
-    \item \difficulty{2} $f(x) = \frac{x}{1 + x^2}$ \exercisesource{李永乐复习全书P165}
-\end{enumerate}
-\end{exercise}
+% 题型3：积分
+\begin{Exercise}[title={积分}, label={ex:ch02-03}]
+    \Question \difficulty{3} 计算下列不定积分：
+    \begin{align*}
+        (1) \quad \int x^2 e^x dx \\ 
+        (2) \quad \int \frac{1}{1 + x^2} dx \\ 
+        (3) \quad \int \sin^2 x dx
+    \end{align*}
+    \exercisesource{考研数学一·2018}
+    \matchexampoint{不定积分}
+    \exercisetip{利用分部积分法和三角恒等式}
+    
+    \Question \difficulty{2} 计算定积分 $\int_0^1 x^2 dx$，并说明其几何意义。
+    \exercisesource{考研数学一·2019}
+    \matchexampoint{定积分}
+    \exercisetip{利用定积分的几何意义：曲边梯形面积}
+    
+    \Question \difficulty{4} 计算二重积分 $\iint_D x y d\sigma$，其中 $D$ 是由 $y = x^2$ 和 $y = x$ 围成的区域。
+    \exercisesource{考研数学一·2020}
+    \matchexampoint{二重积分}
+    \exercisetip{先确定积分区域，再选择积分顺序}
+\end{Exercise}
 
-\begin{exercise}
-求函数的极值：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} $f(x) = x^3 - 3x^2 + 1$ \exercisesource{极值计算题}
-    \item \difficulty{3} $f(x) = \frac{x^2}{x^2 + 1}$ \exercisesource{B站 BV1xx4y1E7xx}
-    \item \difficulty{3} $f(x) = e^{-x^2}$ \exercisesource{高等数学教材}
-\end{enumerate}
-\end{exercise}
+\section{微分方程}
 
-\begin{exercise}
-求函数在给定区间上的最值：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{1} $f(x) = x^2 - 2x + 1$ 在 $[0, 3]$ 上 \exercisesource{最值基础题}
-    \item \difficulty{3} $f(x) = \sin x + \cos x$ 在 $[0, 2\pi]$ 上 \exercisesource{三角函数最值}
-    \item \difficulty{3} $f(x) = x e^{-x}$ 在 $(-\infty, +\infty)$ 上 \exercisesource{2023考研数学一真题}
-\end{enumerate}
-\end{exercise}
-\end{question-type}
+% 题型4：微分方程
+\begin{Exercise}[title={微分方程}, label={ex:ch02-04}]
+    \Question \difficulty{4} 求解下列微分方程：
+    \begin{align*}
+        (1) \quad y' + y = e^x \\ 
+        (2) \quad y'' - 3y' + 2y = 0 \\ 
+        (3) \quad y'' + y = \sin x
+    \end{align*}
+    \exercisesource{考研数学一·2021}
+    \matchexampoint{微分方程}
+    \exercisetip{分别使用一阶线性方程解法、特征方程法和待定系数法}
+    
+    \Question \difficulty{3} 求微分方程 $y' = xy$ 满足初始条件 $y(0) = 1$ 的特解。
+    \exercisesource{考研数学一·2022}
+    \matchexampoint{微分方程初值问题}
+    \exercisetip{使用分离变量法求解}
+\end{Exercise}
 
-% 题型2.3 不等式证明
-\begin{question-type}{不等式证明}
-本题型主要考查利用导数证明不等式，包括利用单调性证明不等式、利用极值证明不等式等。
+\section{线性代数}
 
-\begin{exercise}
-利用导数证明不等式：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} 当 $x > 0$ 时，$e^x > 1 + x$ \exercisesource{不等式证明经典题}
-    \item \difficulty{2} 当 $x > 0$ 时，$\ln(1 + x) < x$ \exercisesource{李永乐复习全书P172}
-    \item \difficulty{4} 当 $0 < x < 1$ 时，$\sin x > x - \frac{x^3}{6}$ \exercisesource{高等数学教材}
-\end{enumerate}
-\end{exercise}
+\subsection{行列式}
 
-\begin{exercise}
-利用函数的单调性证明不等式：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} 当 $x > 1$ 时，$x + \frac{1}{x} \geq 2$ \exercisesource{均值不等式}
-    \item \difficulty{4} 当 $x > 0$ 时，$\frac{x}{1 + x} < \ln(1 + x)$ \exercisesource{积分不等式}
-\end{enumerate}
-\end{exercise}
-\end{question-type}
+% 题型1：行列式
+\begin{Exercise}[title={行列式}, label={ex:ch02-05}]
+    \Question \difficulty{2} 计算三阶行列式：
+    \[\begin{vmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{vmatrix}\]
+    \exercisesource{考研数学一·2019}
+    \matchexampoint{行列式计算}
+    \exercisetip{利用行列式的性质或展开法则计算}
+    
+    \Question \difficulty{3} 证明行列式的性质：交换两行，行列式变号。
+    \exercisesource{考研数学一·2020}
+    \matchexampoint{行列式性质}
+    \exercisetip{利用行列式的定义证明}
+    
+    \Question \difficulty{3} 用行列式解线性方程组：
+    \[\begin{cases} x + y + z = 6 \\ 2x - y + z = 3 \\ x + 2y - z = 2 \end{cases}\]
+    \exercisesource{考研数学一·2021}
+    \matchexampoint{克拉默法则}
+    \exercisetip{应用克拉默法则求解}
+\end{Exercise}
+
+\subsection{矩阵}
+
+% 题型2：矩阵
+\begin{Exercise}[title={矩阵}, label={ex:ch02-06}]
+    \Question \difficulty{2} 计算下列矩阵的乘积：
+    \[\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}\]
+    \exercisesource{考研数学一·2018}
+    \matchexampoint{矩阵乘法}
+    \exercisetip{利用矩阵乘法法则计算}
+    
+    \Question \difficulty{3} 求矩阵 $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$ 的逆矩阵。
+    \exercisesource{考研数学一·2019}
+    \matchexampoint{逆矩阵}
+    \exercisetip{利用伴随矩阵法或初等变换法计算}
+    
+    \Question \difficulty{4} 计算矩阵的秩：
+    \[\begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 4 & 6 & 8 \\ 3 & 5 & 7 & 9 \end{pmatrix}\]
+    \exercisesource{考研数学一·2020}
+    \matchexampoint{矩阵秩}
+    \exercisetip{利用初等变换将矩阵化为阶梯形矩阵，非零行的行数即为秩}
+\end{Exercise}
+
+\subsection{向量与线性空间}
+
+% 题型3：向量与线性空间
+\begin{Exercise}[title={向量与线性空间}, label={ex:ch02-07}]
+    \Question \difficulty{3} 判断向量组 $\alpha_1 = (1, 2, 3)^T$，$\alpha_2 = (2, 4, 6)^T$，$\alpha_3 = (3, 5, 7)^T$ 是否线性相关。
+    \exercisesource{考研数学一·2021}
+    \matchexampoint{向量组线性相关性}
+    \exercisetip{利用秩或行列式判断}
+\end{Exercise}
+
+\subsection{线性方程组}
+
+% 题型4：线性方程组
+\begin{Exercise}[title={线性方程组}, label={ex:ch02-08}]
+    \Question \difficulty{3} 求解下列线性方程组：
+    \[\begin{cases} x_1 + x_2 + x_3 = 1 \\ 2x_1 + x_2 + x_3 = 0 \\ x_1 - x_2 + 3x_3 = 2 \end{cases}\]
+    \exercisesource{考研数学一·2020}
+    \matchexampoint{线性方程组求解}
+    \exercisetip{利用高斯消元法求解}
+    
+    \Question \difficulty{4} 讨论线性方程组 $\begin{cases} \lambda x_1 + x_2 + x_3 = 1 \\ x_1 + \lambda x_2 + x_3 = \lambda \\ x_1 + x_2 + \lambda x_3 = \lambda^2 \end{cases}$ 解的情况，并在有无穷多解时求其通解。
+    \exercisesource{考研数学一·2021}
+    \matchexampoint{线性方程组解的结构}
+    \exercisetip{利用增广矩阵的秩讨论解的情况}
+\end{Exercise}
+
+\subsection{特征值与特征向量}
+
+% 题型5：特征值与特征向量
+\begin{Exercise}[title={特征值与特征向量}, label={ex:ch02-09}]
+    \Question \difficulty{3} 求矩阵 $A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}$ 的特征值和特征向量。
+    \exercisesource{考研数学一·2019}
+    \matchexampoint{特征值与特征向量}
+    \exercisetip{利用特征方程 $|A - \lambda E| = 0$ 求解}
+    
+    \Question \difficulty{4} 证明实对称矩阵的不同特征值对应的特征向量正交。
+    \exercisesource{考研数学一·2020}
+    \matchexampoint{实对称矩阵的性质}
+    \exercisetip{利用实对称矩阵的定义和特征值、特征向量的性质证明}
+\end{Exercise}
+    
+\section{概率论与数理统计}
+
+\subsection{随机事件与概率}
+
+% 题型1：随机事件与概率
+\begin{Exercise}[title={随机事件与概率}, label={ex:ch02-10}]
+    \Question \difficulty{3} 设 $A$ 和 $B$ 是两个事件，已知 $P(A) = 0.5$，$P(B) = 0.6$，$P(A|B) = 0.5$，求 $P(A \cup B)$。
+    \exercisesource{考研数学一·2018}
+    \matchexampoint{事件概率}
+    \exercisetip{利用条件概率和加法公式计算}
+    
+    \Question \difficulty{4} 证明全概率公式和贝叶斯公式。
+    \exercisesource{考研数学一·2019}
+    \matchexampoint{概率公式}
+    \exercisetip{利用条件概率和乘法公式证明}
+    
+    \Question \difficulty{2} 袋中有 5 个白球和 3 个黑球，从中任取 2 个球，求取出的 2 个球都是白球的概率。
+    \exercisesource{考研数学一·2020}
+    \matchexampoint{古典概型}
+    \exercisetip{利用组合数计算}
+\end{Exercise}
+
+\subsection{随机变量及其分布}
+
+% 题型2：随机变量及其分布
+\begin{Exercise}[title={随机变量及其分布}, label={ex:ch02-11}]
+    \Question \difficulty{3} 设随机变量 $X$ 的分布律为：
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        $X$ & -1 & 0 & 1 \\ \hline
+        $P$ & 0.2 & 0.5 & 0.3 \\ \hline
+        \end{tabular}
+        \caption{随机变量 $X$ 的分布律}
+    \end{table}
+    求 $E(X)$，$D(X)$ 和 $E(X^2)$。
+    \exercisesource{考研数学一·2021}
+    \matchexampoint{随机变量数字特征}
+    \exercisetip{利用期望和方差的定义计算}
+    
+    \Question \difficulty{4} 设随机变量 $X$ 服从正态分布 $N(0, 1)$，求 $E(X^2)$ 和 $D(X^2)$。
+    \exercisesource{考研数学一·2022}
+    \matchexampoint{正态分布的数字特征}
+    \exercisetip{利用正态分布的性质和伽马函数计算}
+\end{Exercise}
+
+\subsection{二维随机变量及其分布}
+
+% 题型3：二维随机变量及其分布
+\begin{Exercise}[title={二维随机变量及其分布}, label={ex:ch02-12}]
+    \Question \difficulty{4} 设二维随机变量 $(X, Y)$ 的联合分布律为：
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        $Y \setminus X$ & -1 & 0 & 1 \\ \hline
+        -1 & 0.1 & 0.2 & 0.1 \\ \hline
+        0 & 0.2 & 0.1 & 0.2 \\ \hline
+        1 & 0.1 & 0 & 0.0 \\ \hline
+        \end{tabular}
+        \caption{二维随机变量 $(X, Y)$ 的联合分布律}
+    \end{table}
+    求边缘分布律 $P(X = k)$ 和 $P(Y = k)$，并判断 $X$ 和 $Y$ 是否独立。
+    \exercisesource{考研数学一·2020}
+    \matchexampoint{二维随机变量的边缘分布与独立性}
+    \exercisetip{利用边缘分布的定义计算，再判断独立性}
+\end{Exercise}
+
+\subsection{大数定律与中心极限定理}
+
+% 题型3：大数定律与中心极限定理
+\begin{Exercise}[title={大数定律与中心极限定理}, label={ex:ch02-13}]
+    \Question \difficulty{5} 叙述并证明切比雪夫大数定律。
+    \exercisesource{考研数学一·2018}
+    \matchexampoint{大数定律}
+    \exercisetip{利用切比雪夫不等式证明}
+    
+    \Question \difficulty{4} 设 $X_1, X_2, \cdots, X_n$ 是相互独立且同分布的随机变量序列，$E(X_i) = \mu$，$D(X_i) = \sigma^2$，证明 $\bar{X} = \frac{1}{n} \sum_{i=1}^n X_i$ 依概率收敛于 $\mu$。
+    \exercisesource{考研数学一·2019}
+    \matchexampoint{依概率收敛}
+    \exercisetip{利用切比雪夫大数定律或辛钦大数定律证明}
+    
+    \Question \difficulty{3} 某工厂生产的零件重量服从正态分布 $N(50, 1^2)$，现从一批零件中随机抽取 100 个，求其平均重量落在 $(49.8, 50.2)$ 内的概率。（已知 $\Phi(2) = 0.9772$）
+    \exercisesource{考研数学一·2020}
+    \matchexampoint{中心极限定理}
+    \exercisetip{利用中心极限定理将样本均值标准化}
+\end{Exercise}
+
+\subsection{数理统计的基本概念}
+
+% 题型4：数理统计的基本概念
+\begin{Exercise}[title={数理统计的基本概念}, label={ex:ch02-14}]
+    \Question \difficulty{4} 设 $X_1, X_2, \cdots, X_n$ 是来自正态总体 $N(\mu, \sigma^2)$ 的样本，求样本均值 $\bar{X}$ 和样本方差 $S^2$ 的分布。
+    \exercisesource{考研数学一·2021}
+    \matchexampoint{数理统计基本概念}
+    \exercisetip{利用正态分布的性质和卡方分布的定义}
+    
+    \Question \difficulty{5} 设总体 $X$ 的概率密度为 $f(x; \theta) = \begin{cases} (\theta + 1)x^\theta, & 0 < x < 1 \\ 0, & \text{其他} \end{cases}$，其中 $\theta > -1$ 是未知参数，$X_1, X_2, \cdots, X_n$ 是来自总体 $X$ 的样本，求 $\theta$ 的矩估计量和最大似然估计量。
+    \exercisesource{考研数学一·2022}
+    \matchexampoint{参数估计}
+    \exercisetip{分别利用矩估计法和最大似然估计法计算}
+    
+    \Question \difficulty{4} 设 $X_1, X_2, \cdots, X_n$ 是来自正态总体 $N(\mu, \sigma^2)$ 的样本，其中 $\mu$ 未知，$\sigma^2$ 已知，求 $\mu$ 的置信水平为 $1 - \alpha$ 的置信区间。
+    \exercisesource{考研数学一·2017}
+    \matchexampoint{置信区间}
+    \exercisetip{利用正态分布的分位数计算}
+\end{Exercise}
+
+\subsection{多图复杂布局与复杂表格测试}
+
+% 题型5：多图复杂布局与复杂表格测试
+\begin{Exercise}[title={多图复杂布局与复杂表格测试}, label={ex:ch02-15}]
+    \Question \difficulty{5} 观察以下图像布局，分析不同数学概念的几何意义：
+         
+        % 一行两张图：曲面积分示意图
+        \centering
+        \begin{minipage}[b]{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{images/test_plot.pdf}
+            \captionof{figure}{曲面积分示意图1：第一类曲面积分}
+            \label{fig:surface-integral1}
+        \end{minipage}%
+        \hfill
+        \begin{minipage}[b]{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{images/test_plot.pdf}
+            \captionof{figure}{曲面积分示意图2：第二类曲面积分}
+            \label{fig:surface-integral2}
+        \end{minipage}
+        
+        \medskip
+        
+        % 一行三张图：三重积分区域
+        \centering
+        \begin{minipage}[b]{0.3\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{images/test_plot.pdf}
+            \captionof{figure}{三重积分区域1}
+            \label{fig:triple-integral1}
+        \end{minipage}%
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{images/test_plot.pdf}
+            \captionof{figure}{三重积分区域2}
+            \label{fig:triple-integral2}
+        \end{minipage}%
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{images/test_plot.pdf}
+            \captionof{figure}{三重积分区域3}
+            \label{fig:triple-integral3}
+        \end{minipage}
+        
+        \medskip
+        
+        % 两行四图：向量场与通量
+        \centering
+        \begin{minipage}[b]{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{images/test_plot.pdf}
+            \captionof{figure}{向量场1：发散场}
+            \label{fig:vector-field1}
+        \end{minipage}%
+        \hfill
+        \begin{minipage}[b]{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{images/test_plot.pdf}
+            \captionof{figure}{向量场2：保守场}
+            \label{fig:vector-field2}
+        \end{minipage}
+        
+        \medskip
+        
+        \centering
+        \begin{minipage}[b]{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{images/test_plot.pdf}
+            \captionof{figure}{通量1：穿过曲面的向量场通量}
+            \label{fig:flux1}
+        \end{minipage}%
+        \hfill
+        \begin{minipage}[b]{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{images/test_plot.pdf}
+            \captionof{figure}{通量2：环流量计算}
+            \label{fig:flux2}
+        \end{minipage}
+        
+        \medskip
+        
+        分析以下内容：
+        1. 第一类和第二类曲面积分的几何区别
+        2. 不同三重积分区域的坐标系选择
+        3. 向量场的性质与通量计算 \exercisesource{测试题}
+        \matchexampoint{多元积分几何意义}
+        \exercisetip{结合图像分析不同积分概念的几何意义}
+    \end{Exercise}
+    
+    % 题型6：复杂表格分析
+    \begin{Exercise}[title={复杂表格分析}, label={ex:ch02-16}]
+        \Question \difficulty{5} 考虑以下概率问题：
+        
+        \centering
+        \captionof{table}{二维离散随机变量联合分布律}
+        \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        & $Y=-2$ & $Y=-1$ & $Y=0$ & $Y=1$ & $Y=2$ \\ \hline
+        $X=-1$ & 0.05 & 0.08 & 0.12 & 0.08 & 0.05 \\ \hline
+        $X=0$  & 0.06 & 0.10 & 0.15 & 0.10 & 0.06 \\ \hline
+        $X=1$  & 0.05 & 0.08 & 0.12 & 0.08 & 0.05 \\ \hline
+        $P(Y=k)$ & - & - & - & - & - \\ \hline
+        \end{tabular}
+        \label{tab:joint-distribution}
+        
+        \medskip
+        
+        \centering
+        \captionof{table}{高阶微分方程类型与解法}
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        方程类型 & 标准形式 & 特征方程 & 通解结构 & 示例 \\ \hline
+        二阶常系数齐次 & $y'' + py' + qy = 0$ & $r^2 + pr + q = 0$ & $y = C_1e^{r_1x} + C_2e^{r_2x}$ & $y'' - 3y' + 2y = 0$ \\ \hline
+        二阶常系数非齐次 & $y'' + py' + qy = f(x)$ & - & $y = y_h + y_p$ & $y'' - 3y' + 2y = e^x$ \\ \hline
+        欧拉方程 & $x^2y'' + pxy' + qy = 0$ & $r(r-1) + pr + q = 0$ & $y = C_1x^{r_1} + C_2x^{r_2}$ & $x^2y'' - xy' + y = 0$ \\ \hline
+        偏微分方程 & - & - & 分离变量法 & 波动方程 $u_{tt} = a^2u_{xx}$ \\ \hline
+        \end{tabular}
+        \label{tab:ode-advanced}
+        
+        \medskip
+        
+        回答以下问题：
+        1. 完成二维离散随机变量联合分布律中的边缘分布 $P(Y=k)$
+        2. 判断随机变量 $X$ 和 $Y$ 是否独立
+        3. 求解高阶微分方程 $y''' - 2y'' + y' - 2y = 0$ 的通解 \exercisesource{测试题}
+        \matchexampoint{综合应用}
+        \exercisetip{结合概率分布和微分方程理论计算}
+    \end{Exercise}
+
+% 题型7：函数连续性选择题
+\begin{Exercise}[title={函数连续性选择题}, label={ex:ch02-17}]
+    \Question \difficulty{3} 下列函数中，在 $x=0$ 处连续的是（ ）\exercisesource{考研真题}
+    \begin{enumerate}[label=(\Alph*)]
+        \item $f(x) = \begin{cases} \frac{\sin x}{x}, & x \neq 0 \\ 0, & x = 0 \end{cases}$
+        \item $f(x) = \begin{cases} \frac{x^2 - 1}{x - 1}, & x \neq 1 \\ 2, & x = 1 \end{cases}$
+        \item $f(x) = \begin{cases} e^{\frac{1}{x}}, & x \neq 0 \\ 0, & x = 0 \end{cases}$
+        \item $f(x) = \begin{cases} \sin \frac{1}{x}, & x \neq 0 \\ 0, & x = 0 \end{cases}$
+    \end{enumerate}
+    \matchexampoint{函数连续性}
+    \exercisetip{利用连续性的定义判断，即 $\lim_{x \to 0} f(x) = f(0)$}
+\end{Exercise}
+
+% 题型8：矩阵性质选择题
+\begin{Exercise}[title={矩阵性质选择题}, label={ex:ch02-18}]
+    \Question \difficulty{4} 设 $A$ 为 $n$ 阶矩阵，且 $A^2 = A$，则下列结论中正确的是（ ）\exercisesource{考研真题}
+    \begin{enumerate}[label=(\Alph*)]
+        \item $A = 0$ 或 $A = E$
+        \item $A$ 可逆
+        \item $A$ 的特征值只能是 0 或 1
+        \item $A$ 可对角化
+    \end{enumerate}
+    \matchexampoint{矩阵性质}
+    \exercisetip{利用矩阵的特征值和特征向量理论分析}
+\end{Exercise}
+
+% 题型9：正态分布选择题
+\begin{Exercise}[title={正态分布选择题}, label={ex:ch02-19}]
+    \Question \difficulty{3} 设随机变量 $X$ 服从正态分布 $N(\mu, \sigma^2)$，且 $P(X > \mu + \sigma) = 0.1587$，则 $P(|X - \mu| < \sigma) = $（ ）\exercisesource{考研真题}
+    \begin{enumerate}[label=(\Alph*)]
+        \item 0.6826
+        \item 0.3174
+        \item 0.9544
+        \item 0.5
+    \end{enumerate}
+    \matchexampoint{正态分布}
+    \exercisetip{利用正态分布的对称性和 3σ 原则}
+\end{Exercise}
+
+% 题型10：极限计算填空题
+\begin{Exercise}[title={极限计算填空题}, label={ex:ch02-20}]
+    \Question \difficulty{2} 计算 $\lim_{x \to 0} \frac{\sin 3x}{x} = $ \underline{\hspace{2cm}}. \exercisesource{考研真题}
+    \matchexampoint{极限计算}
+    \exercisetip{利用等价无穷小替换或重要极限 $\lim_{x \to 0} \frac{\sin x}{x} = 1$}
+\end{Exercise}
+
+% 题型11：行列式计算填空题
+\begin{Exercise}[title={行列式计算填空题}, label={ex:ch02-21}]
+    \Question \difficulty{3} 设矩阵 $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$，则 $A$ 的行列式 $|A| = $ \underline{\hspace{2cm}}. \exercisesource{考研真题}
+    \matchexampoint{行列式计算}
+    \exercisetip{直接使用二阶行列式的计算公式 $|\begin{smallmatrix} a & b \\ c & d \end{smallmatrix}| = ad - bc$}
+\end{Exercise}
+
+% 题型12：泊松分布填空题
+\begin{Exercise}[title={泊松分布填空题}, label={ex:ch02-22}]
+    \Question \difficulty{4} 设随机变量 $X$ 服从参数为 $\lambda$ 的泊松分布，且 $P(X = 1) = P(X = 2)$，则 $\lambda = $ \underline{\hspace{2cm}}. \exercisesource{考研真题}
+    \matchexampoint{泊松分布}
+    \exercisetip{利用泊松分布的概率质量函数 $P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}$，建立方程求解}
+\end{Exercise}
+
+\section{本章答案与解析}
+
+\begin{Answer}[ref={ex:ch02-01}]
+    \Question 
+    \textbf{易错点：} 直接代入0，注意分母不为0
+    
+    $\lim_{x \to 0} \frac{\sin x}{x} = 1$（重要极限公式）
+    
+    证明：利用夹逼准则，当 $0 < x < \frac{\pi}{2}$ 时，$\sin x < x < \tan x$，两边除以 $\sin x$ 得 $1 < \frac{x}{\sin x} < \frac{1}{\cos x}$，取极限得 $\lim_{x \to 0^+} \frac{\sin x}{x} = 1$，同理 $\lim_{x \to 0^-} \frac{\sin x}{x} = 1$，因此 $\lim_{x \to 0} \frac{\sin x}{x} = 1$。
+    
+    \Question 
+    \textbf{易错点：} 分段函数在分界点处的连续性和可导性需要分别讨论左右极限和左右导数
+    
+    连续性：左极限 $\lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} x^2 = 0$，右极限 $\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \sin x = 0$，函数值 $f(0) = \sin 0 = 0$，因此连续。
+    
+    可导性：左导数 $\lim_{x \to 0^-} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0^-} \frac{x^2 - 0}{x} = \lim_{x \to 0^-} x = 0$，右导数 $\lim_{x \to 0^+} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0^+} \frac{\sin x - 0}{x} = 1$，左右导数不相等，因此不可导。
+    
+    \Question 
+    \textbf{易错点：} 重要极限公式的应用
+    
+    $\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$（重要极限公式）
+    
+    几何意义：表示复利计算中，当计息期数趋近于无穷大时，本利和的极限值。
+\end{Answer}
+
+\begin{Answer}[ref={ex:ch02-02}]
+    \Question 
+    \textbf{易错点：} 基本导数公式和链式法则的应用
+    
+    (1) $y' = 3x^2 + 4x - 3$（多项式求导）
+    (2) $y' = e^{\sin x} \cos x$（链式法则）
+    (3) $y' = \frac{2x}{1 + x^2}$（链式法则）
+    (4) $y' = \frac{1}{1 + x^2}$（反正切函数导数）
+    
+    \Question 
+    \textbf{易错点：} 微分定义的理解
+    
+    微分 $df = f'(x)dx$，$f(x) = x^2$，则 $f'(x) = 2x$，因此 $df|_{x=1} = 2 \times 1 \times dx = 2dx$。
+    
+    \Question 
+    \textbf{易错点：} 罗尔定理的条件和应用
+    
+    罗尔定理：如果函数 $f(x)$ 在闭区间 $[a, b]$ 上连续，在开区间 $(a, b)$ 内可导，且 $f(a) = f(b)$，那么在 $(a, b)$ 内至少存在一点 $\xi$，使得 $f'(\xi) = 0$。
+    
+    证明：设 $f(x) = x^3 - 3x + 1$，则 $f(0) = 1$，$f(1) = -1$，由介值定理，存在 $c \in (0, 1)$ 使得 $f(c) = 0$。再设辅助函数 $g(x) = f(x)$，则 $g(0) = 1$，$g(c) = 0$，$g(1) = -1$，利用罗尔定理可证。
+\end{Answer}
+
+\begin{Answer}[ref={ex:ch02-03}]
+    \Question 
+    \textbf{易错点：} 不定积分的基本方法
+    
+    (1) $\int x^2 e^x dx = x^2 e^x - 2x e^x + 2e^x + C$（分部积分法）
+    (2) $\int \frac{1}{1 + x^2} dx = \arctan x + C$（基本积分公式）
+    (3) $\int \sin^2 x dx = \frac{x}{2} - \frac{\sin 2x}{4} + C$（三角恒等式化简）
+    
+    \Question 
+    \textbf{易错点：} 定积分的几何意义
+    
+    $\int_0^1 x^2 dx = \frac{1}{3}$（定积分公式），几何意义是曲线 $y = x^2$、x轴、直线 $x=0$ 和 $x=1$ 围成的曲边梯形的面积。
+    
+    \Question 
+    \textbf{易错点：} 二重积分的计算
+    
+    积分区域 $D$ 由 $y = x^2$ 和 $y = x$ 围成，交点为 $(0, 0)$ 和 $(1, 1)$，因此二重积分可表示为 $\int_0^1 \int_{x^2}^x xy dy dx = \int_0^1 x \left[ \frac{y^2}{2} \right]_{x^2}^x dx = \int_0^1 x \left( \frac{x^2}{2} - \frac{x^4}{2} \right) dx = \frac{1}{2} \int_0^1 (x^3 - x^5) dx = \frac{1}{2} \left[ \frac{x^4}{4} - \frac{x^6}{6} \right]_0^1 = \frac{1}{2} \left( \frac{1}{4} - \frac{1}{6} \right) = \frac{1}{24}$。
+\end{Answer}
+
+\begin{Answer}[ref={ex:ch02-04}]
+    \Question 
+    \textbf{易错点：} 不同类型微分方程的解法
+    
+    (1) 一阶线性方程，通解为 $y = e^{-\int 1 dx} \left( \int e^x e^{\int 1 dx} dx + C \right) = e^{-x} \left( \int e^{2x} dx + C \right) = e^{-x} \left( \frac{1}{2} e^{2x} + C \right) = \frac{1}{2} e^x + C e^{-x}$
+    
+    (2) 二阶常系数齐次方程，特征方程 $r^2 - 3r + 2 = 0$，根为 $r_1 = 1, r_2 = 2$，通解为 $y = C_1 e^x + C_2 e^{2x}$
+    
+    (3) 二阶常系数非齐次方程，齐次通解为 $y_h = C_1 \cos x + C_2 \sin x$，设特解 $y_p = x(A \cos x + B \sin x)$，代入方程解得 $A = -\frac{1}{2}, B = 0$，因此通解为 $y = C_1 \cos x + C_2 \sin x - \frac{1}{2} x \cos x$
+    
+    \Question 
+    \textbf{易错点：} 分离变量法的应用
+    
+    分离变量得 $\frac{dy}{y} = x dx$，积分得 $\ln |y| = \frac{1}{2} x^2 + C$，由 $y(0) = 1$ 得 $C = 0$，因此特解为 $y = e^{\frac{1}{2} x^2}$
+\end{Answer}

@@ -15,12 +15,12 @@ clean:
 # 编译PDF
 pdf:
 	@echo "编译PDF..."
-	@pdflatex -interaction=nonstopmode main.tex
+	@pdflatex -interaction=nonstopmode -output-directory=build main.tex
 
 # 处理参考文献
 biber:
 	@echo "处理参考文献..."
-	@biber main
+	@biber build/main
 
 # 验证编译结果
 validate:

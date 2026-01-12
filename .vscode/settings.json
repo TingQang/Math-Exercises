@@ -1,4 +1,5 @@
 {
+    // ============ 编译配置 ============
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
@@ -14,40 +15,50 @@
             ]
         }
     ],
-    
     "latex-workshop.latex.recipes": [
         {
             "name": "latexmk",
             "tools": ["latexmk"]
         }
     ],
-    
-    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.outDir": "./build",
     "latex-workshop.latex.clean.fileTypes": [
         "*.aux", "*.bbl", "*.blg", "*.bcf", "*.run.xml",
         "*.synctex.gz", "*.log", "*.out", "*.toc",
         "*.lof", "*.lot", "*.fmt", "*.fot", "*.fdb_latexmk", "*.fls"
     ],
     
-    // ============ 关键配置 ============
-    "latex-workshop.view.pdf.viewer": "tab",  // 使用内置查看器
+    // ============ PDF 查看器配置 ============
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.tab.viewer": "webview",
+    "latex-workshop.view.pdf.webview.enabled": true,
+    "latex-workshop.view.pdf.webview.panel": "split",
+    "latex-workshop.view.pdf.webview.openExternal": false,
+    // ============ 反向搜索配置 ============
     "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
-    "latex-workshop.view.pdf.internal.click": true,
-    "latex-workshop.view.pdf.internal.dblclick": true,
-    "latex-workshop.view.pdf.internal.ctrlclick": false,
+    "latex-workshop.view.pdf.internal.synctex.enabled": true,
     
-    // 同步配置
-    "latex-workshop.synctex.afterBuild.enabled": true,
-    "latex-workshop.synctex.path": "synctex",
-    
-    // 输出目录
-    "latex-workshop.latex.outDir": "./build",
-    
-    // 性能优化
+    // ============ 忽略目录 ============
     "latex-workshop.latex.watch.files.ignore": [
-        "**/build/**",
-        "**/.git/**"
+        "${workspaceFolder}/build/**",
+        "${workspaceFolder}/.git/**"
     ],
+    
+    // ============ 性能与兼容 ============
+    "latex-workshop.cache.enabled": false,
+    
+    // ============ 编辑器配置 ============
+    "[latex]": {
+        "editor.wordWrapColumn": 160,
+        "editor.wordWrap": "bounded",
+        "editor.rulers": [160]
+    },
+    "files.associations": {
+        "*.pdf": "pdf"
+    },
+    
+    // ============ 拼写检查 ============
     "cSpell.words": [
         "amsthm",
         "biber",
@@ -66,9 +77,5 @@
         "synctex",
         "tcolorbox",
         "xelatex"
-    ],
-    "[latex]": {
-    "editor.wordWrapColumn": 80,
-    "editor.wordWrap": "bounded",
-    "editor.rulers": [80]}
+    ]
 }

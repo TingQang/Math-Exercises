@@ -1,309 +1,49 @@
-% 第1章：极限与连续
-\chapter{极限与连续}
-\label{ch:limit-continuity}
+% 第1章：绪论
+\chapter{绪论}
+\label{ch:intro}
 
-\section{极限的基本概念}
+\section{考研数学一概述}
 
-\begin{exam-point}{极限的定义与性质}{limit-def-prop}
-考研中常见的重要极限包括：
-1. 极限的定义（$\epsilon-\delta$语言）
-2. 极限的唯一性
-3. 极限的四则运算法则
-4. 夹逼引理
-\end{exam-point}
+考研数学一是全国硕士研究生入学统一考试中的重要科目，主要考查考生的数学基础知识、基本技能和基本方法，以及运用这些知识解决实际问题的能力。数学一的考试内容包括高等数学、线性代数、概率论与数理统计三个部分，其中高等数学占56%，线性代数占22%，概率论与数理统计占22%。
 
-\subsection{题型1：极限的四则运算法则}
+\section{考研数学一的考试特点}
 
-\begin{enumerate}[label={【\arabic*】}]
-    \qitem{ex:ch01-01-01} \difficulty{1} 计算 $\lim_{x \to 0} \frac{x^2 - 1}{x - 1}$ \exercisesource{考研数学一·2018}
-    \matchexampoint{极限的四则运算法则}
-    \exercisetip{直接代入即可}
-    \qitem{ex:ch01-01-02} \difficulty{1} 计算 $\lim_{x \to 2} \frac{x^2 - 4}{x - 2}$ \exercisesource{考研数学一·2019}
-    \matchexampoint{极限的四则运算法则}
-    \exercisetip{先化简再代入}
-    \qitem{ex:ch01-01-03} \difficulty{1} 计算 $\lim_{x \to 2} \frac{x^2 + 3x - 10}{x - 2}$ \exercisesource{考研数学一·2020}
-    \matchexampoint{极限的四则运算法则}
-    \exercisetip{因式分解后化简}
-\end{enumerate}
+\begin{itemize}
+    \item \textbf{知识点覆盖广}：考试内容涵盖高等数学、线性代数、概率论与数理统计的主要知识点
+    \item \textbf{注重基础}：强调对基本概念、基本理论和基本方法的掌握
+    \item \textbf{强调应用}：注重考查运用数学知识解决实际问题的能力
+    \item \textbf{题型固定}：主要包括选择题、填空题和解答题三种题型
+    \item \textbf{难度适中}：既有基础题，也有一定难度的综合题
+\end{itemize}
 
-\subsection{题型2：等价无穷小替换}
+\section{考研数学一的复习方法}
 
-\begin{enumerate}[label={【\arabic*】}]
-    \qitem{ex:ch01-02-01} \difficulty{1} 计算 $\lim_{x \to 0} \frac{\sin 2x}{\sin x}$ \exercisesource{考研数学一·2019}
-    \matchexampoint{三角函数极限}
-    \exercisetip{利用倍角公式化简}
-    \qitem{ex:ch01-02-02} \difficulty{2} 计算 $\lim_{x \to 0} \frac{e^x - 1}{x}$ \exercisesource{考研数学一·2020}
-    \matchexampoint{重要极限公式}
-    \exercisetip{利用等价无穷小代换}
-    \qitem{ex:ch01-02-03} \difficulty{2} 计算 $\lim_{x \to 0} \frac{\ln(1 + x)}{x}$ \exercisesource{考研数学一·2021}
-    \matchexampoint{重要极限公式}
-    \exercisetip{利用等价无穷小代换}
-\end{enumerate}
+\begin{itemize}
+    \item \textbf{系统复习}：按照考试大纲，系统复习所有知识点
+    \item \textbf{多做习题}：通过大量练习，巩固所学知识，提高解题能力
+    \item \textbf{总结归纳}：总结解题方法和技巧，形成自己的知识体系
+    \item \textbf{模拟考试}：定期进行模拟考试，适应考试节奏，提高应试能力
+    \item \textbf{错题整理}：建立错题集，分析错误原因，避免重复犯错
+\end{itemize}
 
-\subsection{题型3：洛必达法则}
+\section{本书的编写目的和使用方法}
 
-\begin{enumerate}[label={【\arabic*】}]
-    \qitem{ex:ch01-03-01} \difficulty{3} 计算 $\lim_{x \to 1} \frac{e^x - e}{x - 1}$ \exercisesource{考研数学一·2022}
-    \matchexampoint{洛必达法则}
-    \exercisetip{直接应用洛必达法则}
-    \qitem{ex:ch01-03-02} \difficulty{4} 计算 $\lim_{x \to 1} \frac{\ln x}{x - 1}$ \exercisesource{考研数学一·2020}
-    \matchexampoint{洛必达法则}
-    \exercisetip{注意分母趋于0，分子也趋于0}
-    \qitem{ex:ch01-03-03} \difficulty{4} 计算 $\lim_{x \to \infty} \frac{x^2}{\ln x}$ \exercisesource{考研数学一·2019}
-    \matchexampoint{无穷大与无穷大的比较}
-    \exercisetip{利用洛必达法则或等价无穷大}
-\end{enumerate}
+本书是一本针对考研数学一的习题集与错题集，旨在帮助考生系统复习数学一的知识点，提高解题能力，应对考试。本书的主要特点包括：
 
-\subsection{题型4：泰勒公式}
+\begin{itemize}
+    \item \textbf{章节结构清晰}：按照考研数学一的知识点，分章节组织习题
+    \item \textbf{题型全面}：涵盖考研数学一的各种题型
+    \item \textbf{难度分级}：习题难度分为1-5级，适合不同阶段的复习
+    \item \textbf{答案详细}：每个习题都有详细的解析，包括易错点和一题多解
+    \item \textbf{双向超链接}：习题和答案之间可以相互跳转，方便使用
+\end{itemize}
 
-\begin{enumerate}[label={【\arabic*】}]
-    \qitem{ex:ch01-04-01} \difficulty{3} 计算 $\lim_{x \to 0} \frac{x - \sin x}{x^3}$ \exercisesource{考研数学一·2021}
-    \matchexampoint{等价无穷小代换}
-    \exercisetip{利用泰勒展开或洛必达法则}
-    \qitem{ex:ch01-04-02} \difficulty{4} 计算 $\lim_{x \to 0} \frac{\sin x - x}{x^3}$ \exercisesource{考研数学一·2021}
-    \matchexampoint{等价无穷小代换}
-    \exercisetip{利用泰勒展开}
-    \qitem{ex:ch01-04-03} \difficulty{5} 计算 $\lim_{x \to 0} \frac{\tan x - \sin x}{x^3}$ \exercisesource{考研数学一·2019}
-    \matchexampoint{等价无穷小代换}
-    \exercisetip{利用泰勒展开}
-\end{enumerate}
+\section{如何使用本书}
 
-\subsection{题型5：重要极限公式}
-
-\begin{enumerate}[label={【\arabic*】}]
-    \qitem{ex:ch01-05-01} \difficulty{1} 计算 $\lim_{x \to 0} \frac{\sin x}{x}$ \exercisesource{考研数学一·2017}
-    \matchexampoint{重要极限公式}
-    \exercisetip{直接应用公式}
-    \qitem{ex:ch01-05-02} \difficulty{4} 计算 $\lim_{x \to \infty} (1 + \frac{1}{x})^x$ \exercisesource{考研数学一·2022}
-    \matchexampoint{数列极限与函数极限的转化}
-    \exercisetip{利用重要极限公式}
-    \qitem{ex:ch01-05-03} \difficulty{4} 计算 $\lim_{x \to \infty} (1 + \frac{2}{x})^x$ \exercisesource{考研数学一·2018}
-    \matchexampoint{数列极限与函数极限的转化}
-    \exercisetip{利用重要极限公式}
-\end{enumerate}
-
-\subsection{题型6：无穷大的比较}
-
-\begin{enumerate}[label={【\arabic*】}]
-    \qitem{ex:ch01-06-01} \difficulty{4} 计算 $\lim_{x \to \infty} \frac{x^2}{\ln x}$ \exercisesource{考研数学一·2019}
-    \matchexampoint{无穷大与无穷大的比较}
-    \exercisetip{利用洛必达法则或等价无穷大}
-    \qitem{ex:ch01-06-02} \difficulty{3} 计算 $\lim_{x \to \infty} \frac{x}{\sqrt{1 + x} - 1}$ \exercisesource{考研数学一·2021}
-    \matchexampoint{等价无穷小代换}
-    \exercisetip{分子分母同乘共轭式}
-\end{enumerate}
-
-\section{函数的连续性}
-
-\subsection{题型7：函数在某点的连续性判断}
-
-\begin{enumerate}[label={【\arabic*】}]
-    \qitem{ex:ch01-07-01} \difficulty{1} 判断 $f(x) = \frac{x^2 - 1}{x - 1}$ 在 $x = 1$ 处的连续性 \exercisesource{考研数学一·2018}
-    \matchexampoint{可去间断点}
-    \exercisetip{利用极限定义判断}
-    \qitem{ex:ch01-07-02} \difficulty{1} 判断 $f(x) = \sin x$ 在 $\mathbb{R}$ 上的连续性 \exercisesource{考研数学一·2019}
-    \matchexampoint{连续函数}
-    \exercisetip{利用三角函数性质}
-    \qitem{ex:ch01-07-03} \difficulty{1} 判断 $f(x) = \frac{1}{x}$ 在 $x = 0$ 处的连续性 \exercisesource{考研数学一·2020}
-    \matchexampoint{无穷间断点}
-    \exercisetip{利用极限定义判断}
-\end{enumerate}
-
-\subsection{题型8：间断点类型的判断与分类}
-
-\begin{enumerate}[label={【\arabic*】}]
-    \qitem{ex:ch01-08-01} \difficulty{2} 讨论 $f(x) = \frac{x^2 - 4}{x - 2}$ 的连续区间 \exercisesource{考研数学一·2019}
-    \matchexampoint{可去间断点}
-    \exercisetip{利用极限定义判断}
-    \qitem{ex:ch01-08-02} \difficulty{3} 讨论 $f(x) = \frac{1}{x^2 - 1}$ 的间断点类型 \exercisesource{考研数学一·2020}
-    \matchexampoint{无穷间断点}
-    \exercisetip{利用极限定义判断}
-    \qitem{ex:ch01-08-03} \difficulty{2} 判断 $f(x) = \frac{|x|}{x}$ 的连续性 \exercisesource{考研数学一·2021}
-    \matchexampoint{跳跃间断点}
-    \exercisetip{利用左右极限判断}
-\end{enumerate}
-
-\subsection{题型9：分段函数的连续性}
-
-\begin{enumerate}[label={【\arabic*】}]
-    \qitem{ex:ch01-09-01} \difficulty{3} 设分段函数 $f(x) = \begin{cases} \frac{x^2 - 1}{x - 1}, & x \neq 1 \\ k, & x = 1 \end{cases}$，求 $k$ 使得 $f(x)$ 在 $x = 1$ 处连续 \exercisesource{考研数学一·2016}
-    \matchexampoint{可去间断点}
-    \exercisetip{利用连续函数定义，左右极限相等且等于函数值}
-    \qitem{ex:ch01-09-02} \difficulty{4} 讨论分段函数 $f(x) = \begin{cases} \sin x, & x < 0 \\ x, & x \geq 0 \end{cases}$ 在 $x = 0$ 处的连续性与可导性 \exercisesource{考研数学一·2017}
-    \matchexampoint{连续函数}
-    \exercisetip{分别计算左右极限和函数值}
-\end{enumerate}
-
-\subsection{题型10：函数图像与极限分析}
-
-\begin{enumerate}[label={【\arabic*】}]
-    \qitem{ex:ch01-10-01} \difficulty{3} 观察下图中函数 $y = \sin(x)$ 与 $y = x - \frac{x^3}{6}$ 的图像，分析当 $x \to 0$ 时两者的极限关系，并计算 $\lim_{x \to 0} \frac{\sin x - (x - \frac{x^3}{6})}{x^5}$ \exercisesource{考研数学一·2023}
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.8\textwidth]{images/function_comparison.pdf}
-        \caption{函数图像比较}
-        \label{fig:function_comparison}
-    \end{figure}
-    \matchexampoint{泰勒公式}
-    \exercisetip{利用泰勒展开分析两者的差异}
-    
-    \qitem{ex:ch01-10-02} \difficulty{4} 如图所示，三角形 $ABC$ 的三个顶点坐标分别为 $A(0,0)$、$B(4,0)$、$C(1,3)$，求其内切圆的面积，并证明内切圆与三边都相切 \exercisesource{考研数学一·2022}
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.6\textwidth]{images/triangle_circle.pdf}
-        \caption{三角形及其内切圆}
-        \label{fig:triangle_circle}
-    \end{figure}
-    \matchexampoint{平面几何}
-    \exercisetip{利用平面几何知识计算内切圆半径}
-    
-    \qitem{ex:ch01-10-03} \difficulty{5} 已知函数 $f(x) = e^x$ 和 $g(x) = 1 + x + \frac{x^2}{2}$，观察下图中两者的图像，分析当 $x \to 0$ 时的极限关系，并计算 $\lim_{x \to 0} \frac{e^x - (1 + x + \frac{x^2}{2})}{x^3}$ \exercisesource{考研数学一·2024}
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.8\textwidth]{images/function_comparison.pdf}
-        \caption{函数图像比较（扩展）}
-        \label{fig:function_comparison_ext}
-    \end{figure}
-    \matchexampoint{泰勒公式}
-    \exercisetip{利用泰勒展开分析高阶无穷小}
-\end{enumerate}
-
-% ========== 本章答案与解析 ==========
-\begin{chapter-answers}
-
-    \begin{type-answers}{题型1：极限的四则运算法则}
-        \begin{answer-item}{ex:ch01-01-01}
-            $\lim_{x \to 0} \frac{x^2 - 1}{x - 1} = \lim_{x \to 0} (x + 1) = 1$（直接代入）
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-01-02}
-            $\lim_{x \to 2} \frac{x^2 - 4}{x - 2} = \lim_{x \to 2} (x + 2) = 4$（因式分解后化简）
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-01-03}
-            $\lim_{x \to 2} \frac{x^2 + 3x - 10}{x - 2} = \lim_{x \to 2} (x + 5) = 7$（因式分解后化简）
-        \end{answer-item}
-    \end{type-answers}
-    
-    \begin{type-answers}{题型2：等价无穷小替换}
-        \begin{answer-item}{ex:ch01-02-01}
-            $\lim_{x \to 0} \frac{\sin 2x}{\sin x} = \lim_{x \to 0} \frac{2\sin x \cos x}{\sin x} = \lim_{x \to 0} 2\cos x = 2$（倍角公式化简）
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-02-02}
-            $\lim_{x \to 0} \frac{e^x - 1}{x} = 1$（等价无穷小代换：$e^x - 1 \sim x$）
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-02-03}
-            $\lim_{x \to 0} \frac{\ln(1 + x)}{x} = 1$（等价无穷小代换：$\ln(1 + x) \sim x$）
-        \end{answer-item}
-    \end{type-answers}
-    
-    \begin{type-answers}{题型3：洛必达法则}
-        \begin{answer-item}{ex:ch01-03-01}
-            $\lim_{x \to 1} \frac{e^x - e}{x - 1} = \lim_{x \to 1} e^x = e$（直接应用洛必达法则）
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-03-02}
-            $\lim_{x \to 1} \frac{\ln x}{x - 1} = \lim_{x \to 1} \frac{1/x}{1} = 1$（应用洛必达法则）
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-03-03}
-            $\lim_{x \to \infty} \frac{x^2}{\ln x} = \lim_{x \to \infty} \frac{2x}{1/x} = \lim_{x \to \infty} 2x^2 = +\infty$（应用洛必达法则，无穷大与无穷大的比较）
-        \end{answer-item}
-    \end{type-answers}
-    
-    \begin{type-answers}{题型4：泰勒公式}
-        \begin{answer-item}{ex:ch01-04-01}
-            利用泰勒展开：$\sin x = x - \frac{x^3}{6} + o(x^3)$，因此
-            $\lim_{x \to 0} \frac{x - \sin x}{x^3} = \lim_{x \to 0} \frac{x - (x - \frac{x^3}{6} + o(x^3))}{x^3} = \lim_{x \to 0} \frac{\frac{x^3}{6} + o(x^3)}{x^3} = \frac{1}{6}$
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-04-02}
-            利用泰勒展开：$\sin x = x - \frac{x^3}{6} + o(x^3)$，因此
-            $\lim_{x \to 0} \frac{\sin x - x}{x^3} = \lim_{x \to 0} \frac{(x - \frac{x^3}{6} + o(x^3)) - x}{x^3} = -\frac{1}{6}$
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-04-03}
-            利用泰勒展开：$\tan x = x + \frac{x^3}{3} + o(x^3)$，$\sin x = x - \frac{x^3}{6} + o(x^3)$，因此
-            $\lim_{x \to 0} \frac{\tan x - \sin x}{x^3} = \lim_{x \to 0} \frac{(x + \frac{x^3}{3} + o(x^3)) - (x - \frac{x^3}{6} + o(x^3))}{x^3} = \frac{1}{2}$
-        \end{answer-item}
-    \end{type-answers}
-    
-    \begin{type-answers}{题型5：重要极限公式}
-        \begin{answer-item}{ex:ch01-05-01}
-            $\lim_{x \to 0} \frac{\sin x}{x} = 1$（直接应用重要极限公式）
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-05-02}
-            $\lim_{x \to \infty} (1 + \frac{1}{x})^x = e$（直接应用重要极限公式）
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-05-03}
-            $\lim_{x \to \infty} (1 + \frac{2}{x})^x = \lim_{x \to \infty} \left[(1 + \frac{2}{x})^{x/2}\right]^2 = e^2$（应用重要极限公式）
-        \end{answer-item}
-    \end{type-answers}
-    
-    \begin{type-answers}{题型6：无穷大的比较}
-        \begin{answer-item}{ex:ch01-06-01}
-            $\lim_{x \to \infty} \frac{x^2}{\ln x} = +\infty$（应用洛必达法则，无穷大与无穷大的比较，$x^2$ 是比 $\ln x$ 高阶的无穷大）
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-06-02}
-            $\lim_{x \to \infty} \frac{x}{\sqrt{1 + x} - 1} = \lim_{x \to \infty} \frac{x(\sqrt{1 + x} + 1)}{(\sqrt{1 + x} - 1)(\sqrt{1 + x} + 1)} = \lim_{x \to \infty} \frac{x(\sqrt{1 + x} + 1)}{x} = \lim_{x \to \infty} (\sqrt{1 + x} + 1) = +\infty$（分子分母同乘共轭式）
-        \end{answer-item}
-    \end{type-answers}
-    
-    \begin{type-answers}{题型7：函数在某点的连续性判断}
-        \begin{answer-item}{ex:ch01-07-01}
-            $f(x) = \frac{x^2 - 1}{x - 1}$ 在 $x = 1$ 处无定义，因此不连续。但 $\lim_{x \to 1} f(x) = \lim_{x \to 1} (x + 1) = 2$，所以 $x = 1$ 是可去间断点。
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-07-02}
-            $\sin x$ 在 $\mathbb{R}$ 上连续，因为对于任意 $x_0 \in \mathbb{R}$，有 $\lim_{x \to x_0} \sin x = \sin x_0$。
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-07-03}
-            $f(x) = \frac{1}{x}$ 在 $x = 0$ 处无定义，且 $\lim_{x \to 0^+} f(x) = +\infty$，$\lim_{x \to 0^-} f(x) = -\infty$，因此 $x = 0$ 是无穷间断点，$f(x)$ 在 $x = 0$ 处不连续。
-        \end{answer-item}
-    \end{type-answers}
-    
-    \begin{type-answers}{题型8：间断点类型的判断与分类}
-        \begin{answer-item}{ex:ch01-08-01}
-            $f(x) = \frac{x^2 - 4}{x - 2} = x + 2$（$x \neq 2$），因此连续区间为 $(-\infty, 2) \cup (2, +\infty)$，$x = 2$ 是可去间断点。
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-08-02}
-            $f(x) = \frac{1}{x^2 - 1} = \frac{1}{(x - 1)(x + 1)}$，在 $x = 1$ 和 $x = -1$ 处无定义，且 $\lim_{x \to 1} f(x) = \lim_{x \to -1} f(x) = \infty$，因此 $x = 1$ 和 $x = -1$ 都是无穷间断点。
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-08-03}
-            $f(x) = \frac{|x|}{x} = \begin{cases} 1, & x > 0 \\ -1, & x < 0 \end{cases}$，在 $x = 0$ 处无定义，且 $\lim_{x \to 0^+} f(x) = 1$，$\lim_{x \to 0^-} f(x) = -1$，因此 $x = 0$ 是跳跃间断点，$f(x)$ 的连续区间为 $(-\infty, 0) \cup (0, +\infty)$。
-        \end{answer-item}
-    \end{type-answers}
-    
-    \begin{type-answers}{题型9：分段函数的连续性}
-        \begin{answer-item}{ex:ch01-09-01}
-            $\lim_{x \to 1} f(x) = \lim_{x \to 1} \frac{x^2 - 1}{x - 1} = \lim_{x \to 1} (x + 1) = 2$，要使 $f(x)$ 在 $x = 1$ 处连续，需 $f(1) = k = \lim_{x \to 1} f(x) = 2$，因此 $k = 2$。
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-09-02}
-            连续性：$\lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} \sin x = 0$，$\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} x = 0$，且 $f(0) = 0$，因此 $f(x)$ 在 $x = 0$ 处连续。
-            
-            可导性：左导数 $f'_-(0) = \lim_{h \to 0^-} \frac{f(0 + h) - f(0)}{h} = \lim_{h \to 0^-} \frac{\sin h - 0}{h} = 1$，右导数 $f'_+(0) = \lim_{h \to 0^+} \frac{f(0 + h) - f(0)}{h} = \lim_{h \to 0^+} \frac{h - 0}{h} = 1$，左导数等于右导数，因此 $f(x)$ 在 $x = 0$ 处可导。
-        \end{answer-item}
-    \end{type-answers}
-    
-    \begin{type-answers}{题型10：函数图像与极限分析}
-        \begin{answer-item}{ex:ch01-10-01}
-            当 $x \to 0$ 时，$\sin x$ 和 $x - \frac{x^3}{6}$ 都是无穷小量，且两者的差为高阶无穷小。利用泰勒展开：
-            $\sin x = x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^5)$
-            因此，$\lim_{x \to 0} \frac{\sin x - (x - \frac{x^3}{6})}{x^5} = \lim_{x \to 0} \frac{\frac{x^5}{120} + o(x^5)}{x^5} = \frac{1}{120}$
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-10-02}
-            首先计算三角形的边长：
-            $a = BC = \sqrt{(4-1)^2 + (0-3)^2} = \sqrt{9 + 9} = \sqrt{18} = 3\sqrt{2}$
-            $b = AC = \sqrt{(1-0)^2 + (3-0)^2} = \sqrt{1 + 9} = \sqrt{10}$
-            $c = AB = \sqrt{(4-0)^2 + (0-0)^2} = 4$
-            
-            半周长 $s = \frac{a + b + c}{2} = \frac{3\sqrt{2} + \sqrt{10} + 4}{2}$
-            
-            面积 $S = \frac{1}{2} \times 底 \times 高 = \frac{1}{2} \times 4 \times 3 = 6$
-            
-            内切圆半径 $r = \frac{S}{s} = \frac{6}{\frac{3\sqrt{2} + \sqrt{10} + 4}{2}} = \frac{12}{3\sqrt{2} + \sqrt{10} + 4}$
-            
-            内切圆面积 $A = \pi r^2 = \pi \left( \frac{12}{3\sqrt{2} + \sqrt{10} + 4} \right)^2$
-        \end{answer-item}
-        \begin{answer-item}{ex:ch01-10-03}
-            当 $x \to 0$ 时，$e^x$ 和 $1 + x + \frac{x^2}{2}$ 都是无穷小量，且两者的差为高阶无穷小。利用泰勒展开：
-            $e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + o(x^3)$
-            因此，$\lim_{x \to 0} \frac{e^x - (1 + x + \frac{x^2}{2})}{x^3} = \lim_{x \to 0} \frac{\frac{x^3}{6} + o(x^3)}{x^3} = \frac{1}{6}$
-        \end{answer-item}
-    \end{type-answers}
-
-\end{chapter-answers}
-
+\begin{itemize}
+    \item \textbf{基础阶段}：重点做难度1-3级的习题，巩固基础知识
+    \item \textbf{强化阶段}：重点做难度3-5级的习题，提高解题能力
+    \item \textbf{冲刺阶段}：做模拟题和历年真题，适应考试节奏
+    \item \textbf{错题整理}：将做错的习题整理到错题集，定期复习
+    \item \textbf{反复练习}：对于重要的知识点和题型，反复练习，直到熟练掌握
+\end{itemize}
