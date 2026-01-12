@@ -235,13 +235,17 @@
     \Question 
     \textbf{易错点：} 直接代入会得到0/0型不定式，不能直接计算
     
-    \multiplesolution{解法一：泰勒展开法}
+    \multiplesolution{解法一：泰勒展开法}\allowbreak
     利用泰勒展开：$\sin x = x - \frac{x^3}{6} + o(x^3)$，因此
-    $\lim_{x \to 0} \frac{x - \sin x}{x^3} = \lim_{x \to 0} \frac{x - (x - \frac{x^3}{6} + o(x^3))}{x^3} = \lim_{x \to 0} \frac{\frac{x^3}{6} + o(x^3)}{x^3} = \frac{1}{6}$
+    \[
+    \longmath{\lim_{x \to 0} \frac{x - \sin x}{x^3} = \lim_{x \to 0} \frac{x - (x - \frac{x^3}{6} + o(x^3))}{x^3} = \lim_{x \to 0} \frac{\frac{x^3}{6} + o(x^3)}{x^3} = \frac{1}{6}}
+    \]
     
-    \multiplesolution{解法二：洛必达法则}
+    \multiplesolution{解法二：洛必达法则}\allowbreak
     连续应用洛必达法则三次：
-    $\lim_{x \to 0} \frac{x - \sin x}{x^3} = \lim_{x \to 0} \frac{1 - \cos x}{3x^2} = \lim_{x \to 0} \frac{\sin x}{6x} = \lim_{x \to 0} \frac{\cos x}{6} = \frac{1}{6}$
+    \[
+    \longmath{\lim_{x \to 0} \frac{x - \sin x}{x^3} = \lim_{x \to 0} \frac{1 - \cos x}{3x^2} = \lim_{x \to 0} \frac{\sin x}{6x} = \lim_{x \to 0} \frac{\cos x}{6} = \frac{1}{6}}
+    \]
     
     \Question 
     \textbf{易错点：} 符号错误，注意分子是$\sin x - x$而非$x - \sin x$
@@ -257,8 +261,12 @@
     $\lim_{x \to 0} \frac{\tan x - \sin x}{x^3} = \lim_{x \to 0} \frac{(x + \frac{x^3}{3} + o(x^3)) - (x - \frac{x^3}{6} + o(x^3))}{x^3} = \frac{1}{2}$
     
     \multiplesolution{解法二：三角恒等变换}
-    $\tan x - \sin x = \tan x(1 - \cos x) = \tan x \cdot 2\sin^2(\frac{x}{2})$，因此
-    $\lim_{x \to 0} \frac{\tan x - \sin x}{x^3} = \lim_{x \to 0} \frac{\tan x \cdot 2\sin^2(\frac{x}{2})}{x^3} = \lim_{x \to 0} \frac{x \cdot 2 \cdot (\frac{x}{2})^2}{x^3} = \frac{1}{2}$
+    \[
+    \longmath{\tan x - \sin x = \tan x(1 - \cos x) = \tan x \cdot 2\sin^2(\frac{x}{2})}
+    \]，因此
+    \[
+    \longmath{\lim_{x \to 0} \frac{\tan x - \sin x}{x^3} = \lim_{x \to 0} \frac{\tan x \cdot 2\sin^2(\frac{x}{2})}{x^3} = \lim_{x \to 0} \frac{x \cdot 2 \cdot (\frac{x}{2})^2}{x^3} = \frac{1}{2}}
+    \]
 \end{Answer}
 
 \begin{Answer}[ref={ex:ch03-05}]

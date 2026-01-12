@@ -94,6 +94,11 @@
 \newcommand{\exercisetip}[1]{\textbf{\textcolor{kaoyan-orange}{【提示】#1}}} % 答题提示
 \newcommand{\multiplesolution}[1]{\textbf{\textcolor{kaoyan-orange}{【#1】}}} % 一题多解标注
 
+% 9. 公式格式化命令
+\newcommand{\longmath}[1]{\displaystyle #1} % 长行内公式使用displaystyle
+\newcommand{\splitmath}[1]{\begin{split} #1 \end{split}} % 用于分割长公式
+\newcommand{\multmath}[1]{\begin{multline} #1 \end{multline}} % 用于多行公式，自动换行
+
 % 9. 题目超链接命令
 \newcommand{\questionlink}[1]{%
     \hyperref[#1]{\ref{#1}}

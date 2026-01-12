@@ -413,14 +413,17 @@
         
         \centering
         \captionof{table}{高阶微分方程类型与解法}
+        \resizebox{\textwidth}{!}{
         \begin{tabular}{|c|c|c|c|c|}
         \hline
         方程类型 & 标准形式 & 特征方程 & 通解结构 & 示例 \\ \hline
         二阶常系数齐次 & $y'' + py' + qy = 0$ & $r^2 + pr + q = 0$ & $y = C_1e^{r_1x} + C_2e^{r_2x}$ & $y'' - 3y' + 2y = 0$ \\ \hline
         二阶常系数非齐次 & $y'' + py' + qy = f(x)$ & - & $y = y_h + y_p$ & $y'' - 3y' + 2y = e^x$ \\ \hline
         欧拉方程 & $x^2y'' + pxy' + qy = 0$ & $r(r-1) + pr + q = 0$ & $y = C_1x^{r_1} + C_2x^{r_2}$ & $x^2y'' - xy' + y = 0$ \\ \hline
-        偏微分方程 & - & - & 分离变量法 & 波动方程 $u_{tt} = a^2u_{xx}$ \\ \hline
+        偏微分方程 & - & - & 分离变量法 & 波动方程 \\ 
+        & & & & $u_{tt} = a^2u_{xx}$ \\ \hline
         \end{tabular}
+        }
         \label{tab:ode-advanced}
         
         \medskip
@@ -508,7 +511,11 @@
     
     连续性：左极限 $\lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} x^2 = 0$，右极限 $\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \sin x = 0$，函数值 $f(0) = \sin 0 = 0$，因此连续。
     
-    可导性：左导数 $\lim_{x \to 0^-} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0^-} \frac{x^2 - 0}{x} = \lim_{x \to 0^-} x = 0$，右导数 $\lim_{x \to 0^+} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0^+} \frac{\sin x - 0}{x} = 1$，左右导数不相等，因此不可导。
+    可导性：左导数 
+    $\longmath{\lim_{x \to 0^-} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0^-} \frac{x^2 - 0}{x} = \lim_{x \to 0^-} x = 0}$，
+    右导数 
+    $\longmath{\lim_{x \to 0^+} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0^+} \frac{\sin x - 0}{x} = 1}$，
+    左右导数不相等，因此不可导。
     
     \Question 
     \textbf{易错点：} 重要极限公式的应用
@@ -563,7 +570,19 @@
     \Question 
     \textbf{易错点：} 不同类型微分方程的解法
     
-    (1) 一阶线性方程，通解为 $y = e^{-\int 1 dx} \left( \int e^x e^{\int 1 dx} dx + C \right) = e^{-x} \left( \int e^{2x} dx + C \right) = e^{-x} \left( \frac{1}{2} e^{2x} + C \right) = \frac{1}{2} e^x + C e^{-x}$
+    (1) 一阶线性方程，通解为
+    \begin{align*}
+        y &= e^{-\int 1 dx} \left( \int e^x e^{\int 1 dx} dx + C \right) \\
+          &= e^{-x} \left( \int e^{2x} dx + C \right) \\
+          &= e^{-x} \left( \frac{1}{2} e^{2x} + C \right) \\
+          &= \frac{1}{2} e^x + C e^{-x}
+    \end{align*}
+    \begin{align*}
+        y &= e^{-\int 1 dx} \left( \int e^x e^{\int 1 dx} dx + C \right) \\
+          &= e^{-x} \left( \int e^{2x} dx + C \right) \\
+          &= e^{-x} \left( \frac{1}{2} e^{2x} + C \right) \\
+          &= \frac{1}{2} e^x + C e^{-x}
+    \end{align*}
     
     (2) 二阶常系数齐次方程，特征方程 $r^2 - 3r + 2 = 0$，根为 $r_1 = 1, r_2 = 2$，通解为 $y = C_1 e^x + C_2 e^{2x}$
     
