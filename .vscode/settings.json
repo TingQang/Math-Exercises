@@ -65,6 +65,7 @@
         "biblatex",
         "breaklines",
         "Consolas",
+        "displaystyle",
         "gbpub",
         "htbp",
         "kaoyan",
@@ -77,5 +78,6 @@
         "synctex",
         "tcolorbox",
         "xelatex"
-    ]
+    ],
+    "Codegeex.RepoIndex": true
 }

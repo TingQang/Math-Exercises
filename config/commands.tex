@@ -21,9 +21,14 @@
 \newcommand{\diver}{\operatorname{div}} % 散度
 
 % 3. 极限与积分
-\newcommand{\limn}{\lim\limits_{n\to\infty}}
-\newcommand{\limx}{\lim\limits_{x\to\infty}}
-\newcommand{\limxa}{\lim\limits_{x\to a}}
+% 紧凑的极限符号，适合行内使用
+\newcommand{\limn}{\lim_{n\to\infty}}      % n→∞
+\newcommand{\limx}{\lim_{x\to\infty}}      % x→∞
+\newcommand{\limxa}{\lim_{x\to a}}         % x→a（通用）
+\newcommand{\limx0}{\lim_{x\to 0}}         % x→0（常用）
+\newcommand{\limx1}{\lim_{x\to 1}}         % x→1（常用）
+\newcommand{\limxinf}{\lim_{x\to +\infty}} % x→+∞
+\newcommand{\limxminf}{\lim_{x\to -\infty}} % x→-∞
 \newcommand{\intab}{\int_{a}^{b}}
 \newcommand{\iintD}{\iint\limits_{D}}
 \newcommand{\ointC}{\oint\limits_{C}}
