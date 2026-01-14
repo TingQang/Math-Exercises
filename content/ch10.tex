@@ -1,103 +1,71 @@
-% 第10章：数理统计
-\chapter{数理统计}
-\label{ch:mathematical-statistics}
+\chapter{向量}
 
-本章介绍数理统计的基本概念，包括总体、样本、统计量、参数估计、假设检验等。
+\section{考点说明}
+\begin{itemize}
+\item 规范正交基；
+\item 向量的线性组合与线性表示
+\item 向量的概念；
+\item 线性相关性的判定定理；
+\item 基变换与坐标变换；
+\item 向量的线性运算；
+\item 基、维数与坐标；
+\item 向量空间的概念；
+\item 向量的内积与正交性
+\item 向量组线性相关与线性无关的概念；
+\item 向量组的秩与极大线性无关组
+\end{itemize}
 
-% 题型10.1 参数估计
-\begin{question-type}{参数估计}
-本题型主要考查点估计、区间估计的概念和方法。
+\section{第一节 向量的概念与线性运算}
 
-\begin{exercise}
-点估计：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} 正态总体均值的点估计 \exercisesource{点估计}
-    \item \difficulty{3} 矩估计法应用 \exercisesource{李永乐复习全书P881}
-    \item \difficulty{4} 最大似然估计 \exercisesource{B站 BV1xx4y1E7xx}
-\end{enumerate}
-\end{exercise}
+\pt{向量的线性运算；}
 
-\begin{exercise}
-区间估计：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{3} 正态总体均值的置信区间 \exercisesource{区间估计}
-    \item \difficulty{4} 方差的置信区间 \exercisesource{2024考研数学一真题}
-    \item \difficulty{3} 比例的置信区间 \exercisesource{李永乐复习全书P895}
-\end{enumerate}
-\end{exercise}
+\pt{向量的线性组合与线性表示判断；}
 
-\begin{exercise}
-估计量的性质：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{3} 无偏性、一致性 \exercisesource{估计量性质}
-    \item \difficulty{4} 有效性比较 \exercisesource{2023考研数学一真题}
-\end{enumerate}
-\end{exercise}
-\end{question-type}
+\pt{求解线性表示的系数；}
 
-% 题型10.2 假设检验
-\begin{question-type}{假设检验}
-本题型主要考查假设检验的基本概念、显著性水平、检验统计量、p值等。
+\pt{向量组的线性表示与矩阵秩的关系应用；}
 
-\begin{exercise}
-单正态总体均值检验：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{3} $Z$ 检验：$\sigma$ 已知 \exercisesource{Z检验}
-    \item \difficulty{3} $t$ 检验：$\sigma$ 未知 \exercisesource{t检验}
-    \item \difficulty{3} 检验统计量的计算 \exercisesource{李永乐复习全书P915}
-\end{enumerate}
-\end{exercise}
+\pt{含参数向量的线性表示讨论；}
 
-\begin{exercise}
-单正态总体方差检验：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{4} $\chi^2$ 检验 \exercisesource{卡方检验}
-    \item \difficulty{4} 方差比的 F 检验 \exercisesource{F检验}
-\end{enumerate}
-\end{exercise}
+\pt{多个向量线性表示的综合问题；}
 
-\begin{exercise}
-两总体均值比较：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{4} 两正态总体均值差的检验 \exercisesource{两总体检验}
-    \item \difficulty{4} 配对数据的 t 检验 \exercisesource{B站 BV1xx4y1E7xx}
-\end{enumerate}
-\end{exercise}
+\pt{向量线性表示的证明题}
 
-\begin{exercise}
-非参数检验：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{4} 卡方拟合检验 \exercisesource{拟合检验}
-    \item \difficulty{4} 独立性检验 \exercisesource{2024考研数学一真题}
-\end{enumerate}
-\end{exercise}
-\end{question-type}
+\section{第二节 向量组的线性相关性}
 
-% 题型10.3 回归分析
-\begin{question-type}{回归分析}
-本题型主要考查一元线性回归、相关系数、最小二乘法等。
+\pt{向量组线性相关性的判断；}
 
-\begin{exercise}
-一元线性回归：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{3} 回归方程的建立 \exercisesource{线性回归}
-    \item \difficulty{3} 最小二乘估计 \exercisesource{李永乐复习全书P935}
-\end{enumerate}
-\end{exercise}
+\pt{向量组秩的计算与极大线性无关组的求解；}
 
-\begin{exercise}
-相关系数：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} 相关系数的计算 \exercisesource{相关系数}
-    \item \difficulty{4} 相关系数的检验 \exercisesource{B站 BV1xx4y1E7xx}
-\end{enumerate}
-\end{exercise}
+\pt{线性相关性判定定理的应用；}
 
-\begin{exercise}
-回归诊断：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{4} 残差分析 \exercisesource{残差分析}
-    \item \difficulty{4} 回归效果的评价 \exercisesource{2023考研数学一真题}
-\end{enumerate}
-\end{exercise}
-\end{question-type}
+\pt{含参数向量组的线性相关性讨论；}
+
+\pt{向量组秩的不等式应用；}
+
+\pt{极大线性无关组的扩充与应用；}
+
+\pt{线性相关性的证明题（如证明线性无关向量组的变形仍无关）；}
+
+\pt{向量组等价与秩的关系应用}
+
+\section{第三节 向量空间}
+
+\pt{向量空间基与维数的求解；}
+
+\pt{向量在基下的坐标计算；}
+
+\pt{基变换与坐标变换；}
+
+\pt{规范正交基的构造（施密特正交化）；}
+
+\pt{过渡矩阵的计算与应用；}
+
+\pt{子空间的基与维数求解；}
+
+\pt{施密特正交化的综合应用；}
+
+\pt{向量空间同构的判断；}
+
+\pt{向量内积的计算与正交性判断}
+

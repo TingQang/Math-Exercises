@@ -28,6 +28,7 @@
         "*.synctex.gz", "*.log", "*.out", "*.toc",
         "*.lof", "*.lot", "*.fmt", "*.fot", "*.fdb_latexmk", "*.fls"
     ],
+    "latex-workshop.latex.cleanCommand": "latexmk -C -outdir=./build %DOC% && rm -f ./build/%DOC_BASE%.pdf && rm -f ./build/%DOC_BASE%.synctex.gz",
     
     // ============ PDF 查看器配置 ============
     "latex-workshop.view.pdf.viewer": "tab",
@@ -72,6 +73,7 @@
         "latexmk",
         "lstlisting",
         "lstset",
+        "nonstopmode",
         "pdfauthor",
         "pdfsubject",
         "stringstyle",

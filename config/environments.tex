@@ -1,51 +1,19 @@
-% 定义自定义环境
+\DeclareExerciseType{problem}{
+    exercise-env= Problem,
+    solution-env= Answer,
+    exercise-name= ,
+    solution-name= ,
+    counter=problem,
+    exercise-template= default,
+    solution-template= default
+}
 
-% 考点环境
-\newenvironment{exam-point}[2]{
-  \par\vspace{2ex}
-  \noindent\textbf{\textcolor{kaoyan-blue}{考点：#1}}\quad
-  \label{#2}
-}{\par\vspace{1ex}}
-
-% 题型环境
-\newenvironment{question-type}[2]{
-  \subsection{#1} % 题型作为subsection
-  \label{#2}
-  \vspace{1ex}
-}{\vspace{1ex}}
-
-% 章节答案环境
-\newenvironment{chapter-answers}{
-  \section{本章答案与解析}
-  \begin{center}
-    \textbf{\large 答案与解析}
-  \end{center}
-  \vspace{1em}
-}{}
-
-% 题型答案环境
-\newenvironment{type-answers}[1]{
-  \subsection{#1 答案}
-  \begin{enumerate}[label={【\arabic*】}]
-}{\end{enumerate}}
-
-% 答案项环境
-\newenvironment{answer-item}[1]{
-  \item
-  \begin{tcolorbox}[colframe=answercolor, colback=answercolor!10, breakable]
-    \textbf{\ref{#1}}：
-}{\end{tcolorbox}}
-
-% 错题分析环境
-\newenvironment{error-analysis}{
-  \begin{tcolorbox}[colframe=kaoyan-red, colback=kaoyan-red!5, breakable, title=\textbf{错题分析}]
-}{\end{tcolorbox}}
-
-% 为Exercise和Answer环境添加双向超链接支持
-\makeatletter
-% 简化ExerciseHeader，只添加中文标题和指向答案的链接
-\renewcommand{\ExerciseHeader}{\medskip\centerline{\textbf{\Large 题型\arabic{Exercise}：\ExerciseTitle}（\refAnswer{\ExerciseLabel}）}\vspace{1ex}}
-
-% 简化AnswerHeader，使用中文标题，添加指向原题的超链接
-\renewcommand{\AnswerHeader}{\medskip\centerline{\textbf{\large 答案与解析}（\ref{\AnswerRef}）}\smallskip}
-\makeatother
+\xsimsetup{
+    Problem/print = true,
+    Answer/print = false,
+    Problem/heading = ,
+    Answer/heading =,
+    print-solutions/headings= true,
+    print-solutions/headings-template = kaoyan-daan
+}
+\renewcommand{\theproblem}{【\arabic{problem}】}

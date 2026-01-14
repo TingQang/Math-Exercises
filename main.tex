@@ -1,36 +1,35 @@
-\documentclass[10pt, oneside]{book}
+\documentclass[12pt, oneside]{book}
 
 % 引入模块化配置文件
-\input{config/packages}
-\input{config/colors}
-\input{config/styles}
-\input{config/commands}
-\input{config/environments}
+\input{config/packages.tex}
+\input{config/colors.tex}
+\input{config/styles.tex}
+\input{config/commands.tex}
+\input{config/environments.tex}
 
 % 添加参考文献资源（必须在preamble之后）
 \addbibresource{references.bib}
 
 % 设置图片路径
 \graphicspath{{figures/}{figures/common/}{images/}}
-
+\setlength{\parindent}{0pt}
+\DeclareExerciseCollection{simple}
 \begin{document}
 
 % ============= 封面页 =============
 \begin{titlepage}
     \centering
     \vspace*{2cm}
-    {\Huge\bfseries\color{kaoyan-blue} 考研数学核心笔记 \par}
+    {考研数学核心笔记 \par}
     \vspace{0.5cm}
-    {\Large 高等数学·线性代数·概率论与数理统计 \par}
+    {高等数学·线性代数·概率论与数理统计 \par}
     \vspace{2cm}
-    {\LARGE 张庭祥 \par}
+    {张庭祥 \par}
     \vspace{1cm}
-    {\large 版本：2025.1 \par}
+    {版本：2025.1 \par}
     \vspace{3cm}
-    % 可选：添加logo
-    % \includegraphics[width=0.2\textwidth]{figures/common/logo}
     \vfill
-    {\large \today \par}
+    {\today \par}
 \end{titlepage}
 
 % 前言部分
@@ -45,10 +44,33 @@
 % 正文部分（题目+答案）
 \mainmatter
 
-% 绪论和测试章节
-\input{content/ch01}     % 第1章：绪论
+% 测试章节
 \input{content/ch02}     % 第2章：测试章节
-\input{content/ch03}     % 第3章：极限与连续
+
+% 高等数学部分
+\input{content/ch03}     % 第3章：函数、极限、连续
+\input{content/ch04}     % 第4章：一元函数微分学
+\input{content/ch05}     % 第5章：一元函数积分学
+\input{content/ch06}     % 第6章：向量代数和空间解析几何
+\input{content/ch07}     % 第7章：多元函数微分学
+\input{content/ch08}     % 第8章：多元函数积分学
+\input{content/ch09}     % 第9章：无穷级数
+
+% 线性代数部分
+\input{content/ch10}     % 第10章：行列式
+\input{content/ch11}     % 第11章：矩阵
+\input{content/ch12}     % 第12章：向量
+\input{content/ch13}     % 第13章：线性方程组
+\input{content/ch14}     % 第14章：矩阵的特征值和特征向量
+\input{content/ch15}     % 第15章：二次型
+
+% 概率论与数理统计部分
+\input{content/ch16}     % 第16章：随机事件和概率
+\input{content/ch17}     % 第17章：随机变量及其分布
+\input{content/ch18}     % 第18章：多维随机变量及其分布
+\input{content/ch19}     % 第19章：随机变量的数字特征
+\input{content/ch20}     % 第20章：大数定律和中心极限定理
+\input{content/ch21}     % 第21章：数理统计的基本概念
 
 % 附录
 \appendix

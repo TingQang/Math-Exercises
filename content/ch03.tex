@@ -1,398 +1,83 @@
-%第3章：极限与连续
-\chapter{极限与连续}
-\label{ch:limit-continuity}
+\chapter{一元函数积分学}
 
-\begin{exam-point}{极限的定义与性质}{limit-def-prop}
-考研中常见的重要极限包括：
-1. 极限的定义（$\epsilon-\delta$语言）
-2. 极限的唯一性
-3. 极限的四则运算法则
-4. 夹逼引理
-\end{exam-point}
+\section{考点说明}
+\begin{itemize}
+\item 积分上限的函数及其导数；
+\item 不定积分和定积分的换元积分法与分部积分法；
+\item 基本积分公式；
+\item 反常（广义）积分；
+\item 定积分的概念和基本性质；
+\item 定积分中值定理
+\item 有理函数、三角函数的有理式和简单无理函数的积分
+\item 反常积分收敛的比较判别法；
+\item 不定积分的基本性质；
+\item 函数的平均值
+\item 定积分的应用（平面图形的面积、平面曲线的弧长、旋转体的体积及侧面积、平行截面面积为已知的立体体积、功、引力、压力、质心、形心等）；
+\item 原函数和不定积分的概念；
+\item 牛顿-莱布尼茨（Newton-Leibniz）公式；
+\end{itemize}
 
-\section{极限的四则运算法则}
+\section{第一节 不定积分与定积分的概念及性质}
 
-% 题型1：极限的四则运算法则
-\begin{Exercise}[title={极限的四则运算法则}, label={ex:ch03-01}]
-    \Question \difficulty{1} 计算 $\limx0 \frac{x^2 - 1}{x - 1}$ \exercisesource{考研数学一·2018}
-    \matchexampoint{极限的四则运算法则}
-    \exercisetip{直接代入即可}
-    
-    \Question \difficulty{1} 计算 $\lim_{x \to 2} \frac{x^2 - 4}{x - 2}$ \exercisesource{考研数学一·2019}
-    \matchexampoint{极限的四则运算法则}
-    \exercisetip{先化简再代入}
-    
-    \Question \difficulty{1} 计算 $\lim_{x \to 2} \frac{x^2 + 3x - 10}{x - 2}$ \exercisesource{考研数学一·2020}
-    \matchexampoint{极限的四则运算法则}
-    \exercisetip{因式分解后化简}
-\end{Exercise}
+\pt{原函数存在性判断；}
 
-\section{等价无穷小替换}
+\pt{不定积分的基本计算；}
 
-% 题型2：等价无穷小替换
-\begin{Exercise}[title={等价无穷小替换}, label={ex:ch03-02}]
-    \Question \difficulty{1} 计算 $\limx0 \frac{\sin 2x}{\sin x}$ \exercisesource{考研数学一·2019}
-    \matchexampoint{三角函数极限}
-    \exercisetip{利用倍角公式化简}
-    
-    \Question \difficulty{2} 计算 $\limx0 \frac{e^x - 1}{x}$ \exercisesource{考研数学一·2020}
-    \matchexampoint{重要极限公式}
-    \exercisetip{利用等价无穷小代换}
-    
-    \Question \difficulty{2} 计算 $\limx0 \frac{\ln(1 + x)}{x}$ \exercisesource{考研数学一·2021}
-    \matchexampoint{重要极限公式}
-    \exercisetip{利用等价无穷小代换}
-\end{Exercise}
+\pt{定积分的概念应用；}
 
-\section{洛必达法则}
+\pt{定积分性质的应用；}
 
-% 题型3：洛必达法则
-\begin{Exercise}[title={洛必达法则}, label={ex:ch03-03}]
-    \Question \difficulty{3} 计算 $\lim_{x \to 1} \frac{e^x - e}{x - 1}$ \exercisesource{考研数学一·2022}
-    \matchexampoint{洛必达法则}
-    \exercisetip{直接应用洛必达法则}
-    
-    \Question \difficulty{4} 计算 $\lim_{x \to 1} \frac{\ln x}{x - 1}$ \exercisesource{考研数学一·2020}
-    \matchexampoint{洛必达法则}
-    \exercisetip{注意分母趋于0，分子也趋于0}
-    
-    \Question \difficulty{4} 计算 $\limx \frac{x^2}{\ln x}$ \exercisesource{考研数学一·2019}
-    \matchexampoint{无穷大与无穷大的比较}
-    \exercisetip{利用洛必达法则或等价无穷大}
-\end{Exercise}
+\pt{定积分中值定理的应用；}
 
-\section{泰勒公式}
+\pt{利用定积分性质比较积分大小；}
 
-% 题型4：泰勒公式
-\begin{Exercise}[title={泰勒公式}, label={ex:ch03-04}]
-    \Question \difficulty{3} 计算 $\limx0 \frac{x - \sin x}{x^3}$ \exercisesource{考研数学一·2021}
-    \matchexampoint{等价无穷小代换}
-    \exercisetip{利用泰勒展开或洛必达法则}
-    
-    \Question \difficulty{4} 计算 $\limx0 \frac{\sin x - x}{x^3}$ \exercisesource{考研数学一·2021}
-    \matchexampoint{等价无穷小代换}
-    \exercisetip{利用泰勒展开}
-    
-    \Question \difficulty{5} 计算 $\limx0 \frac{\tan x - \sin x}{x^3}$ \exercisesource{考研数学一·2019}
-    \matchexampoint{等价无穷小代换}
-    \exercisetip{利用泰勒展开}
-\end{Exercise}
+\pt{原函数的构造与判断；}
 
-\section{重要极限公式}
+\pt{含抽象函数的定积分性质应用}
 
-% 题型5：重要极限公式
-\begin{Exercise}[title={重要极限公式}, label={ex:ch03-05}]
-    \Question \difficulty{1} 计算 $\limx0 \frac{\sin x}{x}$ \exercisesource{考研数学一·2017}
-    \matchexampoint{重要极限公式}
-    \exercisetip{直接应用公式}
-    
-    \Question \difficulty{4} 计算 $\limx (1 + \frac{1}{x})^x$ \exercisesource{考研数学一·2022}
-    \matchexampoint{数列极限与函数极限的转化}
-    \exercisetip{利用重要极限公式}
-    
-    \Question \difficulty{4} 计算 $\limx (1 + \frac{2}{x})^x$ \exercisesource{考研数学一·2018}
-    \matchexampoint{数列极限与函数极限的转化}
-    \exercisetip{利用重要极限公式}
-\end{Exercise}
+\section{第二节 积分的计算方法}
 
-\section{无穷大的比较}
+\pt{积分上限函数的导数计算；}
 
-% 题型6：无穷大的比较
-\begin{Exercise}[title={无穷大的比较}, label={ex:ch03-06}]
-    \Question \difficulty{4} 计算 $\lim_{x \to \infty} \frac{x^2}{\ln x}$ \exercisesource{考研数学一·2019}
-    \matchexampoint{无穷大与无穷大的比较}
-    \exercisetip{利用洛必达法则或等价无穷大}
-    
-    \Question \difficulty{3} 计算 $\lim_{x \to \infty} \frac{x}{\sqrt{1 + x} - 1}$ \exercisesource{考研数学一·2021}
-    \matchexampoint{等价无穷小代换}
-    \exercisetip{分子分母同乘共轭式}
-\end{Exercise}
+\pt{牛顿-莱布尼茨公式的应用；}
 
-\section{函数在某点的连续性判断}
+\pt{换元积分法与分部积分法计算积分；}
 
-% 题型7：函数在某点的连续性判断
-\begin{Exercise}[title={函数在某点的连续性判断}, label={ex:ch03-07}]
-    \Question \difficulty{1} 判断 $f(x) = \frac{x^2 - 1}{x - 1}$ 在 $x = 1$ 处的连续性 \exercisesource{考研数学一·2018}
-    \matchexampoint{可去间断点}
-    \exercisetip{利用极限定义判断}
-    
-    \Question \difficulty{1} 判断 $f(x) = \sin x$ 在 $\mathbb{R}$ 上的连续性 \exercisesource{考研数学一·2019}
-    \matchexampoint{连续函数}
-    \exercisetip{利用三角函数性质}
-    
-    \Question \difficulty{1} 判断 $f(x) = \frac{1}{x}$ 在 $x = 0$ 处的连续性 \exercisesource{考研数学一·2020}
-    \matchexampoint{无穷间断点}
-    \exercisetip{利用极限定义判断}
-\end{Exercise}
+\pt{有理函数积分；}
 
-\section{间断点类型的判断与分类}
+\pt{三角函数有理式积分；}
 
-% 题型8：间断点类型的判断与分类
-\begin{Exercise}[title={间断点类型的判断与分类}, label={ex:ch03-08}]
-    \Question \difficulty{2} 讨论 $f(x) = \frac{x^2 - 4}{x - 2}$ 的连续区间 \exercisesource{考研数学一·2019}
-    \matchexampoint{可去间断点}
-    \exercisetip{利用极限定义判断}
-    
-    \Question \difficulty{3} 讨论 $f(x) = \frac{1}{x^2 - 1}$ 的间断点类型 \exercisesource{考研数学一·2020}
-    \matchexampoint{无穷间断点}
-    \exercisetip{利用极限定义判断}
-    
-    \Question \difficulty{2} 判断 $f(x) = \frac{|x|}{x}$ 的连续性 \exercisesource{考研数学一·2021}
-    \matchexampoint{跳跃间断点}
-    \exercisetip{利用左右极限判断}
-\end{Exercise}
+\pt{简单无理函数积分；}
 
-\section{分段函数的连续性}
+\pt{含变限积分的方程求解；}
 
-% 题型9：分段函数的连续性
-\begin{Exercise}[title={分段函数的连续性}, label={ex:ch03-09}]
-    \Question \difficulty{3} 设分段函数 $f(x) = \begin{cases} \frac{x^2 - 1}{x - 1}, & x \neq 1 \\ k, & x = 1 \end{cases}$，求 $k$ 使得 $f(x)$ 在 $x = 1$ 处连续 \exercisesource{考研数学一·2016}
-    \matchexampoint{可去间断点}
-    \exercisetip{利用连续函数定义，左右极限相等且等于函数值}
-    
-    \Question \difficulty{4} 讨论分段函数 $f(x) = \begin{cases} \sin x, & x < 0 \\ x, & x \geq 0 \end{cases}$ 在 $x = 0$ 处的连续性与可导性 \exercisesource{考研数学一·2017}
-    \matchexampoint{连续函数}
-    \exercisetip{分别计算左右极限和函数值}
-\end{Exercise}
+\pt{分部积分法的综合应用（多次分部、递推公式）；}
 
-\section{函数图像与极限分析}
+\pt{利用对称性简化定积分计算；}
 
-% 题型10：函数图像与极限分析
-\begin{Exercise}[title={函数图像与极限分析}, label={ex:ch03-10}]
-    \Question \difficulty{3} 观察下图中函数 $y = \sin(x)$ 与 $y = x - \frac{x^3}{6}$ 的图像，分析当 $x \to 0$ 时两者的极限关系，并计算 $\lim_{x \to 0} \frac{\sin x - (x - \frac{x^3}{6})}{x^5}$ \exercisesource{考研数学一·2023}
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.8\textwidth]{images/function_comparison.pdf}
-        \caption{函数图像比较}
-        \label{fig:function_comparison}
-    \end{figure}
-    \matchexampoint{泰勒公式}
-    \exercisetip{利用泰勒展开分析两者的差异}
-    
-    \Question \difficulty{4} 如图所示，三角形 $ABC$ 的三个顶点坐标分别为 $A(0,0)$、$B(4,0)$、$C(1,3)$，求其内切圆的面积，并证明内切圆与三边都相切 \exercisesource{考研数学一·2022}
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.6\textwidth]{images/triangle_circle.pdf}
-        \caption{三角形及其内切圆}
-        \label{fig:triangle_circle}
-    \end{figure}
-    \matchexampoint{平面几何}
-    \exercisetip{利用平面几何知识计算内切圆半径}
-    
-    \Question \difficulty{5} 已知函数 $f(x) = e^x$ 和 $g(x) = 1 + x + \frac{x^2}{2}$，观察下图中两者的图像，分析当 $x \to 0$ 时的极限关系，并计算 $\lim_{x \to 0} \frac{e^x - (1 + x + \frac{x^2}{2})}{x^3}$ \exercisesource{考研数学一·2024}
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.8\textwidth]{images/function_comparison.pdf}
-        \caption{函数图像比较（扩展）}
-        \label{fig:function_comparison_ext}
-    \end{figure}
-    \matchexampoint{泰勒公式}
-    \exercisetip{利用泰勒展开分析高阶无穷小}
-\end{Exercise}
+\pt{含绝对值、分段函数的定积分计算}
 
-\section{本章答案与解析}
+\section{第三节 反常积分与定积分的应用}
 
-\begin{Answer}[ref={ex:ch03-01}] % 对应题型1的标签
-    $\limx0 \frac{x^2 - 1}{x - 1} = \limx0 (x + 1) = 1$（直接代入）
-    
-    $\lim_{x \to 2} \frac{x^2 - 4}{x - 2} = \lim_{x \to 2} (x + 2) = 4$（因式分解后化简）
-    
-    $\lim_{x \to 2} \frac{x^2 + 3x - 10}{x - 2} = \lim_{x \to 2} (x + 5) = 7$（因式分解后化简）
-\end{Answer}
+\pt{反常积分的计算与收敛性判断；}
 
-\begin{Answer}[ref={ex:ch03-02}] % 对应题型2的标签
-    $\limx0 \frac{\sin 2x}{\sin x} = \limx0 \frac{2\sin x \cos x}{\sin x} = \limx0 2\cos x = 2$（倍角公式化简）
-    
-    $\limx0 \frac{e^x - 1}{x} = 1$（等价无穷小代换：$e^x - 1 \sim x$）
-    
-    $\limx0 \frac{\ln(1 + x)}{x} = 1$（等价无穷小代换：$\ln(1 + x) \sim x$）
-\end{Answer}
+\pt{平面图形面积的计算；}
 
-\begin{Answer}[ref={ex:ch03-03}] % 对应题型3的标签
-    \textbf{易错点：} 忘记检查洛必达法则的条件，本题满足0/0型不定式
-    
-    \multiplesolution{解法一：洛必达法则}
-    $\lim_{x \to 1} \frac{e^x - e}{x - 1} = \lim_{x \to 1} e^x = e$（直接应用洛必达法则）
-    
-    \multiplesolution{解法二：导数定义}
-    注意到$\lim_{x \to 1} \frac{e^x - e}{x - 1}$是函数$f(x) = e^x$在$x=1$处的导数，因此$f'(1) = e^1 = e$
-    
-    \textbf{易错点：} 洛必达法则应用后，分子分母都要单独求导
-    
-    \multiplesolution{解法一：洛必达法则}
-    $\lim_{x \to 1} \frac{\ln x}{x - 1} = \lim_{x \to 1} \frac{1/x}{1} = 1$（应用洛必达法则）
-    
-    \multiplesolution{解法二：换元法}
-    令$t = x - 1$，则$x = t + 1$，当$x \to 1$时$t \to 0$，因此
-    $\lim_{x \to 1} \frac{\ln x}{x - 1} = \lim_{t \to 0} \frac{\ln(1 + t)}{t} = 1$（利用重要极限）
-    
-    \textbf{易错点：} 无穷大与无穷大的比较，注意$x^2$是比$\ln x$高阶的无穷大
-    
-    $\lim_{x \to \infty} \frac{x^2}{\ln x} = \lim_{x \to \infty} \frac{2x}{1/x} = \lim_{x \to \infty} 2x^2 = +\infty$（应用洛必达法则，无穷大与无穷大的比较）
-\end{Answer}
+\pt{平面曲线弧长的计算；}
 
-\begin{Answer}[ref={ex:ch03-04}]
-    \Question 
-    \textbf{易错点：} 直接代入会得到0/0型不定式，不能直接计算
-    
-    \multiplesolution{解法一：泰勒展开法}\allowbreak
-    利用泰勒展开：$\sin x = x - \frac{x^3}{6} + o(x^3)$，因此
-    \[
-    \longmath{\lim_{x \to 0} \frac{x - \sin x}{x^3} = \lim_{x \to 0} \frac{x - (x - \frac{x^3}{6} + o(x^3))}{x^3} = \lim_{x \to 0} \frac{\frac{x^3}{6} + o(x^3)}{x^3} = \frac{1}{6}}
-    \]
-    
-    \multiplesolution{解法二：洛必达法则}\allowbreak
-    连续应用洛必达法则三次：
-    \[
-    \longmath{\lim_{x \to 0} \frac{x - \sin x}{x^3} = \lim_{x \to 0} \frac{1 - \cos x}{3x^2} = \lim_{x \to 0} \frac{\sin x}{6x} = \lim_{x \to 0} \frac{\cos x}{6} = \frac{1}{6}}
-    \]
-    
-    \Question 
-    \textbf{易错点：} 符号错误，注意分子是$\sin x - x$而非$x - \sin x$
-    
-    利用泰勒展开：$\sin x = x - \frac{x^3}{6} + o(x^3)$，因此
-    $\lim_{x \to 0} \frac{\sin x - x}{x^3} = \lim_{x \to 0} \frac{(x - \frac{x^3}{6} + o(x^3)) - x}{x^3} = -\frac{1}{6}$
-    
-    \Question 
-    \textbf{易错点：} 直接使用等价无穷小$\tan x \sim x$和$\sin x \sim x$会得到0，导致错误
-    
-    \multiplesolution{解法一：泰勒展开法}
-    利用泰勒展开：$\tan x = x + \frac{x^3}{3} + o(x^3)$，$\sin x = x - \frac{x^3}{6} + o(x^3)$，因此
-    $\lim_{x \to 0} \frac{\tan x - \sin x}{x^3} = \lim_{x \to 0} \frac{(x + \frac{x^3}{3} + o(x^3)) - (x - \frac{x^3}{6} + o(x^3))}{x^3} = \frac{1}{2}$
-    
-    \multiplesolution{解法二：三角恒等变换}
-    \[
-    \longmath{\tan x - \sin x = \tan x(1 - \cos x) = \tan x \cdot 2\sin^2(\frac{x}{2})}
-    \]，因此
-    \[
-    \longmath{\lim_{x \to 0} \frac{\tan x - \sin x}{x^3} = \lim_{x \to 0} \frac{\tan x \cdot 2\sin^2(\frac{x}{2})}{x^3} = \lim_{x \to 0} \frac{x \cdot 2 \cdot (\frac{x}{2})^2}{x^3} = \frac{1}{2}}
-    \]
-\end{Answer}
+\pt{旋转体体积与侧面积的计算；}
 
-\begin{Answer}[ref={ex:ch03-05}]
-    \Question 
-    \textbf{易错点：} 不要将重要极限记混，$\lim_{x \to 0} \frac{\sin x}{x} = 1$，而不是0或其他值
-    
-    $\lim_{x \to 0} \frac{\sin x}{x} = 1$（直接应用重要极限公式）
-    
-    \Question 
-    \textbf{易错点：} 重要极限的形式要正确，指数部分必须与分母匹配
-    
-    \multiplesolution{解法一：直接应用公式}
-    $\lim_{x \to \infty} (1 + \frac{1}{x})^x = e$（直接应用重要极限公式）
-    
-    \multiplesolution{解法二：取自然对数}
-    令$y = (1 + \frac{1}{x})^x$，则$\ln y = x \ln(1 + \frac{1}{x})$，
-    $\lim_{x \to \infty} \ln y = \lim_{x \to \infty} \frac{\ln(1 + \frac{1}{x})}{1/x} = \lim_{t \to 0} \frac{\ln(1 + t)}{t} = 1$（令$t = 1/x$），
-    因此$\lim_{x \to \infty} y = e^1 = e$
-    
-    \Question 
-    \textbf{易错点：} 变量代换时要注意指数和分母的关系
-    
-    $\lim_{x \to \infty} (1 + \frac{2}{x})^x = \lim_{x \to \infty} \left[(1 + \frac{2}{x})^{x/2}\right]^2 = e^2$（应用重要极限公式）
-\end{Answer}
+\pt{平行截面面积为已知的立体体积计算；}
 
-\begin{Answer}[ref={ex:ch03-06}]
-    \Question 
-    \textbf{易错点：} 无穷大的比较中，多项式函数增长速度比对数函数快
-    
-    $\lim_{x \to \infty} \frac{x^2}{\ln x} = +\infty$（应用洛必达法则，无穷大与无穷大的比较，$x^2$ 是比 $\ln x$ 高阶的无穷大）
-    
-    \Question 
-    \textbf{易错点：} 直接代入无穷大会得到$\infty/\infty$型不定式，需要先化简
-    
-    \multiplesolution{解法一：有理化法}
-    $\lim_{x \to \infty} \frac{x}{\sqrt{1 + x} - 1} = \lim_{x \to \infty} \frac{x(\sqrt{1 + x} + 1)}{(\sqrt{1 + x} - 1)(\sqrt{1 + x} + 1)} = \lim_{x \to \infty} \frac{x(\sqrt{1 + x} + 1)}{x} = \lim_{x \to \infty} (\sqrt{1 + x} + 1) = +\infty$（分子分母同乘共轭式）
-    
-    \multiplesolution{解法二：变量代换}
-    令$t = \sqrt{x}$，则$x = t^2$，当$x \to \infty$时$t \to \infty$，
-    $\lim_{x \to \infty} \frac{x}{\sqrt{1 + x} - 1} = \lim_{t \to \infty} \frac{t^2}{t\sqrt{1 + 1/t^2} - 1} \approx \lim_{t \to \infty} \frac{t^2}{t - 1} = +\infty$
-\end{Answer}
+\pt{定积分在物理中的应用；}
 
-\begin{Answer}[ref={ex:ch03-07}]
-    \Question 
-    \textbf{易错点：} 忽略函数在该点是否有定义，连续的必要条件是函数在该点有定义
-    
-    $f(x) = \frac{x^2 - 1}{x - 1}$ 在 $x = 1$ 处无定义，因此不连续。但 $\lim_{x \to 1} f(x) = \lim_{x \to 1} (x + 1) = 2$，所以 $x = 1$ 是可去间断点。
-    
-    \Question 
-    \textbf{易错点：} 误以为所有三角函数都在 $\mathbb{R}$ 上连续，实际上正切函数等有间断点
-    
-    $\sin x$ 在 $\mathbb{R}$ 上连续，因为对于任意 $x_0 \in \mathbb{R}$，有 $\lim_{x \to x_0} \sin x = \sin x_0$。
-    
-    \Question 
-    \textbf{易错点：} 左右极限都为无穷大时，是无穷间断点，而不是跳跃间断点
-    
-    $f(x) = \frac{1}{x}$ 在 $x = 0$ 处无定义，且 $\lim_{x \to 0^+} f(x) = +\infty$，$\lim_{x \to 0^-} f(x) = -\infty$，因此 $x = 0$ 是无穷间断点，$f(x)$ 在 $x = 0$ 处不连续。
-\end{Answer}
+\pt{函数平均值的计算；}
 
-\begin{Answer}[ref={ex:ch03-08}]
-    \Question 
-    \textbf{易错点：} 化简函数时要注意定义域的变化，原函数在$x=2$处无定义
-    
-    $f(x) = \frac{x^2 - 4}{x - 2} = x + 2$（$x \neq 2$），因此连续区间为 $(-\infty, 2) \cup (2, +\infty)$，$x = 2$ 是可去间断点。
-    
-    \Question 
-    \textbf{易错点：} 分母为零的点都是间断点，要检查所有可能的点
-    
-    $f(x) = \frac{1}{x^2 - 1} = \frac{1}{(x - 1)(x + 1)}$，在 $x = 1$ 和 $x = -1$ 处无定义，且 $\lim_{x \to 1} f(x) = \lim_{x \to -1} f(x) = \infty$，因此 $x = 1$ 和 $x = -1$ 都是无穷间断点。
-    
-    \Question 
-    \textbf{易错点：} 绝对值函数的分段讨论要正确，左右极限不相等时是跳跃间断点
-    
-    $f(x) = \frac{|x|}{x} = \begin{cases} 1, & x > 0 \\ -1, & x < 0 \end{cases}$，在 $x = 0$ 处无定义，且 $\lim_{x \to 0^+} f(x) = 1$，$\lim_{x \to 0^-} f(x) = -1$，因此 $x = 0$ 是跳跃间断点，$f(x)$ 的连续区间为 $(-\infty, 0) \cup (0, +\infty)$。
-\end{Answer}
+\pt{反常积分敛散性的比较判别法应用；}
 
-\begin{Answer}[ref={ex:ch03-09}]
-    \Question 
-    \textbf{易错点：} 连续的三个条件缺一不可：有定义、有极限、极限等于函数值
-    
-    $\lim_{x \to 1} f(x) = \lim_{x \to 1} \frac{x^2 - 1}{x - 1} = \lim_{x \to 1} (x + 1) = 2$，要使 $f(x)$ 在 $x = 1$ 处连续，需 $f(1) = k = \lim_{x \to 1} f(x) = 2$，因此 $k = 2$。
-    
-    \Question 
-    \textbf{易错点：} 分段函数在分界点处的连续性和可导性需要分别讨论左右极限和左右导数
-    
-    \multiplesolution{连续性分析}
-    连续性：$\lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} \sin x = 0$，$\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} x = 0$，且 $f(0) = 0$，因此 $f(x)$ 在 $x = 0$ 处连续。
-    
-    \multiplesolution{可导性分析}
-    可导性：左导数 $f'_-(0) = \lim_{h \to 0^-} \frac{f(0 + h) - f(0)}{h} = \lim_{h \to 0^-} \frac{\sin h - 0}{h} = 1$，右导数 $f'_+(0) = \lim_{h \to 0^+} \frac{f(0 + h) - f(0)}{h} = \lim_{h \to 0^+} \frac{h - 0}{h} = 1$，左导数等于右导数，因此 $f(x)$ 在 $x = 0$ 处可导。
-\end{Answer}
+\pt{旋转体体积的综合计算（含挖去部分、组合旋转体）；}
 
-\begin{Answer}[ref={ex:ch03-10}]
-    \Question 
-    \textbf{易错点：} 泰勒展开的阶数要足够高，否则会得到错误结果
-    
-    当 $x \to 0$ 时，$\sin x$ 和 $x - \frac{x^3}{6}$ 都是无穷小量，且两者的差为高阶无穷小。利用泰勒展开：
-    $\sin x = x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^5)$
-    因此，$\lim_{x \to 0} \frac{\sin x - (x - \frac{x^3}{6})}{x^5} = \lim_{x \to 0} \frac{\frac{x^5}{120} + o(x^5)}{x^5} = \frac{1}{120}$
-    
-    \Question 
-    \textbf{易错点：} 计算三角形面积时，底和高要对应，这里以AB为底，高是点C到AB的垂直距离
-    
-    首先计算三角形的边长：
-    $a = BC = \sqrt{(4-1)^2 + (0-3)^2} = \sqrt{9 + 9} = \sqrt{18} = 3\sqrt{2}$
-    $b = AC = \sqrt{(1-0)^2 + (3-0)^2} = \sqrt{1 + 9} = \sqrt{10}$
-    $c = AB = \sqrt{(4-0)^2 + (0-0)^2} = 4$
-    
-    半周长 $s = \frac{a + b + c}{2} = \frac{3\sqrt{2} + \sqrt{10} + 4}{2}$
-    
-    面积 $S = \frac{1}{2} \times 底 \times 高 = \frac{1}{2} \times 4 \times 3 = 6$
-    
-    内切圆半径 $r = \frac{S}{s} = \frac{6}{\frac{3\sqrt{2} + \sqrt{10} + 4}{2}} = \frac{12}{3\sqrt{2} + \sqrt{10} + 4}$
-    
-    内切圆面积 $A = \pi r^2 = \pi \left( \frac{12}{3\sqrt{2} + \sqrt{10} + 4} \right)^2$
-    
-    \Question 
-    \textbf{易错点：} 泰勒展开时要注意各项的系数，特别是阶乘项
-    
-    \multiplesolution{解法一：泰勒展开法}
-    当 $x \to 0$ 时，$e^x$ 和 $1 + x + \frac{x^2}{2}$ 都是无穷小量，且两者的差为高阶无穷小。利用泰勒展开：
-    $e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + o(x^3)$
-    因此，$\lim_{x \to 0} \frac{e^x - (1 + x + \frac{x^2}{2})}{x^3} = \lim_{x \to 0} \frac{\frac{x^3}{6} + o(x^3)}{x^3} = \frac{1}{6}$
-    
-    \multiplesolution{解法二：洛必达法则}
-    连续应用洛必达法则三次：
-    $\lim_{x \to 0} \frac{e^x - (1 + x + \frac{x^2}{2})}{x^3} = \lim_{x \to 0} \frac{e^x - 1 - x}{3x^2} = \lim_{x \to 0} \frac{e^x - 1}{6x} = \lim_{x \to 0} \frac{e^x}{6} = \frac{1}{6}$
-\end{Answer}
+\pt{定积分在几何中的综合应用（面积与体积结合）；}
+
+\pt{物理应用中的变力做功、压力计算的综合问题}
 

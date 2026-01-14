@@ -4,36 +4,61 @@
 % 作用：集中管理所有样式定义
 % ==============================================
 
+% 页面布局精细化配置
+\geometry{
+    a4paper,               % 纸张尺寸：A4
+    left=3cm,              % 左页边距
+    right=2.5cm,           % 右页边距
+    top=2.5cm,             % 上页边距
+    bottom=2.5cm,          % 下页边距
+    headheight=15pt,       % 页眉高度
+    headsep=1cm,           % 页眉与正文间距
+    footskip=1cm,          % 页脚与正文间距
+    marginparwidth=1.5cm,  % 页边注宽度（预留）
+    marginparsep=0.5cm     % 页边注与正文间距
+}
+
 % 段落格式配置
 \setlength{\parindent}{2em}      % 首行缩进2字符
 \setlength{\parskip}{0.5em}      % 段落间距0.5em
 
 % 页眉页脚设置
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\leftmark}
-\fancyhead[R]{\rightmark}
-\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0pt}
+\pagestyle{plain}
 
-% 章节格式设置
-\titleformat{\chapter}[display]
-    {\normalfont\Huge\bfseries\color{kaoyan-blue}}
-    {\chaptertitlename\ \thechapter}{20pt}{\centering}
-\titlespacing*{\chapter}{0pt}{-30pt}{40pt}
+% 章节标题样式优化
+% 保持居中、加粗的基础样式，优化字体字号和间距
+\titleformat{\section}[hang]{\bfseries\zihao{3}}{\textcolor{kaoyan-blue}{\thesection}}{1em}{}
+\titlespacing*{\section}{0pt}{30pt}{20pt}
 
-% 节格式设置
-\titleformat{\section}
-    {\normalfont\Large\bfseries\color{kaoyan-blue}}
-    {\thesection}{1em}{}
-\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titleformat{\subsection}[block]{\bfseries\zihao{4}\centering}{\textcolor{kaoyan-blue}{\arabic{subsection}}}{1em}{}
+\titlespacing*{\subsection}{0pt}{25pt}{15pt}
 
-% 小节格式设置
-\titleformat{\subsection}
-    {\normalfont\large\bfseries\color{kaoyan-blue!80!black}}
-    {\thesubsection}{1em}{}
-\titlespacing*{\subsection}{0pt}{3.2ex plus 1ex minus .2ex}{1.8ex plus .2ex}
+\titleformat{\subsubsection}[block]{\bfseries\zihao{5}\centering}{\textcolor{kaoyan-blue}{(\arabic{subsubsection})}}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{20pt}{10pt}
+
+% 目录样式优化
+\usepackage{tocloft}
+\renewcommand{\cftchapfont}{\bfseries\zihao{3}}
+\renewcommand{\cftchappagefont}{\bfseries\zihao{3}}
+\renewcommand{\cftchapafterpnum}{\par}
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+
+\renewcommand{\cftsecfont}{\zihao{4}}
+\renewcommand{\cftsecpagefont}{\zihao{4}}
+\renewcommand{\cftsecafterpnum}{\par}
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+
+\renewcommand{\cftsubsecfont}{\zihao{5}}
+\renewcommand{\cftsubsecpagefont}{\zihao{5}}
+\renewcommand{\cftsubsecafterpnum}{\par}
+\renewcommand{\cftsubsecdotsep}{\cftdotsep}
+
+\setlength{\cftbeforechapskip}{15pt}
+\setlength{\cftbeforesecskip}{10pt}
+\setlength{\cftbeforesubsecskip}{8pt}
+
+% 设置目录标题样式
+\renewcommand{\contentsname}{\centering\bfseries\zihao{2}\textcolor{kaoyan-blue}{目录}}
 
 % 超链接设置
 \hypersetup{
@@ -58,22 +83,13 @@
     leftmargin=2em
 }
 
-% 为习题列表创建自定义label格式
-\newcommand{\exerciseLabelFormat}[1]{%
-    \textbf{\textcolor{kaoyan-blue}{\hyperlink{solution:#1}{【\arabic*】}}}
-}
-
-% 设置特定的enumerate环境为习题列表样式
-\setlist[enumerate,1]{
-    label={\textbf{\textcolor{kaoyan-blue}{\hyperlink{solution:\@currentlabel}{【\arabic*】}}}},
-    leftmargin=2em
-}
+% 习题列表样式已移至xsim配置中
 
 \setlist[itemize]{
     topsep=0pt,
     itemsep=0pt,
     parsep=0pt,
-    label=\textcolor{kaoyan-blue}{$\bullet$},
+    label=\textcolor{black}{$\blacksquare$},
     leftmargin=2em
 }
 
@@ -95,3 +111,8 @@
     \setcounter{chapter}{0}
     \setcounter{section}{0}
 }
+
+% 编译输出目录配置（指定所有编译产物输出至./build文件夹）
+\makeatletter
+\def\output@path{./build/}  % 核心配置：设置编译输出路径为./build
+\makeatother

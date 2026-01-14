@@ -1,105 +1,87 @@
-% 第7章：常微分方程
-\chapter{常微分方程}
-\label{ch:differential-equations}
+\chapter{无穷级数}
 
-本章介绍常微分方程的基本概念、解法以及在几何、物理、生物等领域的应用。
+\section{考点说明}
+\begin{itemize}
+\item 绝对收敛与条件收敛的概念及判断
+\item 函数的幂级数展开式；
+\item 幂级数的收敛半径、收敛区间和收敛域；
+\item 傅里叶级数的概念；
+\item 狄利克雷（Dirichlet）收敛定理；
+\item 交错级数的审敛法（莱布尼茨判别法）；
+\item 函数在[0, l]上的正弦级数和余弦级数
+\item 常数项级数的概念；
+\item 级数的基本性质；
+\item 幂级数的和函数；
+\item 级数的收敛与发散的定义；
+\item 幂级数的四则运算与复合运算
+\item 幂级数的概念；
+\item 正项级数的审敛法（比较审敛法、比值审敛法、根值审敛法）；
+\item 幂级数在收敛区间内的基本性质；
+\item 级数收敛的必要条件
+\item 函数在[-l, l]上的傅里叶级数；
+\end{itemize}
 
-% 题型7.1 一阶微分方程
-\begin{question-type}{一阶微分方程}
-本题型主要考查一阶微分方程的求解，包括变量可分离方程、齐次方程、线性方程、伯努利方程等。
+\section{第一节 常数项级数的概念与性质}
 
-\begin{exercise}
-解变量可分离方程：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{1} $\frac{\dy}{\dx} = \frac{y}{x}$ \exercisesource{变量分离基础}
-    \item \difficulty{2} $\frac{\dy}{\dx} = e^{x-y}$ \exercisesource{李永乐复习全书P601}
-    \item \difficulty{2} $\frac{\dy}{\dx} = \frac{y^2}{x^2}$ \exercisesource{2024考研数学一真题}
-\end{enumerate}
-\end{exercise}
+\pt{常数项级数收敛性的判断；}
 
-\begin{exercise}
-解齐次方程：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{3} $\frac{\dy}{\dx} = \frac{y - x}{y + x}$ \exercisesource{齐次方程}
-    \item \difficulty{3} $\frac{\dy}{\dx} = \frac{x^2 + y^2}{xy}$ \exercisesource{李永乐复习全书P615}
-\end{enumerate}
-\end{exercise}
+\pt{利用级数性质判断收敛性；}
 
-\begin{exercise}
-解一阶线性方程：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} $\frac{\dy}{\dx} + y = e^x$ \exercisesource{线性方程}
-    \item \difficulty{3} $\frac{\dy}{\dx} + \frac{y}{x} = x^2$ \exercisesource{B站 BV1xx4y1E7xx}
-    \item \difficulty{3} $\frac{\dy}{\dx} + y \tan x = \sin 2x$ \exercisesource{2023考研数学一真题}
-\end{enumerate}
-\end{exercise}
+\pt{级数收敛必要条件的应用；}
 
-\begin{exercise}
-解伯努利方程：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{4} $\frac{\dy}{\dx} + y = y^2 e^x$ \exercisesource{伯努利方程}
-    \item \difficulty{4} $\frac{\dy}{\dx} + \frac{1}{x} y = x y^2$ \exercisesource{李永乐复习全书P628}
-\end{enumerate}
-\end{exercise}
-\end{question-type}
+\pt{利用级数收敛性判断数列极限；}
 
-% 题型7.2 二阶微分方程
-\begin{question-type}{二阶微分方程}
-本题型主要考查二阶常系数线性微分方程的求解，包括齐次方程和非齐次方程。
+\pt{含参数级数的收敛性讨论；}
 
-\begin{exercise}
-解二阶常系数齐次方程：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} $y'' + y = 0$ \exercisesource{二阶齐次基础}
-    \item \difficulty{2} $y'' - 2y' + y = 0$ \exercisesource{李永乐复习全书P645}
-    \item \difficulty{3} $y'' + 2y' + 2y = 0$ \exercisesource{2024考研数学一真题}
-\end{enumerate}
-\end{exercise}
+\pt{级数敛散性的反例构造}
 
-\begin{exercise}
-解二阶常系数非齐次方程：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{3} $y'' + y = e^x$ \exercisesource{非齐次方程}
-    \item \difficulty{4} $y'' - y = x e^x$ \exercisesource{B站 BV1xx4y1E7xx}
-    \item \difficulty{3} $y'' + y = \sin x$ \exercisesource{李永乐复习全书P658}
-\end{enumerate}
-\end{exercise}
+\section{第二节 常数项级数的审敛法}
 
-\begin{exercise}
-解欧拉方程：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{4} $x^2 y'' + x y' - y = 0$ \exercisesource{欧拉方程}
-    \item \difficulty{5} $x^2 y'' - 2x y' + 2y = x^3$ \exercisesource{2023考研数学一真题}
-\end{enumerate}
-\end{exercise}
-\end{question-type}
+\pt{正项级数的审敛；}
 
-% 题型7.3 微分方程的应用
-\begin{question-type}{微分方程的应用}
-本题型主要考查微分方程在几何、物理、生物等领域的应用。
+\pt{交错级数的审敛（莱布尼茨判别法）；}
 
-\begin{exercise}
-几何应用：曲率、渐屈线等：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{3} 求曲线 $y = \ln x$ 的曲率 \exercisesource{曲率计算}
-    \item \difficulty{4} 求抛物线 $y = x^2$ 的渐屈线 \exercisesource{李永乐复习全书P675}
-\end{enumerate}
-\end{exercise}
+\pt{绝对收敛与条件收敛的判断；}
 
-\begin{exercise}
-物理应用：牛顿冷却、阻尼振动等：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} 物体冷却问题：$\frac{\dT}{\dt} = -k(T - T_0)$ \exercisesource{冷却问题}
-    \item \difficulty{3} 弹簧振动：$y'' + 2y' + 5y = 0$ \exercisesource{B站 BV1xx4y1E7xx}
-    \item \difficulty{3} 电路问题：$L \frac{\di}{\dt} + R i = E$ \exercisesource{2024考研数学一真题}
-\end{enumerate}
-\end{exercise}
+\pt{正项级数审敛法的综合应用（比较与比值结合）；}
 
-\begin{exercise}
-人口增长模型：
-\begin{enumerate}[label={【\arabic*】}]
-    \item \difficulty{2} 指数增长：$\frac{\dN}{\dt} = kN$ \exercisesource{人口模型}
-    \item \difficulty{4} 逻辑斯蒂增长：$\frac{\dN}{\dt} = rN(1 - \frac{N}{K})$ \exercisesource{李永乐复习全书P688}
-\end{enumerate}
-\end{exercise}
-\end{question-type} 
+\pt{交错级数余项的估计；}
+
+\pt{任意项级数的敛散性判断；}
+
+\pt{含参数级数的绝对收敛与条件收敛判断}
+
+\section{第三节 幂级数}
+
+\pt{幂级数收敛半径、收敛区间、收敛域的求解；}
+
+\pt{幂级数和函数的求解；}
+
+\pt{函数的幂级数展开；}
+
+\pt{幂级数在收敛域内的逐项求导与逐项积分应用；}
+
+\pt{含参数幂级数的收敛域求解；}
+
+\pt{利用幂级数和函数求解常数项级数的和；}
+
+\pt{函数的幂级数展开在近似计算中的应用；}
+
+\pt{幂级数的四则运算应用；}
+
+\pt{幂级数复合运算的收敛域求解}
+
+\section{第四节 傅里叶级数}
+
+\pt{傅里叶系数的计算；}
+
+\pt{傅里叶级数的收敛性判断（狄利克雷定理应用）；}
+
+\pt{函数的傅里叶级数展开（正弦级数、余弦级数）；}
+
+\pt{利用傅里叶级数求常数项级数的和；}
+
+\pt{非周期函数的周期延拓与傅里叶展开；}
+
+\pt{傅里叶级数在特定点的收敛值计算}
+

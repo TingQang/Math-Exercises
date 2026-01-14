@@ -23,18 +23,22 @@
 ]{geometry}
 
 % 第三部分：数学宏包
-\usepackage{amsmath, amsthm, amssymb, amsfonts}  % AMS数学基础
+\usepackage{amsmath, amssymb, amsfonts}  % AMS数学基础（移除amsthm）
 \usepackage{mathtools}                           % 增强数学工具
 \usepackage{bm}                                  % 粗体数学符号
 \usepackage{cases}                               % 多行公式
 \usepackage{siunitx}                             % 单位与数字
 \usepackage{cancel}                              % 取消线
+\usepackage{esint}                               % 提供标准的三重积分符号
+\usepackage{unicode-math}                        % 数学字体支持，解决字符缺失问题
+\setmathfont{Latin Modern Math}                 % 设置数学字体
 
 % 第四部分：图形与颜色
 \usepackage{graphicx}                    % 图片插入
 \usepackage{caption}                     % 支持\captionof命令
-\usepackage{tcolorbox}                   % 彩色框（含定理环境）
-\tcbuselibrary{most, breakable, skins}   % 加载tcolorbox库
+\usepackage{tcolorbox}                   % 彩色框体与定理环境（可折行、自定义样式）
+\tcbuselibrary{most, breakable, skins}   % 加载tcolorbox扩展库（增强功能）
+\usepackage{tikz}                        % 矢量图形绘制
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{svg.path}
 \usepackage[dvipsnames, svgnames, x11names]{xcolor}  % 颜色，添加选项以确保所有颜色命令都能正确定义
@@ -43,11 +47,17 @@
 % 第五部分：排版与工具
 \usepackage{etoolbox}                    % 工具宏包
 \usepackage{enumitem}                    % 列表控制
-\usepackage{exercise} % 习题和答案的组织管理
-% 在每章开始时重置Exercise计数器
-\pretocmd{\chapter}{\setcounter{Exercise}{0}}{}{}
-% 配置Exercise环境，对应题型，显示题型标题
-% ExerciseHeader的重定义移到了environments.tex中
+% 修复section标题对齐问题并调整格式
+\usepackage{titlesec}
+\titleformat{\section}[hang]{\bfseries\large}{\thesection}{1em}{}
+
+% 设置subsection标题为1,2,3形式并居中对齐
+\titleformat{\subsection}[block]{\bfseries\centering}{\arabic{subsection}}{1em}{}
+% 加载xsim宏包用于习题与答案管理
+\usepackage{xsim}
+
+
+
 \usepackage{booktabs}                    % 专业表格
 \usepackage{multirow, multicol}          % 表格与多列
 \usepackage{array}                       % 数组扩展
@@ -56,7 +66,6 @@
 
 % 第六部分：页面样式
 \usepackage{fancyhdr}                    % 页眉页脚
-\usepackage{titlesec}                    % 标题格式
 \usepackage{titletoc}                    % 目录格式
 \usepackage{appendix}                    % 附录
 
