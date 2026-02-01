@@ -1,0 +1,72 @@
+\section{第二节 极限}
+
+\pt{极限的概念性问题（存在性判断、左右极限求解）}
+\pt{利用倒代换计算极限}
+\begin{Problem}
+    \difficulty{3}
+    设 \(a\)，\(b\) 为常数，且
+    \(
+    \lim_{x \to \infty} \left( \sqrt[3]{1 - x^6} - a x^2 - b \right) = 0,
+    \)
+    则 \(a = \underline{\quad\quad}\)，\(b = \underline{\quad\quad}\)。
+    \exercisesource{2026·660·第5题}
+    \exercisetip{提公因式容易出错}
+\end{Problem}
+\begin{Answer}
+    由已知得，$\lim_{x \to \infty}\ \sqrt[3]{1-x^6} - ax^2 = b$\par
+    即，$\lim_{x \to \infty}\ \dfrac{\sqrt[3]{1-\dfrac{1}{x^6}}+a}{\dfrac{1}{x^2}} = b$\par
+    令$t = \dfrac{1}{x}$，把$t$带入上述等式，得\[\begin{aligned}
+        &\lim_{t \to 0}\ \dfrac{\sqrt[3]{1-t^6}+a}{t^2}\\
+        &=b
+    \end{aligned}\]
+    由于$\lim_{t \to 0}\ t^2 = 0$,所以$\lim_{t\to 0}\ \sqrt[3]{1-t^6}+a = 0$\par
+    $\Rightarrow a = -lim_{t \to 0}\ \sqrt[3]{1-t^6} = -1$\par
+    $\Rightarrow b = \lim_{t \to 0}\ \dfrac{\sqrt[3]{1-t^6}-1}{t^2} =0$
+\end{Answer}
+\begin{Problem}
+    \difficulty{3}
+    计算极限$\lim_{x \to +\infty}\ 2x^3\left(\sin \dfrac{1}{x} - \tan \dfrac{1}{x}\right)$
+    \exercisesource{b站：BV17i421Y7Nm}
+\end{Problem}
+\begin{Answer}
+    \[\sin x = x - \dfrac{1}{6}x^3 + o(x^3)\]
+    \[\tan x = x + \dfrac{1}{3}x^3 + o(x^3)\]
+    令$t=\dfrac{1}{x}$，将$t$带入极限式，得\par
+    \multi{解法一·洛必达法则}
+    \[\begin{aligned}
+        &\lim_{t \to 0^+}\ \dfrac{2(\sin t - \tan t)}{t^3}\\
+        &\upeq{洛必达法则}{5em} \lim_{t \to 0^+}\ \dfrac{2\left(\cos t - \sec^2 t\right)}{3t^2}\\
+        &=\dfrac{2}{3} \left[\lim_{t \to 0^+}\ \dfrac{\cos t -1}{t^2} + \lim_{t \to 0^+}\ \dfrac{1-\sec^2 t}{t^2}\right]\\
+        &=\dfrac{2}{3} \cdot \left(-\dfrac{3}{2}\right) = -1
+    \end{aligned}\]
+    \multi{解法二·等价无穷小替换法则}
+    \[\begin{aligned}
+        &\lim_{t \to 0^+}\ \dfrac{2(\sin t - \tan t)}{t^3}\\
+        &\upeq{分子分母同时乘以$\cos t$}{8em} \lim_{t \to 0^+}\ \dfrac{2 \sin t (\cos t -1)}{t^3}\\
+        &\upeq{等价无穷小替换法则}{8em} \lim_{t \to 0^+}\ \dfrac{2t \cdot \left(-\dfrac{t^2}{2}\right)}{t^3}=-1
+    \end{aligned}\]
+    \multi{解法三·泰勒公式}
+    \[\begin{aligned}
+        &\lim_{t \to 0^+}\ \dfrac{2(\sin t - \tan t)}{t^3}\\
+        &= \lim_{t \to 0+}\ \dfrac{2\left[ \left(t- \dfrac{1}{6} t^3\right) - \left( t + \dfrac{1}{3} t^3\right)\right]}{t^3}\\
+        &=\lim_{t \to 0^+}\ \dfrac{2 \cdot \left( -\dfrac{1}{2} t^3\right)}{t^3}=-1
+    \end{aligned}\]
+\end{Answer}
+\pt{利用四则运算、重要极限求极限}
+
+\pt{利用夹逼准则、单调有界准则求极限}
+
+\pt{无穷小量阶的比较}
+
+\pt{极限式中参数的确定}
+
+\pt{无穷大量与无界变量的区分}
+
+\pt{含变限积分的极限计算}
+
+\pt{利用泰勒公式求极限}
+
+\pt{数列极限的转化（转化为函数极限求解）}
+
+\pt{含抽象函数的极限问题}
+

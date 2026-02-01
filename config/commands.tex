@@ -54,6 +54,20 @@
 \newcommand{\dz}{\,\mathrm{d}z}          % 积分微元z
 \newcommand{\dt}{\,\mathrm{d}t}
 \newcommand{\const}{\text{const}}        % 常数
+% 自定义长等号命令：\longeq{长度}，比如\longeq{2cm}
+% 【修正】自定义长等号（双横线=真正等号，非单横线）
+\newcommand{\longeq}[1]{%
+  \mathrel{% 保证数学符号间距
+    \rule[0.65ex]{#1}{0.08ex}% 上横线（位置稍高）
+    \hspace{-#1}% 重叠两条横线
+    \rule[0.35ex]{#1}{0.08ex}% 下横线（位置稍低）
+  }%
+}
+% 【保留调用方式】长等号+上标：\upeq{上标文字}{等号长度}
+\newcommand{\upeq}[2]{%
+  \stackrel{\mathclap{\textnormal{#1}}}{\longeq{#2}}%
+}
+
 
 % 7. 考点与习题专用命令
 \newcommand{\keypoint}[1]{\textbf{\textcolor{kaoyan-red}{【考点】#1}}}
@@ -99,16 +113,22 @@
 \newcommand{\formula}[1]{\textcolor{kaoyan-blue}{\[#1\]}}
 
 % 8. 习题扩展命令
-\newcommand{\exercisesource}[1]{\textbf{\textcolor{gray}{【来源】#1}}} % 习题来源
+% 修正后的习题来源命令：自动换行+灰色+加粗
+\newcommand{\exercisesource}[1]{%
+\par
+  \parbox{0.9\textwidth}{% 限定宽度为页面90%，超出自动换行
+    \textbf{\textcolor{gray}{【来源】#1}}% 保留原有样式
+  }%
+}
 \newcommand{\matchexampoint}[1]{\textbf{\textcolor{kaoyan-blue}{【匹配考点】#1}}} % 考点匹配
-\newcommand{\exercisetip}[1]{\textbf{\textcolor{kaoyan-orange}{【提示】#1}}} % 答题提示
+\newcommand{\exercisetip}[1]{\par \textbf{\textcolor{kaoyan-orange}{【易错点】#1}}} % 答题提示
 \newcommand{\multiplesolution}[1]{\textbf{\textcolor{kaoyan-orange}{【#1】}}} % 一题多解标注
 
 % 9. 公式格式化命令
 \newcommand{\longmath}[1]{\displaystyle #1} % 长行内公式使用displaystyle
 \newcommand{\splitmath}[1]{\begin{split} #1 \end{split}} % 用于分割长公式
 \newcommand{\multmath}[1]{\begin{multline} #1 \end{multline}} % 用于多行公式，自动换行
-
+\newcommand{\multi}{\multiplesolution}%把命令重定向
 % 10. 题型样式命令
 \newcounter{problemtype}[subsection]%题型计数器，随subsection重置
 \renewcommand{\theproblemtype}{题型\arabic{problemtype}}
@@ -119,9 +139,8 @@
     \begin{center} % 居中环境（比 \centering 更稳定）
         % 字体+字号：推荐组合（兼顾美观和可读性）
         \zihao{4} % 中文四号字（≈14pt，题型标题黄金字号）
-        \bfseries % 加粗
-        \kaishu % 中文用楷体（典雅易读），也可换 \heiti/\songti
-        \textbf{【\theproblemtype:#1】}% 输出题型编号和参数
+        \heiti% 中文用黑体（典雅易读），也可换 \heiti/\songti
+        【\theproblemtype:#1】% 输出题型编号和参数
     \end{center}
     \par\vspace{0.8em}% 题型下方间距
 }

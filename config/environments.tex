@@ -1,16 +1,34 @@
+% 2. 定义带行间距+序号的题目模板
+\DeclareExerciseEnvironmentTemplate{custom-problem}
+{% 开始前的配置
+    \linespread{1.3}\selectfont  % 1.3倍行间距
+    \GetExerciseProperty{counter} % 输出题号（如“1.”）
+    \GetExerciseProperty{body}           % 输出题目内容
+}
+{\par\vspace{0.5em}}  % 结束后无额外操作
+
+% 3. 定义带行间距+序号的解析模板
+\DeclareExerciseEnvironmentTemplate{custom-answer}
+{% 开始前的配置
+    \linespread{1.3}\selectfont  % 和题目一致的行间距
+    \GetExerciseProperty{counter} % 输出对应题号（如“1.”）
+    \textbf{\GetExerciseName}            % 输出“解析：”
+    \GetExerciseProperty{body}           % 输出解析内容
+}
+{\par\vspace{0.5em}}  % 结束后无额外操作
 \DeclareExerciseType{problem}{
     exercise-env= Problem,
     solution-env= Answer,
     exercise-name= ,
-    solution-name= ,
+    solution-name=解析： ,
     counter=problem,
-    exercise-template= default,
-    solution-template= default
+    exercise-template= custom-problem,
+    solution-template= custom-answer
 }
 
 \xsimsetup{
     Problem/print = true,
-    Answer/print = false,
+    Answer/print = true,
     Problem/heading = ,
     Answer/heading =,
     print-solutions/headings= true,
